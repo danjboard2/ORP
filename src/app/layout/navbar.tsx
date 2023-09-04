@@ -38,12 +38,13 @@ var isMenuOpen = function(state:any) {
       top: '139px'
     },
     bmMenu: {
-      padding: '1.5em',
+      padding: '0.5em 1.5em',
       fontSize: '1.15em',
       display: 'flex',
       background: 'rgba(0, 0, 0, 0.75)',
     backdropFilter: 'blur(5px)',
-    borderTop: '8px solid rgb(94 163 71)'
+    borderTop: '8px solid rgb(94 163 71)',
+    borderRadius: '0px 0px 8px 8px'
     },
     bmMorphShape: {
       fill: '#373a47'
