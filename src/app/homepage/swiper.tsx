@@ -18,7 +18,7 @@ export default function HomepageSwiper() {
   
     useEffect(() => {
         if (swiperInstance) {
-          swiperInstance.on('slideChange', function () {
+          swiperInstance.on('slideChange', function (this: any) {
             // Calculate the corrected index based on the internal activeIndex property
             let correctedIndex = swiperInstance.activeIndex % numberOfSlides;
       
