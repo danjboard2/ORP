@@ -22,3 +22,6 @@
   src: url("../../public/media/fonts/abc-diatype-italic.otf") format("opentype");
   font-style:italic
 }
+
+/* menu fix for no underline on last element */
+.bm-item-list .bm-item:last-of-type {border-bottom:none !important;}
