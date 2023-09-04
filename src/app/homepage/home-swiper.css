@@ -7,12 +7,12 @@ body {background:#F6F6F6;}
     transition:0.5s;
     content: '';
     height: 0px;
-    background-color: #73CD4A;
+    background-color: transparent;
     display: block;
     width: 100%;
     position: absolute;
     left: 0px;
-    top: 0px;
+    top: -1px;
     z-index: -1;
     border-radius: 8px 8px 0px 0px;
 }

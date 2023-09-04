@@ -84,7 +84,7 @@ export default function NavBar(this:any) {
          <nav className="flex h-[147px] z-50 justify-between w-full flex-row backdrop-blur-lg  bg-black bg-opacity-75 fixed top-0 left-0 border-b-8 border-[#5DA33D]">
             <div className="m-6 lg:m-[1.9rem] lg:ml-12"><Image src="/media/images/orp-logo.png" priority={true} width={271} height={78} alt="Logo"/></div>
             <div className="flex relative mx-32 self-center">
-            <Hamburger size={80} color="#fff" toggled={isOpen} toggle={setOpen} onToggle={toggled => {handleMenuClick()}}/>
+            <Hamburger size={27} color="#fff" toggled={isOpen} toggle={setOpen} onToggle={toggled => {handleMenuClick()}}/>
             </div>
         </nav>
         <div className="flex relative">
