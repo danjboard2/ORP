@@ -9,7 +9,30 @@ import { FaCircleChevronLeft, FaCircleChevronRight } from "react-icons/fa6";
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 
-export default function FancySwiper() {
+interface Section {
+  title: string;
+  content: string;
+}
+
+interface Pages {
+  name: string;
+  pagetitle: string;
+  image1: string;
+  image2: string;
+  image3: string;
+  smallimage1: string;
+  smallimage2: string;
+  smallimage3: string;
+  bg: string;
+  color: string;
+  sections: Section[];
+}
+
+interface PageContentProps {
+  pages: Pages[];
+}
+
+const FancySwiper: React.FC<PageContentProps> = ({ pages }) => {
     const [swiperInstance, setSwiperInstance] = useState<OriginalSwiper | null>(null);
     const [activeIndex, setActiveIndex] = useState<number>(0);
     const numberOfSlides = 3;
@@ -42,11 +65,15 @@ export default function FancySwiper() {
   return (
     <>
 <section id="fancyswiper" className="overflow-hidden"> {/* page wrapper */}
-    <div className="pl-20 w-[800px] relative overflow-y-clip"> { /* sliding text wrapper */}
-    <div className="curvedbg absolute w-[2400px] h-[1200px] top-0 right-0 bottom-0 -left-[1000px] bg-[#F6F6F6]"></div>
+    <div className="w-full relative overflow-y-clip"> { /* sliding text wrapper */}
+    {pages.map((page: Pages, pageIndex:number) => (
+      <div key={pageIndex}>
+    <div className={`curvedbg absolute w-[2400px] h-[1200px] top-0 right-0 bottom-0 -left-[1000px] ${page.name}`} style={{
+        background : page.bg,
+      }}></div>
     <Swiper
     onSwiper={(swiper: OriginalSwiper) => setSwiperInstance(swiper)}
-    className="w-full h-[925px] "
+    className="w-[600px] !ml-[5%] h-[925px] "
       modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade, Autoplay]}
       spaceBetween={0}
       slidesPerView={1}
@@ -59,28 +86,43 @@ export default function FancySwiper() {
       allowTouchMove={true}
       data-swiper-autoplay={5000}
       pagination={false}
-    >
-      <SwiperSlide className="swiper-slide-first"><div className="flex flex-col ml-[10%] h-full justify-center"><h2 className="text-4xl font-bold uppercase text-black">Soil Remediation</h2><p className="text-xl my-6 text-black pr-32" >Due to the wide usage of petroleum products in our world every day, our land has become saturated with contaminates. Our products safely remove all signs of the contamination leaving you with lush, fertile soil.</p></div></SwiperSlide>
-      <SwiperSlide><div className="flex flex-col ml-[10%] h-full justify-center"><h2 className="text-4xl font-bold uppercase text-black" >Adding Value</h2><p className="text-xl my-6 text-black pr-32" >Often contaminated sites remain untouched for years because of the elevated cost of remediation. The use of microorganisms is a fraction of the cost. These microorganisms feed off of the pollutants, break them down and eliminate them.</p></div></SwiperSlide>
-      <SwiperSlide><div className="flex flex-col ml-[10%] h-full justify-center"><h2 className="text-4xl font-bold uppercase text-black">Breathe Easy</h2><p className="text-xl my-6 text-black pr-32" >The soil will become usable land at the end of the treatment. This land can now be used for urban development without the risk of spreading contaminates. Our products are 100% non-toxic, safe to use and extremely effective.</p></div></SwiperSlide>
-      <div className="custom-navigation z-10 flex flex-row w-1/5 justify-between">
-        <div className="swiper-button-prev"><FaCircleChevronLeft size={50} className="text-[#D9D9D9] hover:text-[#404041]"/></div>
-        <div className="swiper-button-next"><FaCircleChevronRight size={50} className="text-[#D9D9D9] hover:text-[#404041]"/></div>
+    >     
+       {page.sections.map((section: Section, sectionIndex: number) => (
+        <div key={sectionIndex}>
+          <SwiperSlide className="swiper-slide-first"><div className="flex flex-col ml-[10%] w-[600px] h-full justify-center"><h2 className="text-4xl font-bold uppercase" style={{
+        color: page.color,
+      }}>{section.title}</h2><p className="text-xl my-6  pr-32" style={{
+        color: page.color,
+      }}>{section.content}</p></div></SwiperSlide>
+          </div>
+          ))}
+                <div className="block absolute top-[250px] left-[10%]">
+      <h1 className="text-5xl text-[#73CD4A] font-bold uppercase">{page.pagetitle}</h1>
+      </div>
+        <div className={`custom-navigation z-10 flex flex-row w-[180px] justify-between ${page.name}`}>
+          <div className="swiper-button-prev"><FaCircleChevronLeft size={50} className="text-[#D9D9D9]"/></div>
+          <div className="swiper-button-next"><FaCircleChevronRight size={50} className="text-[#D9D9D9]"/></div>
       </div>
     </Swiper>
-    </div>
     <div className="absolute top-0 left-0 right-0 bottom-0 h-[925px] -z-[1]">  { /* background images */}
-        <div className={`item absolute top-0 left-0 right-0 bottom-0 h-[925px]  bg-[url('/media/images/soil-remediation.jpg')] bg-cover bg-right ${activeIndex === 0 ? 'active' : ''}`} onClick={() => goToSlide(0)}>
-         this
+        <div className={`item absolute top-0 left-0 right-0 bottom-0 h-[925px]  bg-cover bg-right ${activeIndex === 0 ? 'active' : ''}`} onClick={() => goToSlide(0)} style={{
+        backgroundImage: activeIndex === 0 ? page.image1 : '',
+      }}>
         </div>
-        <div className={`item absolute top-0 left-0 right-0 bottom-0 h-[925px] bg-[url('/media/images/adding-value.jpg')] bg-cover bg-right  ${activeIndex === 1 ? 'active' : ''}`} onClick={() => goToSlide(1)}>
-        this
+        <div className={`item absolute top-0 left-0 right-0 bottom-0 h-[925px] bg-cover bg-right  ${activeIndex === 1 ? 'active' : ''}`} onClick={() => goToSlide(1)} style={{
+        backgroundImage: activeIndex === 1 ? page.image2 : '',
+      }}>
           </div>
-        <div className={`item absolute top-0 left-0 right-0 bottom-0 h-[925px] bg-[url('/media/images/breathe-easy.jpg')] bg-cover bg-right  ${activeIndex === 2 ? 'active' : ''}`} onClick={() => goToSlide(2)}>
-        this
+        <div className={`item absolute top-0 left-0 right-0 bottom-0 h-[925px] bg-cover bg-right  ${activeIndex === 2 ? 'active' : ''}`} onClick={() => goToSlide(2)} style={{
+        backgroundImage: activeIndex === 2 ? page.image3 : '',
+      }}>
           </div>
     </div>
+           </div>
+                      ))}
+        </div>
     </section>
     </>
   );
 };
+export default FancySwiper

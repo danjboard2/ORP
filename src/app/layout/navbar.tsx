@@ -5,6 +5,8 @@ import { slide as Menu } from 'react-burger-menu'
 import { Fade as Hamburger } from 'hamburger-react'
 import {useState, useEffect} from 'react';
 import classNames from 'classnames';
+import { usePathname } from 'next/navigation';
+
 
 var isMenuOpen = function(state:any) {
     return state.isOpen;
@@ -44,7 +46,7 @@ var isMenuOpen = function(state:any) {
       display: 'flex',
       background: 'rgba(0, 0, 0, 0.75)',
     backdropFilter: 'blur(5px)',
-    borderTop: '8px solid rgb(24 31 20);',
+    borderTop: '8px solid rgb(24 31 20)',
     borderRadius: '0px 0px 8px 8px'
     },
     bmMorphShape: {
@@ -59,7 +61,6 @@ var isMenuOpen = function(state:any) {
     },
     bmItem: {
       display: 'inline-block',
-      padding: '12px 10px',
     },
     bmOverlay: {
       background: 'rgba(0, 0, 0, 0.3)',
@@ -69,6 +70,7 @@ var isMenuOpen = function(state:any) {
 
 
 export default function NavBar(this:any) {
+  
     const [isOpen, setOpen] = useState(false)
 
     const [menuOpen, setMenuOpen] = useState(false);
@@ -85,7 +87,8 @@ export default function NavBar(this:any) {
     useEffect(() => {
       setActivePath(window.location.pathname);
     }, []);
-  
+  {/* Get the current route */}
+const currentRoute = usePathname();
     
     return (
         <>
@@ -97,14 +100,14 @@ export default function NavBar(this:any) {
         </nav>
         <div className="flex relative">
                 <Menu onStateChange={ isMenuOpen } isOpen={menuOpen} styles={styles} right noOverlay>
-                    <Link legacyBehavior passHref href="/"><a className={classNames({ active: activePath ===('')}) || classNames({ active: activePath ===('/')})} onClick={() => handleSetActivePath('/')}><span>Home</span></a></Link>
-                    <Link legacyBehavior passHref href="/soil"><a className={classNames({ active: activePath ===('/soil') })} onClick={() => handleSetActivePath('/soil')}><span>Soil</span></a></Link>
-                    <Link legacyBehavior passHref href="/mold"><a className={classNames({ active: activePath ===('/mold') })} onClick={() => handleSetActivePath('/mold')}><span>Mold</span></a></Link>
-                    <Link legacyBehavior passHref href="/sewage"><a className={classNames({ active: activePath ===('/sewage') })} onClick={() => handleSetActivePath('/sewage')}><span>Sewage</span></a></Link>
-                    <Link legacyBehavior passHref href="/agriculture"><a className={classNames({ active: activePath ===('/agriculture') })} onClick={() => handleSetActivePath('/agriculture')}><span>Agriculture</span></a></Link>
-                    <Link legacyBehavior passHref href="/projects"><a className={classNames({ active: activePath ===('/projects') })} onClick={() => handleSetActivePath('/projects')}><span>Projects</span></a></Link>
-                    <Link legacyBehavior passHref href="/downloads"><a className={classNames({ active: activePath ===('/downloads') })} onClick={() => handleSetActivePath('/downloads')}><span>Downloads</span></a></Link>
-                    <Link legacyBehavior passHref href="/contact"><a className={classNames({ active: activePath ===('/contact') })} onClick={() => handleSetActivePath('/contact')}><span>Contact</span></a></Link>
+                    <Link href="/"  className={currentRoute === "/"  ? "active"  : ""}><span>Home</span></Link>
+                    <Link href="/soil"  className={currentRoute === "/soil"  ? "active"  : ""}><span>Soil</span></Link>
+                    <Link href="/mold"  className={currentRoute === "/mold"  ? "active"  : ""}><span>Mold</span></Link>
+                    <Link href="/sewage"  className={currentRoute === "/sewage"  ? "active"  : ""}><span>Sewage</span></Link>
+                    <Link href="/agriculture"  className={currentRoute === "/agriculture"  ? "active"  : ""}><span>Agriculture</span></Link>
+                    <Link href="/projects"  className={currentRoute === "/projects"  ? "active"  : ""}><span>Projects</span></Link>
+                    <Link href="/downloads"  className={currentRoute === "/downloads"  ? "active"  : ""}><span>Downloads</span></Link>
+                    <Link href="/contact"  className={currentRoute === "/contact"  ? "active"  : ""}><span>Contact</span></Link>
                 </Menu>
                 </div>
         </>

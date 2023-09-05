@@ -15,10 +15,10 @@ export default function Footer() {
             <div className="flex w-1/3 justify-center">
                <div className="flex flex-col">
                <h4 className=" text-xl mb-8 font-bold">Products</h4>
-               <Link href="/Soil" className="mb-4 hover:underline">Soil</Link>
-               <Link href="/Mold" className="mb-4 hover:underline">Mold</Link>
-               <Link href="/Sewage" className="mb-4 hover:underline">Sewage</Link>
-               <Link href="/Agriculture" className="mb-4 hover:underline">Agriculture</Link>
+               <Link href="/soil" className="mb-4 hover:underline">Soil</Link>
+               <Link href="/mold" className="mb-4 hover:underline">Mold</Link>
+               <Link href="/sewage" className="mb-4 hover:underline">Sewage</Link>
+               <Link href="/agriculture" className="mb-4 hover:underline">Agriculture</Link>
                </div>
             </div>
             { /* end col of footer */}
@@ -27,10 +27,10 @@ export default function Footer() {
             <div className="flex w-1/3 justify-center">
                <div className="flex flex-col">
                <h4 className=" text-xl mb-8 font-bold">General</h4>
-               <Link href="/Soil" className="mb-4 hover:underline">About</Link>
-               <Link href="/Mold" className="mb-4 hover:underline">Projects</Link>
-               <Link href="/Sewage" className="mb-4 hover:underline">Documents</Link>
-               <Link href="/Agriculture" className="mb-4 hover:underline">Contact</Link>
+               <Link href="/soil" className="mb-4 hover:underline">About</Link>
+               <Link href="/mold" className="mb-4 hover:underline">Projects</Link>
+               <Link href="/sewage" className="mb-4 hover:underline">Documents</Link>
+               <Link href="/agriculture" className="mb-4 hover:underline">Contact</Link>
                </div>
             </div>
             { /* endcol of footer */}

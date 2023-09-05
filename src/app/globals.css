@@ -24,10 +24,10 @@
 }
 
 /* menu fix for no underline on last element */
-.bm-item-list a:last-child span {border-bottom:none !important;}
-.bm-item-list a.active {font-weight:bold; background:rgba(255, 255, 255, 0.10)}
-.bm-item-list a span { margin: 0px 1em; padding: 14px 10px; display: block; border-bottom: 1px solid #fff;}
-.bm-item-list a{ color: #fff; font-size: 20px;}
+.bm-item-list a:last-child {border-bottom:none !important;}
+.bm-item-list a.active {font-weight:bold; background:rgba(255, 255, 255, 0.10);}
+.bm-item-list a span { margin: 0px 1em; padding: 14px 10px; display: block; }
+.bm-item-list a{ color: #fff; font-size: 20px; border-bottom: 1px solid #fff; margin: 0px 20px;}
 
 /* fancy swiper */
 #fancyswiper .item.active {opacity:1; transition:1s}
@@ -39,4 +39,8 @@
 #fancyswiper  #fancyswiper  .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {display:none;}
 #fancyswiper .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {display:none;}
 #fancyswiper  .swiper-button-prev, .swiper-button-next {width:auto !important; left:auto !important; right:auto !important;}
+
+/* styling pages */
+.mold svg.text-\[\#D9D9D9\]:hover {color: #fff;}
+.soil svg.text-\[\#D9D9D9\]:hover {color: #404041;}
       
