@@ -6,11 +6,7 @@ import { Navigation, Pagination, Scrollbar, A11y, EffectFade, Autoplay } from 's
 import { useSwiper, Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
 import 'swiper/css/effect-fade';
-import '../homepage/home-swiper.css'
 
 export default function HomepageSwiper() {
     const [swiperInstance, setSwiperInstance] = useState<OriginalSwiper | null>(null);

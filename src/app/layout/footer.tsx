@@ -5,7 +5,7 @@ import { SiDiscord, SiTwitter } from "react-icons/si";
 
 export default function Footer() {
     return (
-       <footer className="flex flex-row space-around bg-black w-full text-white px-10 py-8 mt-20">
+       <footer className="flex flex-row space-around bg-black w-full text-white px-10 py-8">
          <div className="flex w-1/4 items-center justify-center border-r-[1px] border-[#404041]">
             <Image src="/media/images/orp-logo.png" width={200} height={100} alt="ORP Logo"/>
          </div>

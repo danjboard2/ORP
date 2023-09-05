@@ -1,3 +1,10 @@
+"use client"
+import FancySwiper from "../layout/fancyswiper";
+
 export default function Mold() {
-    return <h1>Mold</h1>;
-  }
+  return (
+    <>
+    <FancySwiper/>
+    </>
+  )
+}

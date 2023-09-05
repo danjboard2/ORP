@@ -1,0 +1,21 @@
+.item.active {opacity:1; transition:1s}
+.item {opacity:0; transition:1s}
+.curvedbg {border-radius:0px 0px 300px 0px; transform:rotate(320deg);border-radius: 0px 0px 2000px 0px; border-right: 80px solid #75cd57; border-bottom: 80px solid #75cd57;}
+.custom-navigation{    position: absolute;
+    bottom: 200px;
+    left: 10%;}
+    .swiper-slide-first.swiper-slide-active {
+        opacity: 1; /* First slide should be fully visible without fading */
+      }
+    .swiper-slide {
+        opacity: 0; /* Initial opacity for the fading effect */
+        transition: opacity 1s ease-in-out; /* Smooth transition for the fading effect */
+      }
+      
+      .swiper-slide-active {
+        opacity: 1; /* Active slide should be fully visible */
+      }
+      .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {display:none;}
+      .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {display:none;}
+      .swiper-button-prev, .swiper-button-next {width:auto !important; left:auto !important; right:auto !important;}
+      

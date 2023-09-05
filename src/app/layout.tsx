@@ -1,5 +1,6 @@
 import './globals.css'
 import type { Metadata } from 'next'
+import './homepage/home-swiper.css'
 import NavBar from './layout/navbar'
 import Footer from './layout/footer'
 
