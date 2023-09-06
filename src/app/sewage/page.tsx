@@ -6,7 +6,7 @@ export default function Sewage() {
   const pages = [
     {
       name: 'sewage',
-      pagetitle: 'Mold Remediation',
+      pagetitle: 'Sewage Sludge Remediation',
       image1: 'url(/media/images/mold-remediation.jpg)',
       image2: 'url(/media/images/mold-natural.jpg)',
       image3: 'url(/media/images/mold-clean.jpg)',
