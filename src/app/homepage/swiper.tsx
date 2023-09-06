@@ -65,28 +65,28 @@ export default function HomepageSwiper() {
             </div>
             <h3 className="text-3xl uppercase font-bold mb-4">Soil</h3>
             <p className="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-            <Link href="/Soil" className="item-button block w-4/5 m-auto border-solid border-2 color-[#404041] rounded-full text-2xl px-10 py-2 border-[#404041] mt-6">Learn more</Link>
+            <Link href="/soil" className="item-button block w-4/5 m-auto border-solid border-2 color-[#404041] rounded-full text-2xl px-10 py-2 border-[#404041] mt-6">Learn more</Link>
         </div>
         <div className={`item bg-white z-10 relative text-center [box-shadow:_0_4px_4px_rgb(0_0_0_/_25%)] p-10 rounded-lg rounded-t-none w-[20%]  ${activeIndex === 1 ? 'active' : ''}`} onClick={() => goToSlide(1)}>
         <div className="h-[120px] mb-14">
             <Image src={activeIndex === 1 ? '/media/images/soil-icon-active.png' : '/media/images/soil-icon.png'} width={80} height={80} alt="Soil" className="round-image block m-auto -mt-[120px] p-[30px] w-[150px] bg-white rounded-full [box-shadow:_0_4px_4px_rgb(0_0_0_/_25%)]"/>
             </div>
           <h3 className="text-3xl uppercase font-bold mb-4">Mold</h3><p className="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-          <Link href="/Mold" className="item-button block w-4/5 m-auto border-solid border-2 color-[#404041] rounded-full text-2xl px-10 py-2 border-[#404041] mt-6">Learn more</Link>
+          <Link href="/mold" className="item-button block w-4/5 m-auto border-solid border-2 color-[#404041] rounded-full text-2xl px-10 py-2 border-[#404041] mt-6">Learn more</Link>
           </div>
         <div className={`item bg-white z-10 relative text-center [box-shadow:_0_4px_4px_rgb(0_0_0_/_25%)] p-10 rounded-lg rounded-t-none w-[20%]  ${activeIndex === 2 ? 'active' : ''}`} onClick={() => goToSlide(2)}>
         <div className="h-[120px] mb-14">
             <Image src={activeIndex === 2 ? '/media/images/soil-icon-active.png' : '/media/images/soil-icon.png'} width={80} height={80} alt="Soil" className="round-image block m-auto -mt-[120px] p-[30px] w-[150px] bg-white rounded-full [box-shadow:_0_4px_4px_rgb(0_0_0_/_25%)]"/>
             </div>
           <h3 className="text-3xl uppercase font-bold mb-4">Sewage</h3><p className="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-          <Link href="/Sewage" className="item-button block w-4/5 m-auto border-solid border-2 color-[#404041] rounded-full text-2xl px-10 py-2 border-[#404041] mt-6">Learn more</Link>
+          <Link href="/sewage" className="item-button block w-4/5 m-auto border-solid border-2 color-[#404041] rounded-full text-2xl px-10 py-2 border-[#404041] mt-6">Learn more</Link>
           </div>
         <div className={`item bg-white z-10 relative text-center [box-shadow:_0_4px_4px_rgb(0_0_0_/_25%)] p-10 rounded-lg rounded-t-none w-[20%]  ${activeIndex === 3 ? 'active' : ''}`} onClick={() => goToSlide(3)}>
         <div className="h-[120px] mb-14">
             <Image src={activeIndex === 3 ? '/media/images/soil-icon-active.png' : '/media/images/soil-icon.png'} width={80} height={80} alt="Soil" className="round-image block m-auto -mt-[120px] p-[30px] w-[150px] bg-white rounded-full [box-shadow:_0_4px_4px_rgb(0_0_0_/_25%)]"/>
             </div>
           <h3 className="text-3xl uppercase font-bold mb-4">Agriculture</h3><p className="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-          <Link href="/Agriculture" className="item-button block w-4/5 m-auto border-solid border-2 color-[#404041] rounded-full text-2xl px-10 py-2 border-[#404041] mt-6">Learn more</Link>
+          <Link href="/agriculture" className="item-button block w-4/5 m-auto border-solid border-2 color-[#404041] rounded-full text-2xl px-10 py-2 border-[#404041] mt-6">Learn more</Link>
           </div>
     </div>
     </>
