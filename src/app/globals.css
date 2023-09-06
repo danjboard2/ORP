@@ -62,7 +62,7 @@
 .mold svg.text-\[\#D9D9D9\]:hover {color: #fff;}
 .soil svg.text-\[\#D9D9D9\]:hover {color: #404041;}
 
-.bg-cover.bg-right.active { transform-origin: center;
+#fancyswiper .bg-cover.bg-right.active { transform-origin: center;
   transform: scale(1);
   animation: scalebackground 12s ease-in-out forwards; 
   animation-delay: 0s;/* Adjust the duration as needed */}

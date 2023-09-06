@@ -77,14 +77,16 @@ const FancySwiper: React.FC<PageContentProps> = ({ pages }) => {
       modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade, Autoplay]}
       spaceBetween={0}
       slidesPerView={1}
-      autoplay={true}
+      autoplay={{
+        delay: 7000,
+        disableOnInteraction: false,
+      }}
       rewind={true}
       navigation={{
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev'
       }}
       allowTouchMove={true}
-      data-swiper-autoplay={5000}
       pagination={false}
     >     
        {page.sections.map((section: Section, sectionIndex: number) => (
