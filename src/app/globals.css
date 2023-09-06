@@ -32,6 +32,15 @@
   }
 }
 
+@keyframes scalebackground {
+  0% {
+    transform: scale(1.0);
+  }
+  100% {
+    transform: scale(1.15);
+  }
+}
+
 /* menu fix for no underline on last element */
 .bm-item-list a:last-child {border-bottom:none !important;}
 .bm-item-list a.active {font-weight:bold; background:rgba(255, 255, 255, 0.10);}
@@ -53,15 +62,20 @@
 .mold svg.text-\[\#D9D9D9\]:hover {color: #fff;}
 .soil svg.text-\[\#D9D9D9\]:hover {color: #404041;}
 
+.bg-cover.bg-right.active { transform-origin: center;
+  transform: scale(1);
+  animation: scalebackground 12s ease-in-out forwards; 
+  animation-delay: 0s;/* Adjust the duration as needed */}
+
 .smallimage1 { transform-origin: center;
   transform: scale(0);
-  animation: scaleImage 0.3s ease-in-out forwards; 
+  animation: scaleImage 0.6s ease-in-out forwards; 
   animation-delay: 0s;/* Adjust the duration as needed */}
 .smallimage2 { transform-origin: center;
  transform: scale(0);
- animation: scaleImage 0.3s ease-in-out forwards; 
- animation-delay: 0.3s;/* Adjust the duration as needed */}
+ animation: scaleImage 0.6s ease-in-out forwards; 
+ animation-delay: 0.4s;/* Adjust the duration as needed */}
 .smallimage3 { transform-origin: center;
   transform: scale(0);
-  animation: scaleImage 0.3s ease-in-out forwards; 
-  animation-delay: 0.6s;/* Adjust the duration as needed */}
+  animation: scaleImage 0.6s ease-in-out forwards; 
+  animation-delay: 0.8s;/* Adjust the duration as needed */}
