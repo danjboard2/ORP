@@ -37,7 +37,7 @@
     transform: scale(1.0);
   }
   100% {
-    transform: scale(1.15);
+    transform: scale(1.08);
   }
 }
 
@@ -64,7 +64,7 @@
 
 #fancyswiper .bg-cover.bg-right.active { transform-origin: center;
   transform: scale(1);
-  animation: scalebackground 12s ease-in-out forwards; 
+  animation: scalebackground 7s ease-in-out forwards; 
   animation-delay: 0s;/* Adjust the duration as needed */}
 
 .smallimage1 { transform-origin: center;
