@@ -55,13 +55,13 @@
 
 .smallimage1 { transform-origin: center;
   transform: scale(0);
-  animation: scaleImage 0.3s ease forwards; 
+  animation: scaleImage 0.3s ease-in-out forwards; 
   animation-delay: 0s;/* Adjust the duration as needed */}
 .smallimage2 { transform-origin: center;
  transform: scale(0);
- animation: scaleImage 0.3s ease forwards; 
+ animation: scaleImage 0.3s ease-in-out forwards; 
  animation-delay: 0.3s;/* Adjust the duration as needed */}
 .smallimage3 { transform-origin: center;
   transform: scale(0);
-  animation: scaleImage 0.3s ease forwards; 
+  animation: scaleImage 0.3s ease-in-out forwards; 
   animation-delay: 0.6s;/* Adjust the duration as needed */}
