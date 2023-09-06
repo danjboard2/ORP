@@ -65,17 +65,17 @@
 #fancyswiper .bg-cover.bg-right.active { transform-origin: center;
   transform: scale(1);
   animation: scalebackground 7s ease-in-out forwards; 
-  animation-delay: 0s;/* Adjust the duration as needed */}
+  animation-delay: 0s;}
 
 .smallimage1 { transform-origin: center;
   transform: scale(0);
   animation: scaleImage 0.6s ease-in-out forwards; 
-  animation-delay: 0s;/* Adjust the duration as needed */}
+  animation-delay: 0s;}
 .smallimage2 { transform-origin: center;
  transform: scale(0);
  animation: scaleImage 0.6s ease-in-out forwards; 
- animation-delay: 0.4s;/* Adjust the duration as needed */}
+ animation-delay: 0.4s;}
 .smallimage3 { transform-origin: center;
   transform: scale(0);
   animation: scaleImage 0.6s ease-in-out forwards; 
-  animation-delay: 0.8s;/* Adjust the duration as needed */}
+  animation-delay: 0.8s;}
