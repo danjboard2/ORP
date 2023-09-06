@@ -12,9 +12,9 @@ export default function Agriculture() {
       image3: 'url(/media/images/agri-yield.jpg)',
       bg: '#F6F6F6',
       color: '#404041',
-      smallimage1: '',
-      smallimage2: '',
-      smallimage3: '',
+      smallimage1: '/media/images/soil-small1.png',
+      smallimage2: '/media/images/soil-small2.png',
+      smallimage3: '/media/images/soil-small3.png',
     sections: [
       {
         title: 'Less pesticides',

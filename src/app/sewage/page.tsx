@@ -12,9 +12,9 @@ export default function Sewage() {
       image3: 'url(/media/images/mold-clean.jpg)',
       bg: 'radial-gradient(50% 50% at 50% 50%, #3B3B3D 0%, #606061 100%)',
       color: '#fff',
-      smallimage1: '',
-      smallimage2: '',
-      smallimage3: '',
+      smallimage1: '/media/images/soil-small1.png',
+      smallimage2: '/media/images/soil-small2.png',
+      smallimage3: '/media/images/soil-small3.png',
     sections: [
       {
         title: 'Mold Remediation',
