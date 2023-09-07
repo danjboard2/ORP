@@ -5,8 +5,8 @@ import { SiDiscord, SiTwitter } from "react-icons/si";
 export default function CTABlock() {
     return (
             <>
-            <section className="w-full flex flex-row bg-[#73CD4A] px-32 py-10 mb-12">
-                <div className="w-full flex  max-w-[2000px] m-auto">
+            <section className="w-full flex flex-row bg-[#73CD4A] py-10 mb-12">
+                <div className="w-full flex  max-w-[2000px] m-auto px-32">
                     <div className="w-3/4">
                         <h3 className="text-4xl font-bold uppercase mb-2">Call to action message title goes here</h3>
                         <p className="text-2xl">Call to action message subtitle or body goes here</p>
