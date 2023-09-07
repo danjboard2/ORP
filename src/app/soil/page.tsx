@@ -2,7 +2,7 @@
 import FancySwiper from "../layout/fancyswiper";
 
 export default function Soil() {
-
+  const slidesToShow = 3;
   const pages = [
     {
       name: 'soil',
@@ -18,15 +18,15 @@ export default function Soil() {
     sections: [
       {
         title: 'Soil Remediation',
-        content: 'Due to the wide usage of petroleum products in our world every day, our land has become saturated with contaminates. Our products safely remove all signs of the contamination leaving you with lush, fertile soil.',
+        content: '<ul><li>Industrial practices of the past have caught up to us. Natural resource extractions, transportation, and chemical handling have caused massive amounts of pollution.</li><li>Evolving regulations are forcing entities to address and remediate polluted soil in many countries.</li>',
       },
       {
         title: 'Adding Value',
-        content: 'Often contaminated sites remain untouched for years because of the elevated cost of remediation. The use of microorganisms is a fraction of the cost. These microorganisms feed off of the pollutants, break them down and eliminate them.',
+        content: '<ul><li>Traditional approach has been to “dig and dump” (relocate polluted materials offsite to chemical dumps).</li><li>This practice is very expensive, disruptive to communities and only moves the problem.</li></ul>',
       },
       {
         title: 'Breathe Easy',
-        content: 'The soil will become usable land at the end of the treatment. This land can now be used for urban development without the risk of spreading contaminates. Our products are 100% non-toxic, safe to use and extremely effective.',
+        content: '<ul><li>ORP-SR1 allows treatment on-site, is highly effective and represents a massive carbon offset at remediation completion.</li><li>Reduced liability for polluters and property owners.</li>',
       },
     ]
   }
@@ -34,7 +34,7 @@ export default function Soil() {
 
   return (
     <>
-    <FancySwiper  pages={pages}/>
+    <FancySwiper pages={pages} numberSlides={slidesToShow}/>
     </>
   )
 }

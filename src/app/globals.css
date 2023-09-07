@@ -69,9 +69,21 @@
 #fancyswiper  #fancyswiper  .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {display:none;}
 #fancyswiper .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {display:none;}
 #fancyswiper  .swiper-button-prev, .swiper-button-next {width:auto !important; left:auto !important; right:auto !important;}
+#fancyswiper ul {list-style:disc; padding-left: 30px;}
+#fancyswiper ol {list-style: decimal; padding-left: 30px;}
+#fancyswiper li {padding-top:10px;}
+
+/* sewage */
+#fancyswiper .sewage ul {margin-top: 150px;}
+.curvedbg.sewage {
+  border-bottom: 80px solid #404041 !important;
+  border-right: 80px solid #404041 !important;
+}
+img.smallimage1.sewage, img.smallimage2.sewage ,img.smallimage3.sewage {
+  display: none;
+}
 
 /* homepage */
-
 /* swiper effects */
 #homeswiper .swiper-slide-active #swiperimage { transform-origin: center;
   transform: scale(1);

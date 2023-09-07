@@ -2,7 +2,7 @@
 import FancySwiper from "../layout/fancyswiper";
 
 export default function Mold() {
-
+  const slidesToShow = 3;
   const pages = [
     {
       name: 'mold',
@@ -12,21 +12,21 @@ export default function Mold() {
       image3: 'url(/media/images/mold-clean.jpg)',
       bg: 'radial-gradient(50% 50% at 50% 50%, #3B3B3D 0%, #606061 100%)',
       color: '#fff',
-      smallimage1: '/media/images/soil-small1.png',
-      smallimage2: '/media/images/soil-small2.png',
-      smallimage3: '/media/images/soil-small3.png',
+      smallimage1: '/media/images/mold-small1.png',
+      smallimage2: '/media/images/mold-small2.png',
+      smallimage3: '/media/images/mold-small3.png',
     sections: [
       {
         title: 'Mold Remediation',
-        content: 'Our organic mold remediation solution kills mold and mold spores quickly and safely. When mold is not treated properly, it can release thousands of spores into the air which can be inhaled and are extremely harmful.',
+        content: '<ul><li>Water events are becoming more frequent and harder to manage globally.</li><li>Flooding and Natural Disasters are degrading communities consistently.</li></ul>',
       },
       {
         title: 'Natural and Non-Toxic',
-        content: 'Man-made chemicals can be even more toxic than the mold they were meant to treat. If not handled carefully, chemical residue can remain after the mold is gone. This process can take weeks to remove all the mold.',
+        content: '<ul><li>Post infiltration, property owners have had limited methods to triage structures:</li><ol><li>Demo and rebuild = very costly and time consuming.</li> <li>Chemical fogging = displaced people, time consuming and variable results.</li><ol><ul>',
       },
       {
         title: 'Clean Living',
-        content: 'Our mold product is composed of 17 naturally occurring microbes and is 100% organic. It cleans and removes mold in difficult to reach places without having to destroy property. It is safe and effective.',
+        content: '<ul><li>ORP-MT1 is applied to moldy surfaces using a simple sprayer avoiding specialized labor.</li><li>Resulting in reduced costs, safer conditions, and effective mold treatment.</li></ul>',
       },
     ]
   }
@@ -34,7 +34,7 @@ export default function Mold() {
 
   return (
     <>
-    <FancySwiper  pages={pages}/>
+    <FancySwiper pages={pages} numberSlides={slidesToShow}/>
     </>
   )
 }
