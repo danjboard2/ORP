@@ -104,7 +104,6 @@ const currentRoute = usePathname();
                     <Link href="/soil"  className={currentRoute === "/soil"  ? "active"  : ""}><span>Soil</span></Link>
                     <Link href="/mold"  className={currentRoute === "/mold"  ? "active"  : ""}><span>Mold</span></Link>
                     <Link href="/sewage"  className={currentRoute === "/sewage"  ? "active"  : ""}><span>Sewage</span></Link>
-                    <Link href="/agriculture"  className={currentRoute === "/agriculture"  ? "active"  : ""}><span>Agriculture</span></Link>
                     <Link href="/projects"  className={currentRoute === "/projects"  ? "active"  : ""}><span>Projects</span></Link>
                     <Link href="/downloads"  className={currentRoute === "/downloads"  ? "active"  : ""}><span>Downloads</span></Link>
                     <Link href="/contact"  className={currentRoute === "/contact"  ? "active"  : ""}><span>Contact</span></Link>
