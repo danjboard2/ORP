@@ -104,6 +104,10 @@ h3#orpstory:after {margin-left:3%}
   width: 100%;
 }
 
+#orpstory video.video-react-video {
+  clip-path: inset(3px 3px);
+}
+
 /* styling pages */
 .mold svg.text-\[\#D9D9D9\]:hover {color: #fff;}
 .soil svg.text-\[\#D9D9D9\]:hover {color: #404041;}
