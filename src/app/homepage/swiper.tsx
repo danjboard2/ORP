@@ -43,41 +43,50 @@ export default function HomepageSwiper() {
     <Swiper
     onSwiper={(swiper: OriginalSwiper) => setSwiperInstance(swiper)}
     className="w-full h-[925px]"
+    id="homeswiper"
       modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade, Autoplay]}
       effect="fade"
       spaceBetween={0}
       slidesPerView={1}
-      autoplay={true}
+      autoplay={{
+        delay: 6000,
+        disableOnInteraction: false,
+      }}
       rewind={true}
       allowTouchMove={false}
       data-swiper-autoplay={5000}
       pagination={false}
     >
-      <SwiperSlide className="!flex flex-col bg-[url('/media/images/soil.jpg')] bg-cover justify-center"><div className="flex flex-col ml-60"><h1 className="text-7xl font-bold uppercase text-white [text-shadow:_0_5px_6px_rgb(0_0_0_/_80%)]">Soil Message Title</h1><h2 className="text-4xl my-6 font-bold text-white [text-shadow:_0_5px_6px_rgb(0_0_0_/_80%)]">Message subtitle/body text goes here</h2><Link href="/soil">Learn more</Link></div></SwiperSlide>
-      <SwiperSlide className="!flex flex-col bg-[url('/media/images/soil.jpg')] bg-cover justify-center"><div className="flex flex-col ml-60"><h1 className="text-7xl font-bold uppercase text-white [text-shadow:_0_5px_6px_rgb(0_0_0_/_80%)]">Mold Message Title</h1><h2 className="text-4xl my-6 font-bold text-white [text-shadow:_0_5px_6px_rgb(0_0_0_/_80%)]">Message subtitle/body text goes here</h2><Link href="/mold">Learn more</Link></div></SwiperSlide>
-      <SwiperSlide className="!flex flex-col bg-[url('/media/images/soil.jpg')] bg-cover justify-center"><div className="flex flex-col ml-60"><h1 className="text-7xl font-bold uppercase text-white [text-shadow:_0_5px_6px_rgb(0_0_0_/_80%)]">Sewage Message Title</h1><h2 className="text-4xl my-6 font-bold text-white [text-shadow:_0_5px_6px_rgb(0_0_0_/_80%)]">Message subtitle/body text goes here</h2><Link href="/sewage">Learn more</Link></div></SwiperSlide>
+      <SwiperSlide className="!flex flex-col justify-center"><Image src="/media/images/soil.jpg" id="swiperimage" className="absolute object-cover block -z-[1] top-0 left-0 right-0 bottom-0 min-w-[100%] min-h-[965px] w-auto h-auto" width={3000} height={3000} alt="Soil"></Image><div className="flex flex-col ml-60"><h1 className="text-7xl font-bold uppercase text-white [text-shadow:_0_5px_6px_rgb(0_0_0_/_80%)]">Hydrocarbon</h1><h2 className="text-4xl my-6 font-bold text-white [text-shadow:_0_5px_6px_rgb(0_0_0_/_80%)]">ORP-SR1 & ORP-SR2</h2><Link href="/soil" className="inline-block w-fit text-2xl rounded-full border-4 border-[#3AAA01] px-12 py-2 font-bold text-[#3AAA01] mt-24">Learn more</Link></div></SwiperSlide>
+      <SwiperSlide className="!flex flex-col justify-center"><Image src="/media/images/mold.jpg" id="swiperimage" className="absolute object-cover block -z-[1] top-0 left-0 right-0 bottom-0 min-w-[100%] min-h-[965px] w-auto h-auto" width={3000} height={3000} alt="Soil"></Image><div className="flex flex-col ml-60"><h1 className="text-7xl font-bold uppercase text-white [text-shadow:_0_5px_6px_rgb(0_0_0_/_80%)]">Mold</h1><h2 className="text-4xl my-6 font-bold text-white [text-shadow:_0_5px_6px_rgb(0_0_0_/_80%)]">ORP-MT1 & ORP-MT2</h2><Link href="/mold" className="inline-block w-fit text-2xl rounded-full border-4 border-[#3AAA01] px-12 py-2 font-bold text-[#3AAA01] mt-24">Learn more</Link></div></SwiperSlide>
+      <SwiperSlide className="!flex flex-col justify-center"><Image src="/media/images/sewage.jpg" id="swiperimage" className="absolute object-cover block -z-[1] top-0 left-0 right-0 bottom-0 min-w-[100%] min-h-[965px] w-auto h-auto" width={3000} height={3000} alt="Soil"></Image><div className="flex flex-col ml-60"><h1 className="text-7xl font-bold uppercase text-white [text-shadow:_0_5px_6px_rgb(0_0_0_/_80%)]">Sewage</h1><h2 className="text-4xl my-6 font-bold text-white [text-shadow:_0_5px_6px_rgb(0_0_0_/_80%)]">ORP-WS1 & ORP-WS2</h2><Link href="/sewage" className="inline-block w-fit text-2xl rounded-full border-4 border-[#3AAA01] px-12 py-2 font-bold text-[#3AAA01] mt-24">Learn more</Link></div></SwiperSlide>
     </Swiper>
-    <div className="navigate flex flex-row justify-around mx-20 w-[90%] m-auto !mb-24">
-        <div className={`item bg-white z-10 relative text-center [box-shadow:_0_4px_4px_rgb(0_0_0_/_25%)] p-10 rounded-lg rounded-t-none w-[25%] ${activeIndex === 0 ? 'active' : ''}`} onClick={() => goToSlide(0)}>
+    <div className="navigate flex flex-row justify-between mx-28 m-auto !mb-12">
+        <div className={`item bg-white z-10 relative text-center [box-shadow:_0_4px_4px_rgb(0_0_0_/_25%)] p-10 rounded-lg rounded-t-none w-[30%] ${activeIndex === 0 ? 'active' : ''}`} onClick={() => goToSlide(0)}>
           <div className="h-[120px] mb-14">
             <Image src={activeIndex === 0 ? '/media/images/plant-active.gif' : '/media/images/plant-static.png'} width={80} height={80} alt="Soil" className="round-image block m-auto -mt-[120px] p-[30px] w-[150px] bg-white rounded-full [box-shadow:_0_4px_4px_rgb(0_0_0_/_25%)]"/>
             </div>
-            <h3 className="text-3xl uppercase font-bold mb-4">Soil</h3>
-            <p className="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+            <h3 className="text-3xl uppercase font-bold mb-2">Hydrocarbon</h3>
+            <h4 className="text-2xl text-[#5E5E5E] font-bold mb-4">ORP-SR1 & ORP-SR2</h4>
+            <p className="text-xl">Hydrocarbon contamination in soil is a very serious and expensive problem throughout the world. ORP Soil Treatment 1 was launched after years of R&D to target, break and transform this type of pollution into a harmless byproduct. A revolution in the industry, fully organic and simple to inject. The results speak for themselves, SR1 & SR2 have helped reshape the reality of soil remediation.</p>
             <Link href="/soil" className="item-button block w-4/5 m-auto border-solid border-2 color-[#404041] rounded-full text-2xl px-10 py-2 border-[#404041] mt-6">Learn more</Link>
         </div>
-        <div className={`item bg-white z-10 relative text-center [box-shadow:_0_4px_4px_rgb(0_0_0_/_25%)] p-10 rounded-lg rounded-t-none w-[25%]  ${activeIndex === 1 ? 'active' : ''}`} onClick={() => goToSlide(1)}>
+        <div className={`item bg-white z-10 relative text-center [box-shadow:_0_4px_4px_rgb(0_0_0_/_25%)] p-10 rounded-lg rounded-t-none w-[30%]  ${activeIndex === 1 ? 'active' : ''}`} onClick={() => goToSlide(1)}>
         <div className="h-[120px] mb-14">
             <Image src={activeIndex === 1 ? '/media/images/mold-active.gif' : '/media/images/mold-static.png'} width={80} height={80} alt="Mold" className="round-image block m-auto -mt-[120px] p-[30px] w-[150px] bg-white rounded-full [box-shadow:_0_4px_4px_rgb(0_0_0_/_25%)]"/>
             </div>
-          <h3 className="text-3xl uppercase font-bold mb-4">Mold</h3><p className="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+          <h3 className="text-3xl uppercase font-bold mb-2">Mold</h3>
+          <h4 className="text-2xl text-[#5E5E5E] font-bold mb-4">ORP-MT1 & ORP-MT2</h4>
+          <p className="text-xl">Mold due to moisture events is extremely hazardous to people and employees. Mold Treatment 1&2 are ORP’s flagship product category that target and eliminate surface mold on contact. Developed as an alternative to harmful chemical options, it can be applied throughout structures and buildings simply and safely without added health risk.</p>
           <Link href="/mold" className="item-button block w-4/5 m-auto border-solid border-2 color-[#404041] rounded-full text-2xl px-10 py-2 border-[#404041] mt-6">Learn more</Link>
           </div>
-        <div className={`item bg-white z-10 relative text-center [box-shadow:_0_4px_4px_rgb(0_0_0_/_25%)] p-10 rounded-lg rounded-t-none w-[25%]  ${activeIndex === 2 ? 'active' : ''}`} onClick={() => goToSlide(2)}>
+        <div className={`item bg-white z-10 relative text-center [box-shadow:_0_4px_4px_rgb(0_0_0_/_25%)] p-10 rounded-lg rounded-t-none w-[30%]  ${activeIndex === 2 ? 'active' : ''}`} onClick={() => goToSlide(2)}>
         <div className="h-[120px] mb-14">
             <Image src={activeIndex === 2 ? '/media/images/sewage-active.gif' : '/media/images/sewage-static.png'} width={80} height={80} alt="Sewage" className="round-image block m-auto -mt-[120px] p-[30px] w-[150px] bg-white rounded-full [box-shadow:_0_4px_4px_rgb(0_0_0_/_25%)]"/>
             </div>
-          <h3 className="text-3xl uppercase font-bold mb-4">Sewage</h3><p className="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+          <h3 className="text-3xl uppercase font-bold mb-2">Sewage</h3>
+          <h4 className="text-2xl text-[#5E5E5E] font-bold mb-4">ORP-WS1 & ORP-WS2</h4>
+          <p className="text-xl">Currently in development with very promising early results, ORP-WS1 addresses the growing concern of toxic waste water and sewage. Urban sprawl and population growth have put heavy demand on governments to treat and manage sewage. WS1 is a progressive formula that can be modified to match contamination types and help solve this contamination problem.</p>
           <Link href="/sewage" className="item-button block w-4/5 m-auto border-solid border-2 color-[#404041] rounded-full text-2xl px-10 py-2 border-[#404041] mt-6">Learn more</Link>
           </div>
     </div>

@@ -1,0 +1,86 @@
+import Link from 'next/link'
+import { SiDiscord, SiTwitter } from "react-icons/si";
+import React from 'react';
+import { Player, ControlBar, PlayToggle, BigPlayButton } from 'video-react';
+
+
+export default function ORPStory() {
+    return (
+        <>
+        <section id="orpstory" className="w-full flex flex-col">
+            {/* header text */}
+            <div className="w-full text-center mb-12">
+                <h3 id="orpstory" className="relative text-5xl uppercase font-bold overflow-hidden">The ORP Story</h3>
+                <h4 className="text-2xl text-[#404041]">Our journey and vision</h4>
+            </div>
+
+            {/* video section 1 */}
+            <div className="video-container mb-4">
+                <div className="video-wrapper relative">
+                    <div className="w-1/4 absolute flex flex-col h-full justify-center ml-48">
+                        <h5 className="text-5xl font-bold uppercase text-[#3AAA01]">Title</h5>
+                        <p className="text-white text-2xl mt-8">ORP has developed a proprietary line of 100% Organic, Non-Toxic, All-Natural liquid solutions that target and eliminate 2 distinct categories of harmful occurring compounds:  MOLD & HYDROCARBONS</p>
+
+                    </div>
+                    <Player
+                        autoPlay
+                        muted
+                        playsInline
+                        src="/media/videos/Plants.mov"
+                        fluid={false} // Disable fluid mode
+                        width={2000} // Set a default width (adjust as needed)
+                        height={600} // Set a default height (adjust as needed)
+                        >
+                        <ControlBar autoHide={true} disableDefaultControls></ControlBar>
+                    </Player>
+                </div>
+            </div>
+
+             {/* video section 2 */}
+             <div className="video-container mb-4">
+                <div className="video-wrapper relative">
+                    <div className="w-1/4 absolute flex flex-col h-full justify-center mr-48 right-0">
+                        <h5 className="text-5xl font-bold uppercase text-[#3AAA01]">Title</h5>
+                        <p className="text-white text-2xl mt-8">Founded in 2017, after several years of R&D, ORP has now come to market with this breakthrough technology and solidified itself as a leader in the field of Organic Bioremediation.</p>
+
+                    </div>
+                    <Player
+                        autoPlay
+                        muted
+                        playsInline
+                        src="/media/videos/Sky.mov"
+                        fluid={false} // Disable fluid mode
+                        width={2000} // Set a default width (adjust as needed)
+                        height={600} // Set a default height (adjust as needed)
+                        >
+                        <ControlBar autoHide={true} disableDefaultControls></ControlBar>
+                    </Player>
+                </div>
+            </div>     
+
+
+             {/* video section 3 */}
+             <div className="video-container mb-4">
+                <div className="video-wrapper relative">
+                    <div className="w-1/4 absolute flex flex-col h-full justify-center ml-48">
+                        <h5 className="text-5xl font-bold uppercase text-[#3AAA01]">Title</h5>
+                        <p className="text-white text-2xl mt-8">Currently serving Commercial and Residential Property Owners, Governments, and Oil/Gas Industries, ORP is building an impressive early track record poised for rapid growth.</p>
+
+                    </div>
+                    <Player
+                        autoPlay
+                        muted
+                        playsInline
+                        src="/media/videos/Peas.mov"
+                        fluid={false} // Disable fluid mode
+                        width={2000} // Set a default width (adjust as needed)
+                        height={600} // Set a default height (adjust as needed)
+                        >
+                        <ControlBar autoHide={true} disableDefaultControls></ControlBar>
+                    </Player>
+                </div>
+            </div>        
+        </section>
+        </>
+    )
+}
