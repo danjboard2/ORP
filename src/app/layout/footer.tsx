@@ -19,7 +19,6 @@ export default function Footer() {
                <Link href="/soil" className="mb-4 hover:underline">Soil</Link>
                <Link href="/mold" className="mb-4 hover:underline">Mold</Link>
                <Link href="/sewage" className="mb-4 hover:underline">Sewage</Link>
-               <Link href="/agriculture" className="mb-4 hover:underline">Agriculture</Link>
                </div>
             </div>
             { /* end col of footer */}
