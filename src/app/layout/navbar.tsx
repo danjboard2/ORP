@@ -37,8 +37,17 @@ var isMenuOpen = function(state:any) {
     },
     bmMenuWrap: {
       position: 'fixed',
-     height: 'auto',
-      top: '139px'
+      right: '0px',
+      left: '0px',
+      zIndex: '1100',
+      width: 'auto',
+      maxWidth: '2000px',
+      margin: '0 auto',
+      height: 'auto',
+      transition: 'all 0.5s ease 0s',
+      top: '139px',
+      display: 'flex',
+      justifyContent: 'flex-end',
     },
     bmMenu: {
       padding: 'none',
@@ -47,7 +56,8 @@ var isMenuOpen = function(state:any) {
       background: 'rgba(0, 0, 0, 0.75)',
     backdropFilter: 'blur(5px)',
     borderTop: '8px solid rgb(24 31 20)',
-    borderRadius: '0px 0px 8px 8px'
+    borderRadius: '0px 0px 8px 8px',
+    width: '300px'
     },
     bmMorphShape: {
       fill: '#373a47'
@@ -100,8 +110,8 @@ const currentRoute = usePathname();
               </div>
             </div>
         </nav>
-        <div className="flex relative">
-                <Menu onStateChange={ isMenuOpen } isOpen={menuOpen} styles={styles} right noOverlay>
+        <div className="relative max-w-[2000px] m-auto">
+                <Menu onStateChange={ isMenuOpen } isOpen={menuOpen} styles={styles} right noOverlay className="flex relative">
                     <Link href="/"  className={currentRoute === "/"  ? "active"  : ""}><span>Home</span></Link>
                     <Link href="/soil"  className={currentRoute === "/soil"  ? "active"  : ""}><span>Soil</span></Link>
                     <Link href="/mold"  className={currentRoute === "/mold"  ? "active"  : ""}><span>Mold</span></Link>
