@@ -25,7 +25,7 @@ export default function ORPStory() {
             <div className="video-container mb-4">
                 <div className="video-wrapper w-full relative">
                     <div className={`fade-element ${fadeClass1} w-1/4 absolute flex flex-col h-full justify-center ml-32 z-10`} ref={ref1}>
-                        <h5 className="text-5xl font-bold uppercase text-[#3AAA01]">Title</h5>
+                        <h5 className="text-5xl font-bold uppercase text-[#3AAA01]">Organic by Design</h5>
                         <p className="text-white text-2xl mt-8">ORP has developed a proprietary line of 100% Organic, Non-Toxic, All-Natural liquid solutions that target and eliminate 2 distinct categories of harmful occurring compounds:  MOLD & HYDROCARBONS</p>
 
                     </div>
@@ -48,7 +48,7 @@ export default function ORPStory() {
                 <div className="video-wrapper w-full relative">
                     <Image src="/media/images/arrow-down.png" width={60} height={40} alt="Arrow Down" className="absolute top-0 z-10 right-[380px]"></Image>
                     <div className={`fade-element ${fadeClass2} w-1/4 absolute flex flex-col h-full justify-center mr-32 right-0 z-10`} ref={ref2}>
-                        <h5 className="text-5xl font-bold uppercase text-[#3AAA01]">Title</h5>
+                        <h5 className="text-5xl font-bold uppercase text-[#3AAA01]">Protecting our Planet</h5>
                         <p className="text-white text-2xl mt-8">Founded in 2017, after several years of R&D, ORP has now come to market with this breakthrough technology and solidified itself as a leader in the field of Organic Bioremediation.</p>
 
                     </div>
@@ -72,7 +72,7 @@ export default function ORPStory() {
                 <div className="video-wrapper w-full relative">
                 <Image src="/media/images/arrow-down.png" width={60} height={40} alt="Arrow Down" className="absolute top-0 z-10 left-[380px]"></Image>
                     <div className={`fade-element ${fadeClass3} w-1/4 absolute flex flex-col h-full justify-center ml-32 z-10`}  ref={ref3}>
-                        <h5 className="text-5xl font-bold uppercase text-[#3AAA01]">Title</h5>
+                        <h5 className="text-5xl font-bold uppercase text-[#3AAA01]">Reducing Financial Waste</h5>
                         <p className="text-white text-2xl mt-8">Currently serving Commercial and Residential Property Owners, Governments, and Oil/Gas Industries, ORP is building an impressive early track record poised for rapid growth.</p>
 
                     </div>

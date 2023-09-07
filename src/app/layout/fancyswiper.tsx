@@ -68,12 +68,12 @@ const FancySwiper: React.FC<PageContentProps> = ({ pages }) => {
     <div className="w-full relative overflow-y-clip"> { /* sliding text wrapper */}
     {pages.map((page: Pages, pageIndex:number) => (
       <div key={pageIndex}>
-    <div className={`curvedbg absolute w-[2400px] h-[1200px] top-0 right-0 bottom-0 -left-[1000px] ${page.name}`} style={{
+    <div className={`curvedbg absolute w-[2400px] h-[1300px] top-0 right-0 bottom-0 -left-[1000px] ${page.name}`} style={{
         background : page.bg,
       }}></div>
     <Swiper
     onSwiper={(swiper: OriginalSwiper) => setSwiperInstance(swiper)}
-    className="w-[600px] !ml-[5%] h-[100vh] max-h-[1200px]"
+    className="w-[600px] !ml-[5%] min-h-[965px] h-[100vh] max-h-[1200px]"
       modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade, Autoplay]}
       spaceBetween={0}
       slidesPerView={1}
@@ -107,8 +107,8 @@ const FancySwiper: React.FC<PageContentProps> = ({ pages }) => {
       </div>
     </Swiper>
     <Image src={`${page.smallimage1}`} priority={true} width={191} height={191} alt="Organic Remediation Products" className="smallimage1 absolute top-[170px] left-[870px]"/>
-    <Image src={`${page.smallimage2}`} priority={true} width={218} height={218} alt="Organic Remediation Products" className="smallimage2 absolute top-[408px] left-[800px]"/>
-    <Image src={`${page.smallimage3}`} priority={true} width={304} height={304} alt="Organic Remediation Products" className="smallimage3 absolute top-[645px] left-[610px]"/>
+    <Image src={`${page.smallimage2}`} priority={true} width={218} height={218} alt="Organic Remediation Products" className="smallimage2 absolute top-[408px] left-[820px]"/>
+    <Image src={`${page.smallimage3}`} priority={true} width={304} height={304} alt="Organic Remediation Products" className="smallimage3 absolute top-[665px] left-[660px]"/>
     <div className="absolute top-0 left-0 right-0 bottom-0 h-[925px] -z-[1]">  { /* background images and small bubble images */}
 
         <div className={`item absolute top-0 left-0 right-0 bottom-0 h-[100vh] max-h-[1200px] bg-cover bg-right ${activeIndex === 0 ? 'active' : ''}`} onClick={() => goToSlide(0)} style={{
