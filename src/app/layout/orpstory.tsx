@@ -16,7 +16,7 @@ export default function ORPStory() {
         <>
         <section id="orpstory" className="w-full max-w-[2000px] m-auto flex flex-col">
             {/* header text */}
-            <div className={`w-full text-center mb-12"`}>
+            <div className={`w-full text-center mb-12`}>
                 <h3 id="orpstory" className="relative text-5xl uppercase font-bold overflow-hidden">The ORP Story</h3>
                 <h4 className="text-2xl text-[#404041]">Our journey and vision</h4>
             </div>
