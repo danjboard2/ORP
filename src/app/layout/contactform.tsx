@@ -6,8 +6,13 @@ export default function ContactBlock() {
     return (
             <>
             <section className="w-full flex flex-row">
-                <div className="w-full flex max-w-[2000px] m-auto">
-                    <div><Image src="" alt="Contact ORP" width={300} height={400}></Image></div>
+                <div className="w-full flex max-w-[2000px] m-auto justify-center items-center my-12 gap-6">
+                    <div className="w-1/5"><Image src="/media/images/contact-leaf.png" alt="Contact ORP" width={400} height={500}></Image></div>
+                    <div className="w-1/5">
+                        <h3 className="text-5xl font-bold text-[#73CD4A] mb-8">Stay in the loop</h3>
+                        <p className="text-3xl font-bold text-[#404041]">Sign up to keep updated with our latest news, products and services</p>
+                        <Link href="/contact" className="inline-block w-fit text-2xl rounded-full border-4 border-[#3AAA01] px-20 py-2 font-bold text-[#3AAA01] mt-24 hover:bg-[#3AAA01] hover:text-white">Enquire now</Link>
+                    </div>
                 </div>
             </section>
             </>
