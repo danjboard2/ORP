@@ -73,7 +73,7 @@ const FancySwiper: React.FC<PageContentProps> = ({ pages }) => {
       }}></div>
     <Swiper
     onSwiper={(swiper: OriginalSwiper) => setSwiperInstance(swiper)}
-    className="w-[600px] !ml-[5%] h-[965px] "
+    className="w-[600px] !ml-[5%] h-[100vh] max-h-[1200px]"
       modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade, Autoplay]}
       spaceBetween={0}
       slidesPerView={1}
@@ -91,7 +91,7 @@ const FancySwiper: React.FC<PageContentProps> = ({ pages }) => {
     >     
        {page.sections.map((section: Section, sectionIndex: number) => (
         <div key={sectionIndex}>
-          <SwiperSlide className="swiper-slide-first"><div className="flex flex-col ml-[10%] w-[600px] h-full justify-center"><h2 className="text-4xl font-bold uppercase" style={{
+          <SwiperSlide className="swiper-slide-first"><div className="flex flex-col ml-[10%] w-[600px] min-h-[900px] max-h-[1000px] h-full justify-center"><h2 className="text-4xl font-bold uppercase" style={{
         color: page.color,
       }}>{section.title}</h2><p className="text-xl my-6  pr-32" style={{
         color: page.color,
@@ -111,15 +111,15 @@ const FancySwiper: React.FC<PageContentProps> = ({ pages }) => {
     <Image src={`${page.smallimage3}`} priority={true} width={304} height={304} alt="Organic Remediation Products" className="smallimage3 absolute top-[645px] left-[610px]"/>
     <div className="absolute top-0 left-0 right-0 bottom-0 h-[925px] -z-[1]">  { /* background images and small bubble images */}
 
-        <div className={`item absolute top-0 left-0 right-0 bottom-0 h-[965px] bg-cover bg-right ${activeIndex === 0 ? 'active' : ''}`} onClick={() => goToSlide(0)} style={{
+        <div className={`item absolute top-0 left-0 right-0 bottom-0 h-[100vh] max-h-[1200px] bg-cover bg-right ${activeIndex === 0 ? 'active' : ''}`} onClick={() => goToSlide(0)} style={{
         backgroundImage: activeIndex === 0 ? page.image1 : '',
       }}>
         </div>
-        <div className={`item absolute top-0 left-0 right-0 bottom-0 h-[965px] bg-cover bg-right  ${activeIndex === 1 ? 'active' : ''}`} onClick={() => goToSlide(1)} style={{
+        <div className={`item absolute top-0 left-0 right-0 bottom-0 h-[100vh] max-h-[1200px] bg-cover bg-right  ${activeIndex === 1 ? 'active' : ''}`} onClick={() => goToSlide(1)} style={{
         backgroundImage: activeIndex === 1 ? page.image2 : '',
       }}>
           </div>
-        <div className={`item absolute top-0 left-0 right-0 bottom-0 h-[965px] bg-cover bg-right  ${activeIndex === 2 ? 'active' : ''}`} onClick={() => goToSlide(2)} style={{
+        <div className={`item absolute top-0 left-0 right-0 bottom-0 h-[100vh] max-h-[1200px] bg-cover bg-right  ${activeIndex === 2 ? 'active' : ''}`} onClick={() => goToSlide(2)} style={{
         backgroundImage: activeIndex === 2 ? page.image3 : '',
       }}>
           </div>
