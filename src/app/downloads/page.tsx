@@ -5,7 +5,7 @@ import Link from "next/link"
 export default function Projects() {
   return (
     <>
-    <section>
+    <section className="mt-[147px]">
       <div className="w-full flex h-[100vh] max-h-[1200px] max-w-[2000px] m-auto justify-center items-center gap-32 flex-col">
 
         <div className="w-2/3 flex flex-col">

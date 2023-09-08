@@ -42,7 +42,7 @@ const ContactUs = () => {
   if (submitted) {
     return (
       <>
-        <section className="h-[100vh] max-h-[1200px] flex w-full justify-center items-center flex-row max-w-[2000px] m-auto">
+        <section className="h-[100vh] mt-[147px] max-h-[1200px] flex w-full justify-center items-center flex-row max-w-[2000px] m-auto">
     <div className="w-2/3 flex flex-row">
         <div className="flex flex-col w-1/3 justify-center self-center">
             <h1 className="text-4xl mb-10 text-[#3AAA01] font-bold uppercase">Thanks for the message.</h1>
@@ -60,7 +60,7 @@ const ContactUs = () => {
 
   return (
     <>
-    <section className="h-[100vh] max-h-[1200px] flex w-full justify-center items-center flex-row max-w-[2000px] m-auto">
+    <section className="h-[100vh] max-h-[1200px]  mt-[147px] flex w-full justify-center items-center flex-row max-w-[2000px] m-auto">
     <div className="w-2/3 flex flex-row">
         <div className="flex flex-col min-w-[445px] w-1/3 justify-center self-center">
             <h1 className="text-6xl mb-10 text-[#3AAA01] font-bold uppercase">Get in touch</h1>
