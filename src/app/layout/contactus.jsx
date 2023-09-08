@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link"
 
-const FORM_ENDPOINT = "https://herotofu.com/start"; // TODO - update to the correct endpoint
+const FORM_ENDPOINT = "https://public.herotofu.com/v1/e8264540-4e4b-11ee-8926-4f22671287a2"; // TODO - update to the correct endpoint
 
 const ContactUs = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -41,8 +42,18 @@ const ContactUs = () => {
   if (submitted) {
     return (
       <>
-        <div className="text-2xl">Thank you!</div>
-        <div className="text-md">We will be in touch soon.</div>
+        <section className="h-[100vh] max-h-[1200px] flex w-full justify-center items-center flex-row max-w-[2000px] m-auto">
+    <div className="w-2/3 flex flex-row">
+        <div className="flex flex-col w-1/3 justify-center self-center">
+            <h1 className="text-4xl mb-10 text-[#3AAA01] font-bold uppercase">Thanks for the message.</h1>
+            <p className="text-2xl mb-10">We will be in touch soon.</p>
+            <Link href="/" className="inline-block w-fit text-2xl rounded-full border-4 border-[#3AAA01] px-20 py-2 font-bold text-[#3AAA01] mt-24 hover:bg-[#3AAA01] hover:text-white">Back to home</Link>
+       </div>
+       <div className="flex flex-col w-2/3  items-center self-center">
+        <Image src="/media/images/contact-img.png" alt="Get in touch" width={500} height={500}/>
+       </div>
+       </div>
+    </section>
       </>
     );
   }
