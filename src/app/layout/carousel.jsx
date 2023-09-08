@@ -56,7 +56,7 @@ export default function Carousel() {
         <>
         <section className="w-full flex justify-end items-center flex-col mt-[147px]">
         <h1 className="text-6xl mt-10 mb-10 text-[#3AAA01] font-bold uppercase">Partnerships</h1>
-        <div className="w-full flex mt-10 mb-20">
+        <div className="w-full flex mt-10 mb-20 items-start">
           {/* industry sector */}
             <div className="w-1/3 flex flex-col justify-center items-center">
                 <div className="w-1/4">
