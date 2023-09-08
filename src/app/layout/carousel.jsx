@@ -56,7 +56,7 @@ export default function Carousel() {
         <>
         <section className="w-full flex justify-end items-center flex-col mt-[147px]">
         <h1 className="text-6xl mt-10 mb-10 text-[#3AAA01] font-bold uppercase">Partnerships</h1>
-        <div className="w-full flex mt-10 mb-20 items-start">
+        <div className="w-full flex mt-10 mb-20 max-w-[2000px] m-auto items-start">
           {/* industry sector */}
             <div className="w-1/3 flex flex-col justify-center items-center">
                 <div className="w-1/4">
@@ -101,7 +101,7 @@ export default function Carousel() {
             </div>
         </div>
         <h1 className="text-6xl mt-10 mb-16 text-[#3AAA01] font-bold uppercase">Projects</h1>
-        <Swiper id="projects" className="w-full max-w-[2000px] !overflow-y-visible"
+        <Swiper id="projects" className="w-full max-w-[2000px] !overflow-y-visible relative"
          onSwiper={(swiper) => setSwiperInstance(swiper)}
          onInit={handleSwiperInit}
         // install Swiper modules
@@ -142,7 +142,8 @@ export default function Carousel() {
         <SwiperSlide className="" data-text="Flooding" data-text2="Have water in your house? Our mold product will stop mold from growing while you wait for the insurance adjuster to file your claim."><Image className="rounded-full border-8 border-[#73CD4A] overflow-hidden" src="/media/images/flooding-circle.jpg" width={500} height={500} alt="Flooding"/></SwiperSlide>
         <SwiperSlide className="" data-text="Mold Remediation" data-text2="Remediated black mold found in Montreal school. No traces of mold after our product was applied."><Image className="rounded-full border-8 border-[#73CD4A] overflow-hidden" src="/media/images/mold-circle.webp" width={500} height={500} alt="Mold Remediation"/></SwiperSlide>
         <SwiperSlide className="" data-text="Heating Oil" data-text2="Furnace oil tanks were often buried in the backyard of many older homes. This contamination was 15000 ppm, we reduced it to 400 ppm in 120 days."><Image className="rounded-full border-8 border-[#73CD4A] overflow-hidden" src="/media/images/heating-circle.webp" width={500} height={500} alt="Heating Oil"/></SwiperSlide>
-
+          <Image className="fade-left absolute -left-[5px] top-0 z-50" src="/media/images/fade-left.png" width={150} height={400} alt=""/>
+          <Image className="fade-right absolute -right-[5px] top-0 z-50" src="/media/images/fade-right.png" width={150} height={400} alt=""/>
         <div className={`custom-navigation mt-10 z-10 flex flex-row w-[180px] m-auto justify-between`} >
           <div className="swiper-button-prev"><FaCircleChevronLeft size={50} className="text-[#000]"/></div>
           <div className="swiper-button-next"><FaCircleChevronRight size={50} className="text-[#000]"/></div>
