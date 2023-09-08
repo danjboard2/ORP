@@ -83,6 +83,22 @@ img.smallimage1.sewage, img.smallimage2.sewage ,img.smallimage3.sewage {
   display: none;
 }
 
+/* projects */
+#projects .swiper-slide {
+    opacity: 0.5;
+    transition:0.1s;
+    filter: blur(4px);
+}
+#projects .swiper-slide-active {
+  opacity: 1;
+  transition:0.2s;
+  filter: blur(0px);
+}
+#projects .custom-navigation{ z-index:40} 
+#projects  .swiper-button-prev:after, #projects .swiper-rtl .swiper-button-next:after {display:none;}
+#projects .swiper-button-next:after, #projects .swiper-rtl .swiper-button-prev:after {display:none;}
+#projects  .swiper-button-prev, #projects .swiper-button-next {width:auto !important; left:auto !important; right:auto !important;}
+
 /* homepage */
 /* swiper effects */
 #homeswiper .swiper-slide-active #swiperimage { transform-origin: center;
