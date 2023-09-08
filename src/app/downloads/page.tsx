@@ -6,7 +6,7 @@ export default function Projects() {
   return (
     <>
     <section>
-      <div className="w-full flex h-[100vh] max-h-[1200px] justify-center items-center gap-32 flex-col">
+      <div className="w-full flex h-[100vh] max-h-[1200px] max-w-[2000px] m-auto justify-center items-center gap-32 flex-col">
 
         <div className="w-2/3 flex flex-col">
             <h1 className="text-6xl mb-10 text-[#3AAA01] font-bold uppercase">Downloads</h1>

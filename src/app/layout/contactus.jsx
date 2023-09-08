@@ -50,7 +50,8 @@ const ContactUs = () => {
   return (
     <>
     <section className="h-[100vh] max-h-[1200px] flex w-full justify-center items-center flex-row max-w-[2000px] m-auto">
-        <div className="flex w-1/2 flex-col max-w-[600px] justify-center self-center">
+    <div className="w-2/3 flex flex-row">
+        <div className="flex flex-col w-1/3 justify-center self-center">
             <h1 className="text-6xl mb-10 text-[#3AAA01] font-bold uppercase">Get in touch</h1>
             <p className="text-2xl mb-10">If there anything we can help you with then please drop us a line and we will get right back to you.</p>
                 <form
@@ -102,8 +103,9 @@ const ContactUs = () => {
                 </div>
                 </form>
        </div>
-       <div className="w-1/2 flex flex-col max-w-[600px]  items-end self-center">
+       <div className="flex flex-col w-2/3  items-center self-center">
         <Image src="/media/images/contact-img.png" alt="Get in touch" width={500} height={500}/>
+       </div>
        </div>
     </section>
     </>
