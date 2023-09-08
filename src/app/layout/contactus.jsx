@@ -63,7 +63,7 @@ const ContactUs = () => {
                     type="text"
                     placeholder="Name"
                     name="name"
-                    className="focus:outline-none focus:ring relative w-full px-3 py-3 text-sm text-gray-600 placeholder-gray-400 bg-[#F9F9F9] border-2 rounded-lg border-[#777777] outline-none"
+                    className="focus:outline-none focus:ring relative w-full px-3 py-3 mb-2 text-sm text-gray-600 placeholder-gray-400 bg-[#F9F9F9] border-2 rounded-lg border-[#777777] outline-none"
                     required
                     />
                 </div>
@@ -72,7 +72,7 @@ const ContactUs = () => {
                     type="email"
                     placeholder="Email"
                     name="email"
-                    className="focus:outline-none focus:ring relative w-full px-3 py-3 text-sm text-gray-600 placeholder-gray-400 bg-[#F9F9F9] border-2 rounded-lg border-[#777777] outline-none"
+                    className="focus:outline-none focus:ring relative w-full px-3 py-3 mb-2 text-sm text-gray-600 placeholder-gray-400 bg-[#F9F9F9] border-2 rounded-lg border-[#777777] outline-none"
                     required
                     />
                 </div>
@@ -80,7 +80,7 @@ const ContactUs = () => {
                     <input
                     placeholder="Phone"
                     name="phone"
-                    className="focus:outline-none focus:ring relative w-full px-3 py-3 text-sm text-gray-600 placeholder-gray-400 bg-[#F9F9F9] border-2 rounded-lg border-[#777777] outline-none"
+                    className="focus:outline-none focus:ring relative w-full px-3 py-3 mb-2 text-sm text-gray-600 placeholder-gray-400 bg-[#F9F9F9] border-2 rounded-lg border-[#777777] outline-none"
                     required
                     />
                 </div>
@@ -88,7 +88,7 @@ const ContactUs = () => {
                     <textarea
                     placeholder="Message"
                     name="message"
-                    className="focus:outline-none focus:ring relative w-full px-3 py-3 text-sm text-gray-600 placeholder-gray-400 bg-[#F9F9F9] border-2  rounded-lg  border-[#777777] outline-none"
+                    className="focus:outline-none focus:ring relative w-full px-3 py-3 mb-2 text-sm text-gray-600 placeholder-gray-400 bg-[#F9F9F9] border-2  rounded-lg  border-[#777777] outline-none"
                     required
                     />
                 </div>
