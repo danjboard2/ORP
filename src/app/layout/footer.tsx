@@ -27,13 +27,12 @@ export default function Footer() {
             <div className="flex w-1/3 justify-center">
                <div className="flex flex-col">
                <h4 className=" text-xl mb-8 font-bold">General</h4>
-               <Link href="/soil" className="mb-4 hover:underline">About</Link>
-               <Link href="/mold" className="mb-4 hover:underline">Projects</Link>
-               <Link href="/sewage" className="mb-4 hover:underline">Documents</Link>
-               <Link href="/agriculture" className="mb-4 hover:underline">Contact</Link>
+               <Link href="/projects" className="mb-4 hover:underline">Projects</Link>
+               <Link href="/downloads" className="mb-4 hover:underline">Documents</Link>
+               <Link href="/contact" className="mb-4 hover:underline">Contact</Link>
                </div>
             </div>
-            { /* endcol of footer */}
+            { /* end col of footer */}
       
             { /* col of footer */ }
             <div className="flex w-1/3 justify-center">
