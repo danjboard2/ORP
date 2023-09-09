@@ -5,17 +5,17 @@ import { SiDiscord, SiTwitter } from "react-icons/si";
 
 export default function Footer() {
     return (
-       <footer className="flex flex-row space-around bg-black w-full text-white px-10 py-8">
+       <footer className="flex flex-row sm:flex-col space-around bg-black w-full text-white px-10 py-8">
          <div className="w-full flex max-w-[2000px] m-auto">
-         <div className="flex w-1/4 items-center justify-center border-r-[1px] border-[#404041]">
-            <Image src="/media/images/orp-logo.png" width={200} height={100} alt="ORP Logo"/>
+         <div className="flex min-w-[130px] w-1/3 sm:w-1/4 items-center justify-center border-r-[1px] border-[#404041]">
+            <Image src="/media/images/orp-logo.png" width={200} height={100} alt="ORP Logo"className="mr-8 sm:mr-4 min-w-[120px]" />
          </div>
-         <div className="flex flex-row w-3/4">
+         <div className="flex flex-col sm:flex-row w-3/4">
 
             { /* col of footer */ }
-            <div className="flex w-1/3 justify-center">
-               <div className="flex flex-col">
-               <h4 className=" text-xl mb-8 font-bold">Products</h4>
+            <div className="flex w-1/2 sm:w-1/3 justify-center">
+               <div className="flex flex-col w-full pl-4 sm:pl-10">
+               <h4 className=" text-xl mt-6 sm:mt-0 mb-2 sm:mb-8 font-bold">Products</h4>
                <Link href="/soil" className="mb-4 hover:underline">Soil</Link>
                <Link href="/mold" className="mb-4 hover:underline">Mold</Link>
                <Link href="/sewage" className="mb-4 hover:underline">Sewage</Link>
@@ -24,9 +24,9 @@ export default function Footer() {
             { /* end col of footer */}
 
             { /* col of footer */ }
-            <div className="flex w-1/3 justify-center">
-               <div className="flex flex-col">
-               <h4 className=" text-xl mb-8 font-bold">General</h4>
+            <div className="flex w-1/2 sm:w-1/3 justify-center">
+               <div className="flex flex-col w-full pl-4  sm:pl-10">
+               <h4 className=" text-xl mt-6 sm:mt-0 mb-2 sm:mb-8 font-bold">General</h4>
                <Link href="/projects" className="mb-4 hover:underline">Projects</Link>
                <Link href="/downloads" className="mb-4 hover:underline">Documents</Link>
                <Link href="/contact" className="mb-4 hover:underline">Contact</Link>
@@ -35,9 +35,9 @@ export default function Footer() {
             { /* end col of footer */}
       
             { /* col of footer */ }
-            <div className="flex w-1/3 justify-center">
-               <div className="flex flex-col">
-               <h4 className=" text-xl mb-8 font-bold">Social</h4>
+            <div className="flex w-1/2 sm:w-1/3 justify-center">
+               <div className="flex flex-col w-full pl-4 sm:pl-10">
+               <h4 className=" text-xl mt-6 sm:mt-0 mb-2 sm:mb-8 font-bold">Social</h4>
                <Link href="https://twitter.com" className="mb-4"><SiTwitter size={25}/></Link>
                <Link href="https://discord.com" className="mb-4"><SiDiscord size={25}/></Link>
                </div>

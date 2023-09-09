@@ -104,7 +104,7 @@ const currentRoute = usePathname();
         <>
          <nav className="flex h-[147px] z-50 w-full flex-row backdrop-blur-lg  bg-black bg-opacity-75 fixed top-0 left-0 border-b-8 border-[#5DA33D]">
             <div className="flex w-full max-w-[2000px] m-auto justify-between">
-              <div className="m-6 lg:m-[1.9rem] lg:ml-12"><Link href="/"><Image src="/media/images/orp-logo.png" priority={true} width={271} height={78} alt="Logo"/></Link></div>
+              <div className="m-8 lg:m-[1.9rem] lg:ml-12"><Link href="/"><Image src="/media/images/orp-logo.png" priority={true} width={271} height={78} alt="Logo"/></Link></div>
               <div className="flex relative mx-8 sm:mx-32 self-center">
               <Hamburger size={27} color="#fff" toggled={isOpen} toggle={setOpen} onToggle={toggled => {handleMenuClick()}}/>
               </div>
