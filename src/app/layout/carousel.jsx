@@ -54,52 +54,44 @@ export default function Carousel() {
 
     return (
         <>
-        <section className="w-full flex justify-end items-center flex-col mt-[147px]">
+        <section className="w-full flex justify-end items-center flex-col mt-[147px] ">
         <h1 className="text-6xl mt-10 mb-10 text-[#3AAA01] font-bold uppercase">Partnerships</h1>
-        <div className="w-full flex mt-10 mb-20 max-w-[2000px] m-auto items-start">
-          {/* industry sector */}
-            <div className="w-1/3 flex flex-col justify-center items-center">
-                <div className="w-1/4">
-                    <Image src="/media/images/government-static.png" alt="Government" width={200} height={200}/>
+
+            <div className="w-full max-w-[2000px] flex flex-row justify-between m-auto px-32 mt-20 !mb-12">
+            <div className={`item bg-white z-10 relative text-center [box-shadow:_0_0px_7px_rgb(0_0_0_/_25%)] p-10 rounded-lg  w-[30%]`}>
+              <div className="h-[120px] mb-14">
+              <Image src="/media/images/government-static.png" alt="Government" width={200} height={200} className="round-image block m-auto -mt-[120px] p-[10px] w-[150px] bg-white rounded-full [box-shadow:_0_4px_4px_rgb(0_0_0_/_25%)]"/>
                 </div>
-                <div className="w-3/4 flex flex-col items-center justify-center">
-                    <h2 className="text-2xl text-center text-[#404041] uppercase font-bold justify-center self-center">Governments</h2>
-                    <ul className="text-lg text-center">
-                        <li className="mt-4">ORP and our MT1 Mold Treatment Line has become registered and approved for natural disaster response teams.</li>
-                        <li className="mt-4">Post flood/water event, MT1 is applied to effected homes and buildings to treat and prevent mold contamination.</li>
-                        <li className="mt-4">ORP is working with multiple governments (UK, Australia, US, Canada) to be the main product used for mold treatment/prevention for social housing complexes.</li>
-                    </ul>
-                </div>
+                <h3 className="text-3xl uppercase font-bold mb-2">Governments</h3>
+                <ul className="text-lg text-center">
+                            <li className="mt-4">ORP and our MT1 Mold Treatment Line has become registered and approved for natural disaster response teams.</li>
+                            <li className="mt-4">Post flood/water event, MT1 is applied to effected homes and buildings to treat and prevent mold contamination.</li>
+                            <li className="mt-4">ORP is working with multiple governments (UK, Australia, US, Canada) to be the main product used for mold treatment/prevention for social housing complexes.</li>
+                        </ul>
             </div>
 
-                      {/* industry sector */}
-                      <div className="w-1/3 flex flex-col justify-center items-center">
-                <div className="w-1/4">
-                    <Image src="/media/images/commercial-static.png" alt="Commercial Real-estate" width={200} height={200}/>
+            <div className={`item bg-white z-10 relative text-center [box-shadow:_0_0px_7px_rgb(0_0_0_/_25%)] p-10 rounded-lg w-[30%]`}>
+            <div className="h-[120px] mb-14">
+            <Image src="/media/images/commercial-static.png" alt="Commercial Real-estate" width={200} height={200} className="round-image block m-auto -mt-[120px] p-[10px] w-[150px] bg-white rounded-full [box-shadow:_0_4px_4px_rgb(0_0_0_/_25%)]"/>
                 </div>
-                <div className="w-3/4 flex flex-col items-center justify-center">
-                    <h2 className="text-2xl text-center text-[#404041] uppercase font-bold justify-center self-center">Commercial Real-estate</h2>
-                    <ul className="text-lg text-center">
-                        <li className="mt-4">ORP is working with Canadian and Australian property developers to fully remediate and rehabilitate former industrial properties to be converted into commercial and residential areas.</li>
-                        <li className="mt-4">ORP is working along-side insurance companies to enact a best-practices approach to onsite soil decontamination and remediation procedures.</li>
-                    </ul>
+              <h3 className="text-3xl uppercase font-bold mb-2">Commercial Real-estate</h3>
+              <ul className="text-lg text-center">
+                            <li className="mt-4">ORP is working with Canadian and Australian property developers to fully remediate and rehabilitate former industrial properties to be converted into commercial and residential areas.</li>
+                            <li className="mt-4">ORP is working along-side insurance companies to enact a best-practices approach to onsite soil decontamination and remediation procedures.</li>
+                        </ul>
+              </div>
+            <div className={`item bg-white z-10 relative text-center [box-shadow:_0_0px_7px_rgb(0_0_0_/_25%)] p-10 rounded-lg w-[30%]`}>
+            <div className="h-[120px] mb-14">
+            <Image src="/media/images/global-static.png" alt="Global Distributors" width={200} height={200} className="round-image block m-auto -mt-[120px] p-[10px] w-[150px] bg-white rounded-full [box-shadow:_0_4px_4px_rgb(0_0_0_/_25%)]"/>
                 </div>
-            </div>
-
-                      {/* industry sector */}
-                      <div className="w-1/3 flex flex-col justify-center items-center">
-                <div className="w-1/4">
-                    <Image src="/media/images/global-static.png" alt="Global Distributors" width={200} height={200}/>
-                </div>
-                <div className="w-3/4 flex flex-col items-center justify-center">
-                    <h2 className="text-2xl text-center text-[#404041] uppercase font-bold justify-center self-center">Global Distributors</h2>
-                    <ul className="text-lg text-center">
-                        <li className="mt-4">ORP has put into place a formal support and training division to activate service providers across North America and Internationally.</li>
-                        <li className="mt-4">ORP manufactures product locally using a network of laboratories and fermentation facilities, and certified distributors perform onsite remediations according to guidelines.</li>
-                    </ul>
-                </div>
-            </div>
+              <h3 className="text-3xl uppercase font-bold mb-2">Global Distributors</h3>
+              <ul className="text-lg text-center">
+                            <li className="mt-4">ORP has put into place a formal support and training division to activate service providers across North America and Internationally.</li>
+                            <li className="mt-4">ORP manufactures product locally using a network of laboratories and fermentation facilities, and certified distributors perform onsite remediations according to guidelines.</li>
+                        </ul>
+              </div>
         </div>
+
         <h1 className="text-6xl mt-10 mb-16 text-[#3AAA01] font-bold uppercase">Projects</h1>
         <Swiper id="projects" className="w-full max-w-[2000px] !overflow-y-visible relative"
          onSwiper={(swiper) => setSwiperInstance(swiper)}
@@ -153,7 +145,7 @@ export default function Carousel() {
       <h2 className="text-4xl text-center text-[#404041] uppercase font-bold">{activeText}</h2>
       </div>
       <div className="bg-[#D9D9D9] flex w-full text-center justify-center items-center min-h-[200px]">
-      <p className="text-lg w-1/3">{activeText2}</p>
+      <p className="text-2xl w-1/3">{activeText2}</p>
       </div>
       </section>
       </>

@@ -169,3 +169,8 @@ h3#orpstory:after {margin-left:3%}
   transform: scale(0);
   animation: scaleImage 0.6s ease-in-out forwards; 
   animation-delay: 0.8s;}
+
+  @media only screen and (max-width:1024px){
+    .navigate .item {display:none}
+   .navigate .item.active {display:block}
+  }
