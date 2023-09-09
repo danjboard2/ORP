@@ -3,10 +3,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { slide as Menu } from 'react-burger-menu'
 import { Fade as Hamburger } from 'hamburger-react'
-import {useState, useEffect} from 'react';
-import classNames from 'classnames';
+import React, {useState, useEffect, useRef} from 'react';
 import { usePathname } from 'next/navigation';
-
 
 var isMenuOpen = function(state:any) {
     return state.isOpen;
@@ -79,21 +77,45 @@ var isMenuOpen = function(state:any) {
   }
 
 
-export default function NavBar(this:any) {
-  
+  const NavBar: React.FC<{ menuRef: React.RefObject<HTMLDivElement> }> = ({ menuRef }) => {
     const [isOpen, setOpen] = useState(false)
-
     const [menuOpen, setMenuOpen] = useState(false);
+
+
 
     const handleMenuClick = () => {
       setMenuOpen(!menuOpen);
     };
     const [activePath, setActivePath] = useState('/');
 
+    const handleMenuItemClick = () => {
+      // Close the menu when a menu item is clicked
+      setMenuOpen(false);
+      setOpen(false); // Set the hamburger menu to its untoggled state
+    };
     const handleSetActivePath = (pathname:any) => {
       setActivePath(pathname);
     };
+
+    useEffect(() => {
+      const closeMenuOnOutsideClick = (event: MouseEvent) => {
+        if (menuOpen) {
+          // Check if the clicked element is not part of the menu
+          if (!menuRef.current?.contains(event.target as Node)) {
+            setMenuOpen(false);
+            setOpen(false); // Set the hamburger menu to its untoggled state
+          }
+        }
+      };
   
+      document.addEventListener('click', closeMenuOnOutsideClick);
+  
+      return () => {
+        // Remove the event listener when the component unmounts
+        document.removeEventListener('click', closeMenuOnOutsideClick);
+      };
+    }, [menuOpen, menuRef]);
+
     useEffect(() => {
       setActivePath(window.location.pathname);
     }, []);
@@ -112,15 +134,16 @@ const currentRoute = usePathname();
         </nav>
         <div className="relative max-w-[2000px] m-auto">
                 <Menu onStateChange={ isMenuOpen } isOpen={menuOpen} styles={styles} right noOverlay className="flex relative">
-                    <Link href="/"  className={currentRoute === "/"  ? "active"  : ""}><span>Home</span></Link>
-                    <Link href="/soil"  className={currentRoute === "/soil"  ? "active"  : ""}><span>Soil</span></Link>
-                    <Link href="/mold"  className={currentRoute === "/mold"  ? "active"  : ""}><span>Mold</span></Link>
-                    <Link href="/sewage"  className={currentRoute === "/sewage"  ? "active"  : ""}><span>Sewage</span></Link>
-                    <Link href="/projects"  className={currentRoute === "/projects"  ? "active"  : ""}><span>Projects</span></Link>
-                    <Link href="/downloads"  className={currentRoute === "/downloads"  ? "active"  : ""}><span>Downloads</span></Link>
-                    <Link href="/contact"  className={currentRoute === "/contact"  ? "active"  : ""}><span>Contact</span></Link>
+                    <Link href="/"  className={currentRoute === "/"  ? "active"  : ""} onClick={handleMenuItemClick}><span>Home</span></Link>
+                    <Link href="/soil"  className={currentRoute === "/soil"  ? "active"  : ""} onClick={handleMenuItemClick}><span>Soil</span></Link>
+                    <Link href="/mold"  className={currentRoute === "/mold"  ? "active"  : ""} onClick={handleMenuItemClick}><span>Mold</span></Link>
+                    <Link href="/sewage"  className={currentRoute === "/sewage"  ? "active"  : ""} onClick={handleMenuItemClick}><span>Sewage</span></Link>
+                    <Link href="/projects"  className={currentRoute === "/projects"  ? "active"  : ""} onClick={handleMenuItemClick}><span>Projects</span></Link>
+                    <Link href="/downloads"  className={currentRoute === "/downloads"  ? "active"  : ""} onClick={handleMenuItemClick}><span>Downloads</span></Link>
+                    <Link href="/contact"  className={currentRoute === "/contact"  ? "active"  : ""} onClick={handleMenuItemClick}><span>Contact</span></Link>
                 </Menu>
                 </div>
         </>
     )
   }
+  export default NavBar;
