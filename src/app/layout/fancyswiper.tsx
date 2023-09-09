@@ -73,7 +73,7 @@ const FancySwiper: React.FC<PageContentProps & totalSlides> = ({ pages, numberSl
     <div className="w-full relative overflow-y-clip"> { /* sliding text wrapper */}
     {pages.map((page: Pages, pageIndex:number) => (
       <div key={pageIndex}>
-    <div className={`curvedbg absolute w-[2400px] h-[1300px] top-0 right-0 bottom-0 -left-[1520px] sm:-left-[1420px] lg:-left-[1220px] xl:-left-[1000px] ${page.name}`} style={{
+    <div className={`curvedbg opacity-[90%] sm:opacity-100 absolute w-[2400px] h-[1300px] top-0 right-0 bottom-0 -left-[1620px] sm:-left-[1420px] lg:-left-[1220px] xl:-left-[1000px] ${page.name}`} style={{
         background : page.bg,
       }}></div>
     <Swiper
@@ -107,13 +107,13 @@ const FancySwiper: React.FC<PageContentProps & totalSlides> = ({ pages, numberSl
       }}>{page.pagetitle}</h1>
       </div>
         <div className={`custom-navigation z-10 flex flex-row w-[120px] sm:w-[180px] justify-between ${page.name} ${numberOfSlides == 1 ? 'hidden' : ''}`} >
-          <div className="swiper-button-prev"><FaCircleChevronLeft size={50} className="text-[#D9D9D9]"/></div>
-          <div className="swiper-button-next"><FaCircleChevronRight size={50} className="text-[#D9D9D9]"/></div>
+          <div className="swiper-button-prev"><FaCircleChevronLeft size={50} className=" text-gray-400 sm:text-[#D9D9D9]"/></div>
+          <div className="swiper-button-next"><FaCircleChevronRight size={50} className="text-gray-400 sm:text-[#D9D9D9]"/></div>
       </div>
     </Swiper>
-    <Image src={`${page.smallimage1}`} priority={true} width={191} height={191} alt="Organic Remediation Products" className={`smallimage1 absolute top-[170px] left-[350px] sm:left-[445px] lg:left-[645px] xl:left-[870px] ${page.name}`}/>
-    <Image src={`${page.smallimage2}`} priority={true} width={218} height={218} alt="Organic Remediation Products" className={`smallimage2 absolute top-[408px] left-[305px] sm:left-[400px] lg:left-[600px] xl:left-[820px] ${page.name}`}/>
-    <Image src={`${page.smallimage3}`} priority={true} width={304} height={304} alt="Organic Remediation Products" className={`smallimage3 absolute top-[665px] left-[150px] sm:left-[240px] lg:left-[440px] xl:left-[660px] ${page.name}`}/>
+    <Image src={`${page.smallimage1}`} priority={true} width={191} height={191} alt="Organic Remediation Products" className={`smallimage1 w-[100px] sm:w-[191px] absolute bottom-[20px] sm:bottom-auto right-[20px] sm:top-[170px] sm:left-[445px] lg:left-[645px] xl:left-[870px] ${page.name}`}/>
+    <Image src={`${page.smallimage2}`} priority={true} width={218} height={218} alt="Organic Remediation Products" className={`smallimage2 w-[100px] sm:w-[218px] absolute bottom-[20px] sm:bottom-auto right-[100px] sm:top-[408px] sm:left-[400px] lg:left-[600px] xl:left-[820px] ${page.name}`}/>
+    <Image src={`${page.smallimage3}`} priority={true} width={304} height={304} alt="Organic Remediation Products" className={`smallimage3 w-[100px] sm:w-[304px] absolute bottom-[20px] sm:bottom-auto right-[180px] sm:top-[665px] sm:left-[240px] lg:left-[440px] xl:left-[660px] ${page.name}`}/>
     <div className="absolute top-0 left-0 right-0 bottom-0 h-[925px] -z-[1]">  { /* background images and small bubble images */}
 
         <div className={`item absolute top-0 left-0 right-0 bottom-0 h-[100vh] min-h-[965px] max-h-[1200px] bg-cover bg-right ${activeIndex === 0 ? 'active' : ''}`} onClick={() => goToSlide(0)} style={{

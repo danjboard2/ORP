@@ -182,4 +182,10 @@ h3#orpstory:after {margin-left:3%}
   @media only screen and (max-width:640px){
     #fancyswiper .sewage .cust-sw {top:180px}
   #fancyswiper .sewage ul {margin-top: 50px;}
+  #fancyswiper .curvedbg {border-right: 10px solid #75cd57; border-bottom: 10px solid #75cd57;}
+  .curvedbg.sewage {
+    border-bottom: 10px solid #404041 !important;
+    border-right: 10px solid #404041 !important;
+  }
+  #fancyswiper .sewage ul {padding-left:0px; padding-right:10px;}
 }

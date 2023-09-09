@@ -43,7 +43,7 @@ const ContactUs = () => {
     return (
       <>
         <section className="h-[100vh] mt-[147px] max-h-[1200px] flex w-full justify-center items-center flex-row max-w-[2000px] m-auto">
-    <div className="w-2/3 flex flex-row">
+    <div className="w-4/5 xl:w-2/3 flex flex-row">
         <div className="flex flex-col w-1/3 justify-center self-center">
             <h1 className="text-4xl mb-10 text-[#3AAA01] font-bold uppercase">Thanks for the message.</h1>
             <p className="text-2xl mb-10">We will be in touch soon.</p>
@@ -60,11 +60,11 @@ const ContactUs = () => {
 
   return (
     <>
-    <section className="h-[100vh] max-h-[1200px]  mt-[147px] flex w-full justify-center items-center flex-row max-w-[2000px] m-auto">
-    <div className="w-2/3 flex flex-row">
-        <div className="flex flex-col min-w-[445px] w-1/3 justify-center self-center">
-            <h1 className="text-6xl mb-10 text-[#3AAA01] font-bold uppercase">Get in touch</h1>
-            <p className="text-2xl mb-10">If there anything we can help you with then please drop us a line and we will get right back to you.</p>
+    <section className="min-h-[700px] h-[100vh] max-h-[1200px] mt-[200px] lg:mt-[147px] flex w-full justify-center items-center flex-row max-w-[2000px] m-auto">
+    <div className="w-4/5 xl:w-2/3 flex flex-col sm:flex-row justify-between">
+        <div className="flex flex-col lg:min-w-[445px] w-full md:w-1/2 lg:w-1/3 justify-center self-center">
+            <h1 className="text-3xl xl:text-6xl mb-10 text-[#3AAA01] font-bold uppercase">Get in touch</h1>
+            <p className="text-lg xl:text-2xl mb-10">If there anything we can help you with then please drop us a line and we will get right back to you.</p>
                 <form
                 action={FORM_ENDPOINT}
                 onSubmit={handleSubmit}
@@ -106,7 +106,7 @@ const ContactUs = () => {
                 </div>
                 <div className="flex pt-0 mb-3 justify-end items-end">
                     <button
-                   className="flex w-fit text-2xl rounded-full border-4 border-[#3AAA01] px-10 py-2 font-bold text-[#3AAA01] mt-6 hover:bg-[#3AAA01] hover:text-white"
+                   className="flex w-fit text-lg xl:text-2xl rounded-full border-4 border-[#3AAA01] px-10 py-2 font-bold text-[#3AAA01] mt-6 hover:bg-[#3AAA01] hover:text-white"
                     type="submit"
                     >
                     Send a message
@@ -114,7 +114,7 @@ const ContactUs = () => {
                 </div>
                 </form>
        </div>
-       <div className="flex flex-col w-2/3  items-center self-center">
+       <div className="flex flex-col mt-20 lg:mt-0 w-1/2 lg:w-1/3  items-center self-center">
         <Image src="/media/images/contact-img.png" alt="Get in touch" width={500} height={500}/>
        </div>
        </div>
