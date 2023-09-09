@@ -1,15 +1,9 @@
-"use client"
 import './globals.css'
 import type { Metadata } from 'next'
 import './homepage/home-swiper.css'
 import NavBar from './layout/navbar'
 import Footer from './layout/footer'
 import React, { useRef } from 'react';
-
-export const metadata: Metadata = {
-  title: 'Organic Remediation Products',
-  description: 'Organic Remediation Products',
-}
 
 export default function Layout({
   children, // will be a page or nested layout
