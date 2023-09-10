@@ -57,9 +57,9 @@ export default function Carousel() {
         <section className="w-full flex justify-end items-center flex-col mt-[147px] ">
         <h1 className="text-3xl xl:text-6xl mt-10 mb-10 text-[#3AAA01] font-bold uppercase">Partnerships</h1>
 
-            <div className="w-full max-w-[2000px] flex flex-col lg:flex-row justify-between m-auto px-4 lg:px-12 xl:px-32 mt-20 !mb-12">
-            <div className={`item bg-white z-10 relative text-center [box-shadow:_0_0px_7px_rgb(0_0_0_/_25%)] p-4 lg:p-8 xl:p-10 rounded-lg w-full mb-28 lg:mb-0 lg:w-[30%]`}>
-              <div className="h-[120px] mb-14">
+            <div className="w-full max-w-[2000px] flex flex-col lg:flex-row justify-between m-auto px-4 lg:px-12 xl:px-32 mt-10 lg:mt-20 !mb-12">
+            <div className={`item bg-white z-10 relative text-center [box-shadow:_0_0px_7px_rgb(0_0_0_/_25%)] p-4 lg:p-8 xl:p-10 rounded-lg w-full mb-20 lg:mb-0 lg:w-[30%]`}>
+              <div className="h-[120px] mb-4 lg:mb-14">
               <Image src="/media/images/government-static.png" alt="Government" width={200} height={200} className="round-image block m-auto -mt-[65px] lg:-mt-[120px] p-[10px] w-[100px] lg:w-[150px] bg-white rounded-full [box-shadow:_0_4px_4px_rgb(0_0_0_/_25%)]"/>
                 </div>
                 <h3 className="text-2xl xl:text-3xl uppercase font-bold mb-2">Governments</h3>
@@ -70,8 +70,8 @@ export default function Carousel() {
                         </ul>
             </div>
 
-            <div className={`item bg-white z-10 relative text-center [box-shadow:_0_0px_7px_rgb(0_0_0_/_25%)] p-4 lg:p-8 xl:p-10 rounded-lg w-full mb-28 lg:mb-0 lg:w-[30%]`}>
-            <div className="h-[120px] mb-14">
+            <div className={`item bg-white z-10 relative text-center [box-shadow:_0_0px_7px_rgb(0_0_0_/_25%)] p-4 lg:p-8 xl:p-10 rounded-lg w-full mb-20 lg:mb-0 lg:w-[30%]`}>
+            <div className="h-[120px] mb-4 lg:mb-14">
             <Image src="/media/images/commercial-static.png" alt="Commercial Real-estate" width={200} height={200} className="round-image block m-auto -mt-[65px] lg:-mt-[120px] p-[10px] w-[100px] lg:w-[150px] bg-white rounded-full [box-shadow:_0_4px_4px_rgb(0_0_0_/_25%)]"/>
                 </div>
               <h3 className="text-2xl xl:text-3xl uppercase font-bold mb-2">Commercial Real-estate</h3>
@@ -80,8 +80,8 @@ export default function Carousel() {
                             <li className="mt-4">ORP is working along-side insurance companies to enact a best-practices approach to onsite soil decontamination and remediation procedures.</li>
                         </ul>
               </div>
-            <div className={`item bg-white z-10 relative text-center [box-shadow:_0_0px_7px_rgb(0_0_0_/_25%)] p-4 lg:p-8 xl:p-10 rounded-lg w-full mb-28 lg:mb-0 lg:w-[30%]`}>
-            <div className="h-[120px] mb-14">
+            <div className={`item bg-white z-10 relative text-center [box-shadow:_0_0px_7px_rgb(0_0_0_/_25%)] p-4 lg:p-8 xl:p-10 rounded-lg w-full mb-20 lg:mb-0 lg:w-[30%]`}>
+            <div className="h-[120px] mb-4 lg:mb-14">
             <Image src="/media/images/global-static.png" alt="Global Distributors" width={200} height={200} className="round-image block m-auto -mt-[65px] lg:-mt-[120px] p-[10px] w-[100px] lg:w-[150px] bg-white rounded-full [box-shadow:_0_4px_4px_rgb(0_0_0_/_25%)]"/>
                 </div>
               <h3 className="text-2xl xl:text-3xl uppercase font-bold mb-2">Global Distributors</h3>
