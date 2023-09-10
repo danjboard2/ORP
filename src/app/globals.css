@@ -101,10 +101,13 @@ img.smallimage1.sewage, img.smallimage2.sewage ,img.smallimage3.sewage {
 
 /* homepage */
 /* swiper effects */
+#homeswiper .swiper-pagination {display:none}
 #homeswiper .swiper-slide-active #swiperimage { transform-origin: center;
   transform: scale(1);
   animation: scalebackground 5s ease-in-out forwards; 
   animation-delay: 0s; display:Block !important}
+  #homeswiper .swiper-button-next {display:none}
+  #homeswiper .swiper-button-prev {display:none}
 
   h3#orpstory:before, h3#orpstory:after {
     position: absolute;
@@ -177,6 +180,16 @@ h3#orpstory:after {margin-left:3%}
   @media only screen and (max-width:1024px){
     .navigate .item {display:none}
    .navigate .item.active {display:block}
+   #homeswiper .swiper-pagination {bottom:150px; display:block}
+   #homeswiper .swiper-pagination-bullet {width:30px; height:30px;width: 30px;
+    height: 30px;
+    opacity: 0.8;
+    background: #e2fce2;}
+   #homeswiper .swiper-pagination-bullet-active {
+     background-color: #3aaa01; opacity:1; /* Change the active bullet color */
+   }
+   #homeswiper .swiper-button-next {display:block; right:10px !important; color: #3aaa01;}
+   #homeswiper .swiper-button-prev {display:block; left:10px;color: #3aaa01;}
   }
 
   @media only screen and (max-width:640px){

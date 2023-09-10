@@ -6,6 +6,8 @@ import { Navigation, Pagination, Scrollbar, A11y, EffectFade, Autoplay } from 's
 import { useSwiper, Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
 
 export default function HomepageSwiper() {
@@ -52,10 +54,11 @@ export default function HomepageSwiper() {
         delay: 6000,
         disableOnInteraction: false,
       }}
+      pagination={{ clickable: true }}
+      navigation={true}
       rewind={true}
       allowTouchMove={false}
-      data-swiper-autoplay={5000}
-      pagination={false}
+      data-swiper-autoplay={5000} 
     >
       <SwiperSlide className="!flex flex-col justify-center px-4 lg:px-32"><Image src="/media/images/soil.jpg" id="swiperimage" className="absolute object-cover block -z-[1] top-0 left-0 right-0 bottom-0 min-w-[100%] min-h-[965px] w-auto h-auto" width={3000} height={3000} alt="Soil"></Image><div className="flex flex-col w-full max-w-[2000px] text-center lg:text-left m-auto 3xl:px-32 pt-[100px]"><h1 className="text-4xl xl:text-7xl font-bold uppercase text-white [text-shadow:_0_5px_6px_rgb(0_0_0_/_80%)]">Hydrocarbon</h1><h2 className="text-2xl xl:text-4xl my-6 font-bold text-white [text-shadow:_0_5px_6px_rgb(0_0_0_/_80%)]">ORP-SR1 & ORP-SR2</h2><Link href="/soil" className="inline-block m-auto lg:ml-0 w-fit text-lg xl:text-2xl rounded-full border-4 border-[#3AAA01] px-10 xl:px-20 py-2 font-bold text-white lg:text-[#3AAA01] mt-24 bg-[#3AAA01] lg:bg-transparent hover:bg-[#3AAA01] hover:text-white">Learn more</Link></div></SwiperSlide>
       <SwiperSlide className="!flex flex-col justify-center px-4 lg:px-32"><Image src="/media/images/mold.jpg" id="swiperimage" className="absolute object-cover block -z-[1] top-0 left-0 right-0 bottom-0 min-w-[100%] min-h-[965px] w-auto h-auto" width={3000} height={3000} alt="Soil"></Image><div className="flex flex-col w-full max-w-[2000px] text-center lg:text-left m-auto 3xl:px-32 pt-[100px]"><h1 className="text-4xl xl:text-7xl font-bold uppercase text-white [text-shadow:_0_5px_6px_rgb(0_0_0_/_80%)]">Mold</h1><h2 className="text-2xl xl:text-4xl my-6 font-bold text-white [text-shadow:_0_5px_6px_rgb(0_0_0_/_80%)]">ORP-MT1 & ORP-MT2</h2><Link href="/mold" className="inline-block m-auto lg:ml-0 w-fit text-lg xl:text-2xl rounded-full border-4 border-[#3AAA01] px-10 xl:px-20 py-2 font-bold  text-white lg:text-[#3AAA01] mt-24 bg-[#3AAA01] lg:bg-transparent hover:bg-[#3AAA01] hover:text-white">Learn more</Link></div></SwiperSlide>
@@ -64,7 +67,7 @@ export default function HomepageSwiper() {
     <div className="navigate w-full max-w-[2000px] flex flex-col lg:flex-row justify-between m-auto px-4 xl:px-10 2xl:px-32 !mb-12">
         <div className={`item bg-white z-10 relative text-center [box-shadow:_0_4px_4px_rgb(0_0_0_/_25%)] p-4 xl:p-10 rounded-lg rounded-t-none w-full lg:w-[32%] 2xl:w-[30%] ${activeIndex === 0 ? 'active' : ''}`} onClick={() => goToSlide(0)}>
           <div className="h-[120px] mb-14">
-            <Image src={activeIndex === 0 ? '/media/images/plant-active.gif' : '/media/images/plant-static.png'} width={80} height={80} alt="Soil" className="round-image block m-auto -mt-[120px] p-[30px] w-[150px] bg-white rounded-full [box-shadow:_0_4px_4px_rgb(0_0_0_/_25%)]"/>
+            <Image src={activeIndex === 0 ? '/media/images/plant-active.gif' : '/media/images/plant-static.png'} width={80} height={80} alt="Soil" className="round-image block m-auto -mt-[120px] p-[10px] w-[150px] bg-white rounded-full [box-shadow:_0_4px_4px_rgb(0_0_0_/_25%)]"/>
             </div>
             <h3 className="text-xl xl:text-3xl uppercase font-bold mb-2">Hydrocarbon</h3>
             <h4 className="text-lg xl:text-2xl text-[#5E5E5E] font-bold mb-4">ORP-SR1 & ORP-SR2</h4>
@@ -73,7 +76,7 @@ export default function HomepageSwiper() {
         </div>
         <div className={`item bg-white z-10 relative text-center [box-shadow:_0_4px_4px_rgb(0_0_0_/_25%)]  p-4 xl:p-10 rounded-lg rounded-t-none w-full lg:w-[32%] 2xl:w-[30%]  ${activeIndex === 1 ? 'active' : ''}`} onClick={() => goToSlide(1)}>
         <div className="h-[120px] mb-14">
-            <Image src={activeIndex === 1 ? '/media/images/mold-active.gif' : '/media/images/mold-static.png'} width={80} height={80} alt="Mold" className="round-image block m-auto -mt-[120px] p-[30px] w-[150px] bg-white rounded-full [box-shadow:_0_4px_4px_rgb(0_0_0_/_25%)]"/>
+            <Image src={activeIndex === 1 ? '/media/images/mold-active.gif' : '/media/images/mold-static.png'} width={80} height={80} alt="Mold" className="round-image block m-auto -mt-[120px] p-[10px] w-[150px] bg-white rounded-full [box-shadow:_0_4px_4px_rgb(0_0_0_/_25%)]"/>
             </div>
           <h3 className="text-xl xl:text-3xl uppercase font-bold mb-2">Mold</h3>
           <h4 className="text-lg xl:text-2xl text-[#5E5E5E] font-bold mb-4">ORP-MT1 & ORP-MT2</h4>
@@ -82,7 +85,7 @@ export default function HomepageSwiper() {
           </div>
         <div className={`item bg-white z-10 relative text-center [box-shadow:_0_4px_4px_rgb(0_0_0_/_25%)]  p-4 xl:p-10 rounded-lg rounded-t-none w-full lg:w-[32%] 2xl:w-[30%]  ${activeIndex === 2 ? 'active' : ''}`} onClick={() => goToSlide(2)}>
         <div className="h-[120px] mb-14">
-            <Image src={activeIndex === 2 ? '/media/images/sewage-active.gif' : '/media/images/sewage-static.png'} width={80} height={80} alt="Sewage" className="round-image block m-auto -mt-[120px] p-[30px] w-[150px] bg-white rounded-full [box-shadow:_0_4px_4px_rgb(0_0_0_/_25%)]"/>
+            <Image src={activeIndex === 2 ? '/media/images/sewage-active.gif' : '/media/images/sewage-static.png'} width={80} height={80} alt="Sewage" className="round-image block m-auto -mt-[120px] p-[10px] w-[150px] bg-white rounded-full [box-shadow:_0_4px_4px_rgb(0_0_0_/_25%)]"/>
             </div>
           <h3 className="text-xl xl:text-3xl uppercase font-bold mb-2">Sewage</h3>
           <h4 className="text-lg xl:text-2xl text-[#5E5E5E] font-bold mb-4">ORP-WS1 & ORP-WS2</h4>
