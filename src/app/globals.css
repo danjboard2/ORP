@@ -94,11 +94,12 @@ img.smallimage1.sewage, img.smallimage2.sewage ,img.smallimage3.sewage {
   transition:0.2s;
   filter: blur(0px);
 }
-#projects .custom-navigation{ z-index:40} 
+#projects .custom-navigation{ z-index:40; width:200px; position:relative; height:50px;} 
 #projects  .swiper-button-prev:after, #projects .swiper-rtl .swiper-button-next:after {display:none;}
 #projects .swiper-button-next:after, #projects .swiper-rtl .swiper-button-prev:after {display:none;}
-#projects  .swiper-button-prev, #projects .swiper-button-next {width:auto !important; left:auto !important; right:auto !important;}
-
+#projects  .swiper-button-prev, #projects .swiper-button-next {width:auto !important; left:auto !important; right:auto !important; top:30px !important}
+#projects  .swiper-button-prev {left:10px !important}
+#projects  .swiper-button-next {right:10px !important}
 /* homepage */
 /* swiper effects */
 #homeswiper .swiper-pagination {display:none}
