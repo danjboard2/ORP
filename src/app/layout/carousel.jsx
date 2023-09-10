@@ -123,7 +123,7 @@ export default function Carousel() {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev'
           }}
-        pagination={{ clickable: true }}
+        pagination={false}
         scrollbar={{ draggable: true }}
         onSlideChange={(swiper) => handleSlideChange(swiper)}
         loop={true}
