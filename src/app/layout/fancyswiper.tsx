@@ -111,9 +111,9 @@ const FancySwiper: React.FC<PageContentProps & totalSlides> = ({ pages, numberSl
           <div className="swiper-button-next"><FaCircleChevronRight size={50} className="text-gray-400 sm:text-[#D9D9D9]"/></div>
       </div>
     </Swiper>
-    <Image src={`${page.smallimage1}`} priority={true} width={191} height={191} alt="Organic Remediation Products" className={`smallimage1 w-[100px] sm:w-[191px] absolute bottom-[20px] sm:bottom-auto right-[20px] sm:top-[170px] sm:left-[445px] lg:left-[645px] xl:left-[870px] ${page.name}`}/>
-    <Image src={`${page.smallimage2}`} priority={true} width={218} height={218} alt="Organic Remediation Products" className={`smallimage2 w-[100px] sm:w-[218px] absolute bottom-[20px] sm:bottom-auto right-[100px] sm:top-[408px] sm:left-[400px] lg:left-[600px] xl:left-[820px] ${page.name}`}/>
-    <Image src={`${page.smallimage3}`} priority={true} width={304} height={304} alt="Organic Remediation Products" className={`smallimage3 w-[100px] sm:w-[304px] absolute bottom-[20px] sm:bottom-auto right-[180px] sm:top-[665px] sm:left-[240px] lg:left-[440px] xl:left-[660px] ${page.name}`}/>
+    <Image src={`${page.smallimage1}`} priority={true} width={191} height={191} alt="Organic Remediation Products" className={`smallimg smallimage1 w-[100px] sm:w-[191px] absolute bottom-[20px] sm:bottom-auto right-[20px] ${page.name}   ${activeIndex === 0 ? 'active' : activeIndex === 1 ? 'queue-top' : 'queue-mid'}`}/>
+    <Image src={`${page.smallimage2}`} priority={true} width={218} height={218} alt="Organic Remediation Products" className={`smallimg smallimage2 w-[100px] sm:w-[218px] absolute bottom-[20px] sm:bottom-auto right-[100px] ${page.name}  ${activeIndex === 1 ? 'active' : activeIndex === 2 ? 'queue-top' : 'queue-mid'}`}/>
+    <Image src={`${page.smallimage3}`} priority={true} width={304} height={304} alt="Organic Remediation Products" className={`smallimg smallimage3 w-[100px] sm:w-[304px] absolute bottom-[20px] sm:bottom-auto right-[180px]  ${page.name}  ${activeIndex === 2 ? 'active' : activeIndex === 0 ? 'queue-top' : 'queue-mid'} `}/>
     <div className="absolute top-0 left-0 right-0 bottom-0 h-[925px] -z-[1]">  { /* background images and small bubble images */}
 
         <div className={`item absolute top-0 left-0 right-0 bottom-0 h-[100vh] min-h-[965px] max-h-[1200px] bg-cover bg-right ${activeIndex === 0 ? 'active' : ''}`} onClick={() => goToSlide(0)} style={{

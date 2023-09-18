@@ -40,6 +40,58 @@
     transform: scale(1.08);
   }
 }
+
+@media only screen and (min-width: 1280px){
+@keyframes top-to-mid {
+  from {top: 170px; left:870px; width:191px; height:191px}
+  to {top: 408px; left:820px; width:218px; height:218px}
+}
+@keyframes mid-to-active {
+  from {top: 408px; left:820px; width:218px; height:218px}
+  to {top: 665px; left:660px; width:304px; height:304px}
+}
+@keyframes active-to-top {
+  from {top: 665px; left:660px; width:304px; height:304px}
+  to {top: 170px; left:870px; width:191px; height:191px}
+}
+}
+
+@media only screen and (min-width: 1024px) and (max-width:1279px){
+  @keyframes top-to-mid {
+    from {top: 170px; left:645px; width:191px; height:191px}
+    to {top: 408px; left:600px; width:218px; height:218px}
+  }
+  @keyframes mid-to-active {
+    from {top: 408px; left:600px; width:218px; height:218px}
+    to {top: 665px; left:440px; width:304px; height:304px}
+  }
+  @keyframes active-to-top {
+    from {top: 665px; left:440px; width:304px; height:304px}
+    to {top: 170px; left:645px; width:191px; height:191px}
+  }
+  }
+
+  @media only screen and (min-width: 640px) and (max-width:1023px){
+    @keyframes top-to-mid {
+      from {top: 170px; left:445px; width:191px; height:191px}
+      to {top: 408px; left:400px; width:218px; height:218px}
+    }
+    @keyframes mid-to-active {
+      from {top: 408px; left:400px; width:218px; height:218px}
+      to {top: 665px; left:240px; width:304px; height:304px}
+    }
+    @keyframes active-to-top {
+      from {top: 665px; left:240px; width:304px; height:304px}
+      to {top: 170px; left:445px; width:191px; height:191px}
+    }
+    }
+
+.smallimg.soil.queue-top {  animation: active-to-top 0.5s ease-in-out forwards; 
+  animation-delay: 0s; display:Block !important}
+.smallimg.soil.queue-mid {animation: top-to-mid 0.5s ease-in-out forwards; 
+  animation-delay: 0s; display:Block !important}
+.smallimg.soil.active {animation: mid-to-active 0.5s ease-in-out forwards; 
+  animation-delay: 0s; display:Block !important}
 /* fade in elements on enter viewport */
 .fade-element {
   opacity: 0;
@@ -161,7 +213,8 @@ h3#orpstory:after {margin-left:3%}
   transform: scale(1);
   animation: scalebackground 7s ease-in-out forwards; 
   animation-delay: 0s;}
-
+  
+/*
 .smallimage1 { transform-origin: center;
   transform: scale(0);
   animation: scaleImage 0.6s ease-in-out forwards; 
@@ -174,6 +227,7 @@ h3#orpstory:after {margin-left:3%}
   transform: scale(0);
   animation: scaleImage 0.6s ease-in-out forwards; 
   animation-delay: 0.8s;}
+  */
 
   @media only screen and (max-width:1279px){
   #fancyswiper .custom-navigation{left: 0%;} 

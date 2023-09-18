@@ -8,8 +8,9 @@ export default function Footer() {
     return (
        <footer className="flex flex-row sm:flex-col space-around bg-black w-full text-white px-10 py-4">
          <div className="w-full flex flex-col  sm:flex-row max-w-[2000px] m-auto">
-         <div className="flex min-w-[130px] w-full sm:w-1/4 items-center justify-center sm:border-r-[2px] border-[#404041]">
+         <div className="flex flex-col min-w-[130px] w-full sm:w-1/4 items-center justify-center sm:border-r-[2px] border-[#404041]">
             <Image src="/media/images/orp-logo.png" width={200} height={100} alt="ORP Logo"className="mr-8 sm:mr-4 min-w-[120px]" />
+            <p className="mt-10"><a href="tel:(514)442-0231" className=" font-bold text-[#3AAA01]  underline hover:no-underline">(514) 442-0231</a></p>
          </div>
          <div className="flex flex-col sm:flex-row w-full sm:w-3/4">
 
