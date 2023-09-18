@@ -59,16 +59,16 @@
 
      /* mold page */
 @keyframes mold-top-to-mid {
-  from {top: 170px; left:790px; width:191px; height:191px}
-  to {top: 408px; left:930px; width:218px; height:218px}
+  from {top: 170px; left:705px; width:191px; height:191px}
+  to {top: 390px; left:830px; width:218px; height:218px}
 }
 @keyframes mold-mid-to-active {
-  from {top: 408px; left:930px; width:218px; height:218px}
-  to {top: 665px; left:930px; width:304px; height:304px}
+  from {top: 390px; left:830px; width:218px; height:218px}
+  to {top: 675px; left:840px; width:304px; height:304px}
 }
 @keyframes mold-active-to-top {
-  from {top: 665px; left:930px; width:304px; height:304px}
-  to {top: 170px; left:790px; width:191px; height:191px}
+  from {top: 675px; left:840px; width:304px; height:304px}
+  to {top: 170px; left:705px; width:191px; height:191px}
 }
     /* end mold page anims */
 }
@@ -145,15 +145,14 @@
   animation-delay: 0s; display:Block !important}
 
   #fancyswiper .curvedbg.mold {
-    transform: rotate(192deg);
-    border-radius: 12000px 150px 15000px 16000px;
+    transform: rotate(215deg);
+    border-radius: 12000px 150px 5000px 25000px;
     border-left: 80px solid #75cd57;
     border-top: 80px solid #75cd57;
-    width: 1648px;
+    width: 1650px;
     height: 1400px;
     left: -500px;
 }
-
   .smallimg.mold.queue-top {  animation: mold-active-to-top 0.5s ease-in-out forwards; 
     animation-delay: 0s; display:Block !important}
     .smallimg.mold.queue-mid {animation: mold-top-to-mid 0.5s ease-in-out forwards; 
