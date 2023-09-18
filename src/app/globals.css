@@ -90,17 +90,17 @@
       /* end soil page anims */
 
          /* Mold page */
-  @keyframes mold-top-to-mid {
-    from {top: 170px; left:645px; width:191px; height:191px}
-    to {top: 408px; left:600px; width:218px; height:218px}
-  }
-  @keyframes mold-mid-to-active {
-    from {top: 408px; left:600px; width:218px; height:218px}
-    to {top: 665px; left:440px; width:304px; height:304px}
-  }
-  @keyframes mold-active-to-top {
-    from {top: 665px; left:440px; width:304px; height:304px}
-    to {top: 170px; left:645px; width:191px; height:191px}
+         @keyframes mold-top-to-mid {
+          from {top: 170px; left:505px; width:191px; height:191px}
+          to {top: 390px; left:630px; width:218px; height:218px}
+        }
+        @keyframes mold-mid-to-active {
+          from {top: 390px; left:630px; width:218px; height:218px}
+          to {top: 675px; left:640px; width:304px; height:304px}
+        }
+        @keyframes mold-active-to-top {
+          from {top: 675px; left:640px; width:304px; height:304px}
+          to {top: 170px; left:505px; width:191px; height:191px}
   }
       /* end mold page anims */
   }
@@ -123,17 +123,17 @@
 
          /* mold page */
          @keyframes mold-top-to-mid {
-          from {top: 170px; left:445px; width:191px; height:191px}
-          to {top: 408px; left:400px; width:218px; height:218px}
+          from {top: 170px; left:325px; width:191px; height:191px}
+          to {top: 390px; left:450px; width:218px; height:218px}
         }
         @keyframes mold-mid-to-active {
-          from {top: 408px; left:400px; width:218px; height:218px}
-          to {top: 665px; left:240px; width:304px; height:304px}
+          from {top: 390px; left:450px; width:218px; height:218px}
+          to {top: 675px; left:460px; width:304px; height:304px}
         }
         @keyframes mold-active-to-top {
-          from {top: 665px; left:240px; width:304px; height:304px}
-          to {top: 170px; left:445px; width:191px; height:191px}
-        }
+          from {top: 675px; left:460px; width:304px; height:304px}
+          to {top: 170px; left:325px; width:191px; height:191px}
+  }
         /* end mold page anims */
     }
 
@@ -298,6 +298,9 @@ h3#orpstory:after {margin-left:3%}
 
   @media only screen and (max-width:1279px){
   #fancyswiper .custom-navigation{left: 0%;} 
+  #fancyswiper .curvedbg.mold {
+ left: -700px;
+}
 }
 
   @media only screen and (max-width:1024px){
@@ -313,6 +316,9 @@ h3#orpstory:after {margin-left:3%}
    }
    #homeswiper .swiper-button-next {display:block; right:10px !important; color: #3aaa01;}
    #homeswiper .swiper-button-prev {display:block; left:10px;color: #3aaa01;}
+   #fancyswiper .curvedbg.mold {
+    left: -880px;
+   }
   }
 
   @media only screen and (max-width:640px){
@@ -324,4 +330,11 @@ h3#orpstory:after {margin-left:3%}
     border-right: 10px solid #404041 !important;
   }
   #fancyswiper .sewage ul {padding-left:0px; padding-right:10px;}
+  #fancyswiper .curvedbg.mold {
+    transform: rotate(255deg);
+    left: -1125px;
+    border-top: 10px solid #75cd57;
+    border-left: 10px solid #75cd57;
+    top: -250px;
+  }
 }
