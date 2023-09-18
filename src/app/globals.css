@@ -168,6 +168,7 @@
   padding-right: 0px;
   margin-left: 20px;
 }
+.mobile-nav {display:none;}
 .swiper.swiper-initialized.swiper-horizontal.sewage div ul {padding-top:120px; margin-left:20px}
 .swiper.swiper-initialized.swiper-horizontal.sewage div ul li {padding-top:30px}
 
@@ -323,10 +324,9 @@ h3#orpstory:after {margin-left:3%}
 
   @media only screen and (max-width:1024px){
     .navigate .item {display:none}
-   .navigate .item.active {display:block}
-   #homeswiper .swiper-pagination {bottom:150px; display:block}
-   #homeswiper .swiper-pagination-bullet {width:30px; height:30px;width: 30px;
-    height: 30px;
+   .navigate .item.active {display:flex}
+   #homeswiper .swiper-pagination {bottom:120px; display:block}
+   #homeswiper .swiper-pagination-bullet {width:10px; height:10px;
     opacity: 0.8;
     background: #e2fce2;}
    #homeswiper .swiper-pagination-bullet-active {
@@ -337,6 +337,7 @@ h3#orpstory:after {margin-left:3%}
    #fancyswiper .curvedbg.mold {
     left: -880px;
    }
+   .mobile-nav {display:block;}
   }
 
   @media only screen and (max-width:640px){
