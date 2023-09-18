@@ -96,7 +96,7 @@ const FancySwiper: React.FC<PageContentProps & totalSlides> = ({ pages, numberSl
     >     
        {page.sections.map((section: Section, sectionIndex: number) => (
         <div key={sectionIndex}>
-          <SwiperSlide className="swiper-slide-first"><div className="flex flex-col xl:ml-[10%] w-[260px] sm:w-[300px] lg:w-[600px] min-h-[900px] max-h-[1000px] h-full justify-center"><div className="pb-20 sm:pb-0 text-lg sm:text-xl xl:text-2xl my-6  lg:pr-32" style={{
+          <SwiperSlide className="swiper-slide-first"><div className="flex flex-col xl:ml-[10%] w-[260px] sm:w-[300px] lg:w-[600px] min-h-[900px] max-h-[1000px] h-full justify-center"><div className="pb-20 sm:pb-0 text-lg sm:text-xl xl:text-3xl my-6  lg:pr-32" style={{
         color: page.color,
       }} dangerouslySetInnerHTML={{ __html: section.content }}></div></div></SwiperSlide>
           </div>

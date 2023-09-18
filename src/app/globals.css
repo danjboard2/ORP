@@ -153,6 +153,24 @@
     height: 1400px;
     left: -500px;
 }
+
+#fancyswiper .curvedbg.sewage {
+  transform: rotate(275deg);
+  border-radius: 0px 0px 2000px 2000px;
+  border-top: 80px solid #75cd57;
+  border-left: 80px solid #75cd57;
+  left: -820px;
+}
+.swiper.swiper-initialized.swiper-horizontal.sewage{
+  width: 730px !important;
+}
+.swiper.swiper-initialized.swiper-horizontal.sewage div {
+  padding-right: 0px;
+  margin-left: 20px;
+}
+.swiper.swiper-initialized.swiper-horizontal.sewage div ul {padding-top:120px; margin-left:20px}
+.swiper.swiper-initialized.swiper-horizontal.sewage div ul li {padding-top:30px}
+
   .smallimg.mold.queue-top {  animation: mold-active-to-top 0.5s ease-in-out forwards; 
     animation-delay: 0s; display:Block !important}
     .smallimg.mold.queue-mid {animation: mold-top-to-mid 0.5s ease-in-out forwards; 
@@ -181,7 +199,7 @@
 #fancyswiper .item.active {opacity:1; transition:1s}
 #fancyswiper .item {opacity:0; transition:1s}
 #fancyswiper .curvedbg {border-radius:0px 0px 300px 0px; transform:rotate(320deg);border-radius: 0px 0px 2000px 0px; border-right: 80px solid #75cd57; border-bottom: 80px solid #75cd57;}
-#fancyswiper .custom-navigation{ position: absolute;top: 700px;left: 10%; width:200px;} 
+#fancyswiper .custom-navigation{ position: absolute;top: 800px;left: 10%; width:200px;} 
 #fancyswiper .swiper-slide-first.swiper-slide-active {  opacity: 1; /* First slide should be fully visible without fading */ }
 #fancyswiper  .swiper-slide {  opacity: 0; /* Initial opacity for the fading effect */transition: opacity 1s ease-in-out; /* Smooth transition for the fading effect */ }
 #fancyswiper  .swiper-slide-active {opacity: 1; /* Active slide should be fully visible */}
@@ -191,7 +209,7 @@
 #fancyswiper .swiper-button-next {left:150px!important; }
 #fancyswiper ul {list-style:disc; padding-left: 30px;}
 #fancyswiper ol {list-style: decimal; padding-left: 30px;}
-#fancyswiper li {padding-top:10px;}
+#fancyswiper li {padding-top:30px;}
 
 /* sewage */
 #fancyswiper .sewage ul {margin-top: 150px;}
@@ -297,7 +315,7 @@ h3#orpstory:after {margin-left:3%}
   */
 
   @media only screen and (max-width:1279px){
-  #fancyswiper .custom-navigation{left: 0%;} 
+  #fancyswiper .custom-navigation{left: 0%;top: 700px;} 
   #fancyswiper .curvedbg.mold {
  left: -700px;
 }
