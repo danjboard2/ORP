@@ -120,7 +120,7 @@ export default function Carousel() {
               slidesPerView: 2
             },
             770: {
-              slidesPerView: 3
+              slidesPerView: 4
             },
             // when window width is >= 770px
           }}
