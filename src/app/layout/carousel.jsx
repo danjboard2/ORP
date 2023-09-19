@@ -163,16 +163,16 @@ export default function Carousel() {
       <a href={activeURL1} className=" rounded-full text-[#404041] border-2 font-bold border-[#404041] px-6 py-[3px] hover:bg-[#404041] hover:text-white">Learn more...</a></p>
       
       { /* governments */}
-      <ul className={`industry-text text-lg xl:text-xl border-t-2 border-[#A0A0A0] w-1/2 mt-20 pt-4 pb-10 list-disc  ${activeItem === 0 ? 'active' : ''}`}><li className="ml-[30px]">ORP and our MT1 Mold Treatment Line has become registered and approved for natural disaster response teams.</li>
+      <ul className={`industry-text text-lg xl:text-xl border-t-2 border-[#A0A0A0] w-full md:w-1/2 mt-20 pt-4 pb-10 list-disc  ${activeItem === 0 ? 'active' : ''}`}><li className="ml-[30px]">ORP and our MT1 Mold Treatment Line has become registered and approved for natural disaster response teams.</li>
       <li className="ml-[30px] pt-4">Post flood/water event, MT1 is applied to effected homes and buildings to treat and prevent mold contamination.</li>
       <li className="ml-[30px] pt-4">ORP is working with multiple governments (UK, Australia, US, Canada) to be the main product used for mold treatment/prevention for social housing complexes.</li></ul>
 
       { /* real-estate */} 
-      <ul className={`industry-text text-lg xl:text-xl border-t-2 border-[#A0A0A0] w-1/2 mt-20 pt-4 pb-10 list-disc  ${activeItem === 1 ? 'active' : ''}`}><li className="ml-[30px]">ORP is working with Canadian and Australian property developers to fully remediate and rehabilitate former industrial properties to be converted into commercial and residential areas.</li>
+      <ul className={`industry-text text-lg xl:text-xl border-t-2 border-[#A0A0A0] w-full md:w-1/2 mt-20 pt-4 pb-10 list-disc  ${activeItem === 1 ? 'active' : ''}`}><li className="ml-[30px]">ORP is working with Canadian and Australian property developers to fully remediate and rehabilitate former industrial properties to be converted into commercial and residential areas.</li>
       <li className="ml-[30px] pt-4">ORP is working along-side insurance companies to enact a best-practices approach to onsite soil decontamination and remediation procedures.</li></ul>
       
       { /* global distributors */}
-      <ul className={`industry-text text-lg xl:text-xl border-t-2 border-[#A0A0A0] w-1/2 mt-20 pt-4 pb-10 list-disc  ${activeItem === 2 ? 'active' : ''}`}><li className="ml-[30px]">ORP has put into place a formal support and training division to activate service providers across North America and Internationally.</li>
+      <ul className={`industry-text text-lg xl:text-xl border-t-2 border-[#A0A0A0] w-full md:w-1/2 mt-20 pt-4 pb-10 list-disc  ${activeItem === 2 ? 'active' : ''}`}><li className="ml-[30px]">ORP has put into place a formal support and training division to activate service providers across North America and Internationally.</li>
       <li className="ml-[30px] pt-4">ORP manufactures product locally using a network of laboratories and fermentation facilities, and certified distributors perform onsite remediations according to guidelines.</li></ul>
   
       </div>
