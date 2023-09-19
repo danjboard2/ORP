@@ -159,7 +159,7 @@ export default function Carousel() {
       <h2 className="text-2xl xl:text-3xl text-center text-[#404041] uppercase font-bold">{activeItemTitle}</h2>
       </div>
       <div className="bg-[#D9D9D9] z-20 flex flex-col w-full text-left justify-center items-center">
-      <p className="text-lg xl:text-xl px-4 pt-20 md:px-0 w-full md:w-1/2 min-h-[200px]">{/* activeText */}{activeText2}<br/><br/>
+      <p className="text-lg xl:text-xl px-4 pt-20 md:px-0 w-full md:w-1/2 min-h-[300px] md:min-h-[200px]">{/* activeText */}{activeText2}<br/><br/>
       <a href={activeURL1} className=" rounded-full text-[#404041] border-2 font-bold border-[#404041] px-6 py-[3px] hover:bg-[#404041] hover:text-white">Learn more...</a></p>
       
       { /* governments */}
