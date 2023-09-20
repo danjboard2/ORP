@@ -188,16 +188,16 @@
  
           /* mold page */
           @keyframes mold-top-to-mid {
-           from {top: 470px;left:550px;width:80px; height:80px}
-           to {top: 395px; left:200px; width:80px; height:80px}
+           from {top: 470px;left:550px;width:120px; height:120px}
+           to {top: 375px; left:220px; width:120px; height:120px}
          }
          @keyframes mold-mid-to-active {
-           from {top: 395px; left:200px; width:80px; height:80px}
-           to {top: 405px; left:25px;  width:140px; height:140px}
+           from {top: 375px; left:220px; width:120px; height:120px}
+           to {top: 385px; left:25px;  width:170px; height:170px}
          }
          @keyframes mold-active-to-top {
-           from {top: 405px; left:25px; width:140px; height:140px}
-           to {top: 515px; left:-100px; width:80px; height:80px}
+           from {top: 385px; left:25px; width:170px; height:170px}
+           to {top: 515px; left:-150px; width:120px; height:120px}
    }
          /* end mold page anims */
      }
