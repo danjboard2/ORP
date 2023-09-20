@@ -137,6 +137,39 @@
         /* end mold page anims */
     }
 
+
+    @media only screen and (min-width: 300px) and (max-width:639px){
+      /* soil page */
+     @keyframes top-to-mid {
+       from {top: 170px; left:445px; width:191px; height:191px}
+       to {top: 408px; left:400px; width:218px; height:218px}
+     }
+     @keyframes mid-to-active {
+       from {top: 408px; left:400px; width:218px; height:218px}
+       to {top: 665px; left:240px; width:304px; height:304px}
+     }
+     @keyframes active-to-top {
+       from {top: 665px; left:240px; width:304px; height:304px}
+       to {top: 170px; left:445px; width:191px; height:191px}
+     }
+     /* end soil page anims */
+ 
+          /* mold page */
+          @keyframes mold-top-to-mid {
+           from {top: 590px;left:650px;width:160px; height:160px}
+           to {top: 385px; left:350px; width:160px; height:160px}
+         }
+         @keyframes mold-mid-to-active {
+           from {top: 385px; left:350px; width:160px; height:160px}
+           to {top: 335px; left:65px;  width:218px; height:218px}
+         }
+         @keyframes mold-active-to-top {
+           from {top: 335px;left:65px; width:218px; height:218px}
+           to {top: 485px; left:-180px; width:160px; height:160px}
+   }
+         /* end mold page anims */
+     }
+
 .smallimg.soil.queue-top {  animation: active-to-top 0.5s ease-in-out forwards; 
   animation-delay: 0s; display:Block !important}
 .smallimg.soil.queue-mid {animation: top-to-mid 0.5s ease-in-out forwards; 
@@ -368,10 +401,26 @@ h3#orpstory:after {margin-left:3%}
   }
   #fancyswiper .sewage ul {padding-left:0px; padding-right:10px;}
   #fancyswiper .curvedbg.mold {
-    transform: rotate(255deg);
-    left: -1125px;
-    border-top: 10px solid #75cd57;
-    border-left: 10px solid #75cd57;
-    top: -250px;
-  }
+    transform: rotate(61deg);
+    left: -495px;
+    border-top: 26px solid #75cd57;
+    border-left: 26px solid #75cd57;
+    border-right: 26px solid #75cd57;
+    border-bottom: 26px solid #75cd57;
+    top: 450px;
+    width: 1255px;
+}
+#fancyswiper li {padding-top:10px;}
+#fancyswiper .custom-navigation {
+  top: 800px;
+  left: 0px;
+  right: 0px;
+  margin: 0 auto;
+}
+.sm-title:before {
+  content: 'Mold';
+  font-size: 30px;
+  color: #75cd57;
+  font-weight: bold;
+}
 }

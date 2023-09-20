@@ -73,12 +73,12 @@ const FancySwiper: React.FC<PageContentProps & totalSlides> = ({ pages, numberSl
     <div className="w-full relative overflow-y-clip"> { /* sliding text wrapper */}
     {pages.map((page: Pages, pageIndex:number) => (
       <div key={pageIndex}>
-    <div className={`curvedbg opacity-[90%] sm:opacity-100 absolute w-[2400px] h-[1300px] top-0 right-0 bottom-0 -left-[1620px] sm:-left-[1420px] lg:-left-[1220px] xl:-left-[1000px] ${page.name}`} style={{
+    <div className={`curvedbg absolute w-[2400px] h-[865px] sm:h-[1300px] top-0 right-0 bottom-0 -left-[1620px] sm:-left-[1420px] lg:-left-[1220px] xl:-left-[1000px] ${page.name}`} style={{
         background : page.bg,
       }}></div>
     <Swiper
     onSwiper={(swiper: OriginalSwiper) => setSwiperInstance(swiper)}
-    className={`w-[260px] sm:w-[300px] lg:w-[600px] !ml-[5%] min-h-[965px] h-[100vh] max-h-[1200px]  ${page.name}`}
+    className={`w-full sm:w-[300px] lg:w-[600px] sm:!ml-[5%]  h-[865px] sm:min-h-[965px] sm:h-[100vh] max-h-[1100px]  ${page.name}`}
       modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade, Autoplay]}
       spaceBetween={0}
       slidesPerView={1}
@@ -96,13 +96,13 @@ const FancySwiper: React.FC<PageContentProps & totalSlides> = ({ pages, numberSl
     >     
        {page.sections.map((section: Section, sectionIndex: number) => (
         <div key={sectionIndex}>
-          <SwiperSlide className="swiper-slide-first"><div className="flex flex-col xl:ml-[10%] w-[260px] sm:w-[300px] lg:w-[600px] min-h-[900px] max-h-[1000px] h-full justify-center"><div className="pb-20 sm:pb-0 text-lg sm:text-xl xl:text-3xl my-6  lg:pr-32" style={{
+          <SwiperSlide className="swiper-slide-first"><div className=" flex px-10 sm:px-0 flex-col xl:ml-[10%] w-full sm:w-[300px] lg:w-[600px] sm:min-h-[900px] sm:max-h-[1000px] h-full justify-end sm:justify-center"><div className="sm-title pb-20 sm:pb-0 text-base sm:text-xl xl:text-3xl my-6  lg:pr-32" style={{
         color: page.color,
       }} dangerouslySetInnerHTML={{ __html: section.content }}></div></div></SwiperSlide>
           </div>
           ))}
                 <div className="cust-sw block absolute top-[250px] xl:left-[10%]">
-      <h1 className="text-2xl sm:text-4xl xl:text-5xl text-[#73CD4A] font-bold uppercase" style={{
+      <h1 className="hidden sm:block text-2xl sm:text-4xl xl:text-5xl text-[#73CD4A] font-bold uppercase" style={{
         color: page.color,
       }}>{page.pagetitle}</h1>
       </div>
@@ -111,20 +111,20 @@ const FancySwiper: React.FC<PageContentProps & totalSlides> = ({ pages, numberSl
           <div className="swiper-button-next"><FaCircleChevronRight size={50} className="text-gray-400 sm:text-[#D9D9D9]"/></div>
       </div>
     </Swiper>
-    <Image src={`${page.smallimage1}`} priority={true} width={191} height={191} alt="Organic Remediation Products" className={`smallimg smallimage1 w-[100px] sm:w-[191px] absolute bottom-[20px] sm:bottom-auto right-[20px] ${page.name}   ${activeIndex === 0 ? 'active' : activeIndex === 1 ? 'queue-top' : 'queue-mid'}`}/>
-    <Image src={`${page.smallimage2}`} priority={true} width={218} height={218} alt="Organic Remediation Products" className={`smallimg smallimage2 w-[100px] sm:w-[218px] absolute bottom-[20px] sm:bottom-auto right-[100px] ${page.name}  ${activeIndex === 1 ? 'active' : activeIndex === 2 ? 'queue-top' : 'queue-mid'}`}/>
-    <Image src={`${page.smallimage3}`} priority={true} width={304} height={304} alt="Organic Remediation Products" className={`smallimg smallimage3 w-[100px] sm:w-[304px] absolute bottom-[20px] sm:bottom-auto right-[180px]  ${page.name}  ${activeIndex === 2 ? 'active' : activeIndex === 0 ? 'queue-top' : 'queue-mid'} `}/>
+    <Image src={`${page.smallimage1}`} priority={true} width={191} height={191} alt="Organic Remediation Products" className={`smallimg smallimage1 sm:w-[191px] absolute right-[20px] ${page.name}   ${activeIndex === 0 ? 'active' : activeIndex === 1 ? 'queue-top' : 'queue-mid'}`}/>
+    <Image src={`${page.smallimage2}`} priority={true} width={218} height={218} alt="Organic Remediation Products" className={`smallimg smallimage2 sm:w-[218px] absolute right-[100px] ${page.name}  ${activeIndex === 1 ? 'active' : activeIndex === 2 ? 'queue-top' : 'queue-mid'}`}/>
+    <Image src={`${page.smallimage3}`} priority={true} width={304} height={304} alt="Organic Remediation Products" className={`smallimg smallimage3 sm:w-[304px] absolute right-[180px]  ${page.name}  ${activeIndex === 2 ? 'active' : activeIndex === 0 ? 'queue-top' : 'queue-mid'} `}/>
     <div className="absolute top-0 left-0 right-0 bottom-0 h-[925px] -z-[1]">  { /* background images and small bubble images */}
 
-        <div className={`item absolute top-0 left-0 right-0 bottom-0 h-[100vh] min-h-[965px] max-h-[1200px] bg-cover bg-right ${activeIndex === 0 ? 'active' : ''}`} onClick={() => goToSlide(0)} style={{
+        <div className={`item absolute top-0 left-0 right-0 bottom-0 sm:h-[100vh] h-[680px] sm:min-h-[965px] max-h-[1200px] bg-cover bg-right ${activeIndex === 0 ? 'active' : ''}`} onClick={() => goToSlide(0)} style={{
         backgroundImage: activeIndex === 0 ? page.image1 : '',
       }}>
         </div>
-        <div className={`item absolute top-0 left-0 right-0 bottom-0 h-[100vh] min-h-[965px] max-h-[1200px] bg-cover bg-right  ${activeIndex === 1 ? 'active' : ''}`} onClick={() => goToSlide(1)} style={{
+        <div className={`item absolute top-0 left-0 right-0 bottom-0 sm:h-[100vh] h-[680px] sm:min-h-[965px] max-h-[1200px] bg-cover bg-right  ${activeIndex === 1 ? 'active' : ''}`} onClick={() => goToSlide(1)} style={{
         backgroundImage: activeIndex === 1 ? page.image2 : '',
       }}>
           </div>
-        <div className={`item absolute top-0 left-0 right-0 bottom-0 h-[100vh] min-h-[965px] max-h-[1200px] bg-cover bg-right  ${activeIndex === 2 ? 'active' : ''}`} onClick={() => goToSlide(2)} style={{
+        <div className={`item absolute top-0 left-0 right-0 bottom-0 sm:h-[100vh] h-[680px] sm:min-h-[965px] max-h-[1200px] bg-cover bg-right  ${activeIndex === 2 ? 'active' : ''}`} onClick={() => goToSlide(2)} style={{
         backgroundImage: activeIndex === 2 ? page.image3 : '',
       }}>
           </div>
