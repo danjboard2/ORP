@@ -138,7 +138,7 @@
     }
 
 
-    @media only screen and (min-width: 300px) and (max-width:639px){
+    @media only screen and (min-width: 540px) and (max-width:640px){
       /* soil page */
      @keyframes top-to-mid {
        from {top: 170px; left:445px; width:191px; height:191px}
@@ -166,6 +166,38 @@
          @keyframes mold-active-to-top {
            from {top: 335px;left:65px; width:218px; height:218px}
            to {top: 485px; left:-180px; width:160px; height:160px}
+   }
+         /* end mold page anims */
+     }
+
+     @media only screen and (min-width: 300px) and (max-width:540px){
+      /* soil page */
+     @keyframes top-to-mid {
+       from {top: 170px; left:445px; width:191px; height:191px}
+       to {top: 408px; left:400px; width:218px; height:218px}
+     }
+     @keyframes mid-to-active {
+       from {top: 408px; left:400px; width:218px; height:218px}
+       to {top: 665px; left:240px; width:304px; height:304px}
+     }
+     @keyframes active-to-top {
+       from {top: 665px; left:240px; width:304px; height:304px}
+       to {top: 170px; left:445px; width:191px; height:191px}
+     }
+     /* end soil page anims */
+ 
+          /* mold page */
+          @keyframes mold-top-to-mid {
+           from {top: 470px;left:550px;width:80px; height:80px}
+           to {top: 395px; left:200px; width:80px; height:80px}
+         }
+         @keyframes mold-mid-to-active {
+           from {top: 395px; left:200px; width:80px; height:80px}
+           to {top: 405px; left:25px;  width:140px; height:140px}
+         }
+         @keyframes mold-active-to-top {
+           from {top: 405px; left:25px; width:140px; height:140px}
+           to {top: 515px; left:-100px; width:80px; height:80px}
    }
          /* end mold page anims */
      }
@@ -417,10 +449,21 @@ h3#orpstory:after {margin-left:3%}
   right: 0px;
   margin: 0 auto;
 }
-.sm-title:before {
+.mold .sm-title:before {
   content: 'Mold';
   font-size: 30px;
   color: #75cd57;
   font-weight: bold;
 }
+.soil .sm-title:before {
+  content: 'Soil';
+  font-size: 30px;
+  color: #75cd57;
+  font-weight: bold;
+}
+}
+@media only screen and (min-width:300px) and (max-width:540px){
+  #fancyswiper li {font-size:0.9rem !important;}
+  #fancyswiper .swiper-inner {padding:10px !important}
+  #fancyswiper .sm-title {padding-bottom:3rem !important;}
 }
