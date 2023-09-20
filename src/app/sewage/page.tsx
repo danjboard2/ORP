@@ -10,7 +10,7 @@ export default function Sewage() {
       image1: 'url(/media/images/sewage-slide.jpg)',
       image2: '',
       image3: '',
-      bg: 'radial-gradient(44.05% 44.05% at 52.55% 50.02%, #469621 51.56%, #61BD36 100%)',
+      bg: 'radial-gradient(44.05% 44.05% at 52.55% 50.02%, rgb(88 173 49) 51.56%, rgb(97, 189, 54) 100%)',
       color: '#fff',
       smallimage1: '',
       smallimage2: '',

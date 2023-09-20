@@ -227,11 +227,11 @@
   left: -820px;
 }
 .swiper.swiper-initialized.swiper-horizontal.sewage{
-  width: 730px !important;
+  width: 730px;
 }
 .swiper.swiper-initialized.swiper-horizontal.sewage div {
   padding-right: 0px;
-  margin-left: 20px;
+  text-shadow: 0px 0px 16px rgba(0, 0, 0, 0.35);
 }
 .mobile-nav {display:none;}
 .swiper.swiper-initialized.swiper-horizontal.sewage div ul {padding-top:120px; margin-left:20px}
@@ -403,9 +403,12 @@ h3#orpstory:after {margin-left:3%}
   #fancyswiper .curvedbg.mold {
  left: -700px;
 }
+#fancyswiper .curvedbg.sewage {
+left: -1000px;
+}
 }
 
-  @media only screen and (max-width:1024px){
+  @media only screen and (max-width:1023px){
     .navigate .item {display:none}
    .navigate .item.active {display:flex}
    #homeswiper .swiper-pagination {bottom:120px; display:block}
@@ -421,25 +424,21 @@ h3#orpstory:after {margin-left:3%}
     left: -880px;
    }
    .mobile-nav {display:block;}
+   #fancyswiper .curvedbg.sewage {
+    left: -1300px;
+}
   }
 
-  @media only screen and (max-width:640px){
+  @media only screen and (max-width:639px){
     #fancyswiper .curvedbg.soil {
       transform: rotate(215deg);
       border-radius: 12000px 150px 5000px 25000px;
-      border-left: 80px solid #75cd57;
-      border-top: 80px solid #75cd57;
-      width: 1650px;
       height: 1400px;
       left: -500px;
   }
     #fancyswiper .sewage .cust-sw {top:180px}
   #fancyswiper .sewage ul {margin-top: 50px;}
   #fancyswiper .curvedbg {border-right: 10px solid #75cd57; border-bottom: 10px solid #75cd57;}
-  .curvedbg.sewage {
-    border-bottom: 10px solid #404041 !important;
-    border-right: 10px solid #404041 !important;
-  }
   #fancyswiper .sewage ul {padding-left:0px; padding-right:10px;}
   #fancyswiper .curvedbg.mold {
     transform: rotate(61deg);
@@ -461,6 +460,23 @@ h3#orpstory:after {margin-left:3%}
   top: 450px;
   width: 1255px;
 }
+#fancyswiper .curvedbg.sewage {
+  border-radius: 12000px 150px 5000px 25000px;
+  transform: rotate(61deg);
+  left: -490px;
+  border-top: 26px solid #75cd57;
+  border-left: 26px solid #75cd57;
+  border-right: 26px solid #75cd57;
+  border-bottom: 26px solid #75cd57;
+  top: 510px;
+  height: 1400px;
+  width: 1355px;
+}
+.swiper.swiper-initialized.swiper-horizontal.sewage{
+  width: 95%;
+}
+#fancyswiper .sewage .sm-title {padding-bottom:0.5rem !important;}
+#fancyswiper .sewage .swiper-inner {padding-left:0px !important}
 #fancyswiper li {padding-top:10px;}
 #fancyswiper .custom-navigation {
   top: 800px;
@@ -480,8 +496,19 @@ h3#orpstory:after {margin-left:3%}
   color: #75cd57;
   font-weight: bold;
 }
+.sewage .sm-title:before {
+  content: 'Sewage';
+  font-size: 30px;
+  color: #404041;
+  font-weight: bold;
+}
+#fancyswiper .sewage ul {
+   margin-top: 0px; 
+   padding-top:0px;
+}
 }
 @media only screen and (min-width:300px) and (max-width:540px){
+  #fancyswiper .curvedbg.sewage {top:480px; left:-590px}
   #fancyswiper li {font-size:0.9rem !important;}
   #fancyswiper .swiper-inner {padding:10px !important}
   #fancyswiper .sm-title {padding-bottom:3rem !important;}
