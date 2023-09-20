@@ -141,16 +141,16 @@
     @media only screen and (min-width: 540px) and (max-width:640px){
       /* soil page */
      @keyframes top-to-mid {
-       from {top: 170px; left:445px; width:191px; height:191px}
-       to {top: 408px; left:400px; width:218px; height:218px}
+      from {top: 590px;left:650px;width:160px; height:160px}
+           to {top: 385px; left:350px; width:160px; height:160px}
      }
      @keyframes mid-to-active {
-       from {top: 408px; left:400px; width:218px; height:218px}
-       to {top: 665px; left:240px; width:304px; height:304px}
+      from {top: 385px; left:350px; width:160px; height:160px}
+      to {top: 335px; left:65px;  width:218px; height:218px}
      }
      @keyframes active-to-top {
-       from {top: 665px; left:240px; width:304px; height:304px}
-       to {top: 170px; left:445px; width:191px; height:191px}
+      from {top: 335px;left:65px; width:218px; height:218px}
+      to {top: 485px; left:-180px; width:160px; height:160px}
      }
      /* end soil page anims */
  
@@ -173,16 +173,16 @@
      @media only screen and (min-width: 300px) and (max-width:540px){
       /* soil page */
      @keyframes top-to-mid {
-       from {top: 170px; left:445px; width:191px; height:191px}
-       to {top: 408px; left:400px; width:218px; height:218px}
+      from {top: 470px;left:550px;width:120px; height:120px}
+           to {top: 375px; left:220px; width:120px; height:120px}
      }
      @keyframes mid-to-active {
-       from {top: 408px; left:400px; width:218px; height:218px}
-       to {top: 665px; left:240px; width:304px; height:304px}
+      from {top: 375px; left:220px; width:120px; height:120px}
+      to {top: 385px; left:25px;  width:170px; height:170px}
      }
      @keyframes active-to-top {
-       from {top: 665px; left:240px; width:304px; height:304px}
-       to {top: 170px; left:445px; width:191px; height:191px}
+      from {top: 385px; left:25px; width:170px; height:170px}
+      to {top: 515px; left:-150px; width:120px; height:120px}
      }
      /* end soil page anims */
  
@@ -424,6 +424,15 @@ h3#orpstory:after {margin-left:3%}
   }
 
   @media only screen and (max-width:640px){
+    #fancyswiper .curvedbg.soil {
+      transform: rotate(215deg);
+      border-radius: 12000px 150px 5000px 25000px;
+      border-left: 80px solid #75cd57;
+      border-top: 80px solid #75cd57;
+      width: 1650px;
+      height: 1400px;
+      left: -500px;
+  }
     #fancyswiper .sewage .cust-sw {top:180px}
   #fancyswiper .sewage ul {margin-top: 50px;}
   #fancyswiper .curvedbg {border-right: 10px solid #75cd57; border-bottom: 10px solid #75cd57;}
@@ -441,6 +450,16 @@ h3#orpstory:after {margin-left:3%}
     border-bottom: 26px solid #75cd57;
     top: 450px;
     width: 1255px;
+}
+#fancyswiper .curvedbg.soil {
+  transform: rotate(61deg);
+  left: -495px;
+  border-top: 26px solid #75cd57;
+  border-left: 26px solid #75cd57;
+  border-right: 26px solid #75cd57;
+  border-bottom: 26px solid #75cd57;
+  top: 450px;
+  width: 1255px;
 }
 #fancyswiper li {padding-top:10px;}
 #fancyswiper .custom-navigation {
