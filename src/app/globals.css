@@ -435,6 +435,14 @@ left: -1000px;
   }
 
   @media only screen and (max-width:639px){
+    .item .round-icon img {
+      scale:1;
+      transition:0.3s;
+    }
+    .item.active .round-icon img {
+      scale:1;
+      transition:0.3s;
+    }
     .fade-element {
       max-height:350px
     }
