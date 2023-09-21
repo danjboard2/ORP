@@ -5,7 +5,7 @@ interface FadeInOptions {
   threshold?: number;
 }
 
-export const useFadeIn = ({ threshold = 0.75 }: FadeInOptions = {}) => {
+export const useFadeIn = ({ threshold = 0.5 }: FadeInOptions = {}) => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold,
