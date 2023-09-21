@@ -351,7 +351,7 @@ h3#orpstory:after {margin-left:3%}
   display: none;
 }
 #orpstory .video-container {
-  min-height: 300px; /* Set your desired minimum height */
+  min-height: 350px; /* Set your desired minimum height */
   overflow: hidden; /* Hide any overflow beyond the container */
   display: flex;
   justify-content:center; /* Align the video to the right */
@@ -430,6 +430,17 @@ left: -1000px;
   }
 
   @media only screen and (max-width:639px){
+    .fade-element {
+      max-height:350px
+    }
+    .fade-in {max-height:350px}
+    .video-react-controls-enabled.video-react-paused.video-react-user-active.video-react-workinghover.video-react {
+      height: 350px !important;
+      width: 980px !important;
+  }
+  video.video-react-video {
+    height: 350px !important;
+}
     #fancyswiper .curvedbg.soil {
       transform: rotate(215deg);
       border-radius: 12000px 150px 5000px 25000px;
