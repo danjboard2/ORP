@@ -7,12 +7,21 @@ import { useFadeIn } from './fadein'; // Import the custom hook
 
 export default function ORPStory() {
 
-    function getCurrentDimension(){
-        return {
-              width: window.innerWidth,
-              height: window.innerHeight
+    function getCurrentDimension() {
+        if (typeof window !== 'undefined') {
+          // Check if the 'window' object is defined (client-side)
+          return {
+            width: window.innerWidth,
+            height: window.innerHeight
+          };
+        } else {
+          // Provide a fallback value or handle the case when 'window' is not available
+          return {
+            width: 0,
+            height: 0
+          };
         }
-    }
+      }
     const [screenSize, setScreenSize] = useState(getCurrentDimension());
 
     const { ref: ref1, fadeClass: fadeClass1 } = useFadeIn(); 
