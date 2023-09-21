@@ -160,7 +160,7 @@ export default function Carousel() {
       </div>
       <div className="bg-[#D9D9D9] z-20 flex flex-col w-full text-left justify-center items-center">
       <p className="text-base md:text-lg xl:text-xl px-4 pt-20 md:px-0 w-full md:w-1/2 min-h-[230px] md:min-h-[200px]">{/* activeText */}{activeText2}<br/><br/>
-      <a href={activeURL1} className=" rounded-full text-[#404041] border-2 font-bold border-[#404041] px-6 hover:bg-[#404041] hover:text-white">Learn more...</a></p>
+      <a href={activeURL1} className=" rounded-full text-[#404041] border-2 font-bold border-[#404041] px-6 py-[3px] hover:bg-[#404041] hover:text-white">Learn more...</a></p>
       
       { /* governments */}
       <ul className={`industry-text text-base md:text-lg xl:text-xl border-t-2 border-[#A0A0A0] w-full md:w-1/2 mt-20 pt-4 pb-10 list-disc  ${activeItem === 0 ? 'active' : ''}`}><li className="ml-[30px] mr-[30px]">ORP and our MT1 Mold Treatment Line has become registered and approved for natural disaster response teams.</li>
