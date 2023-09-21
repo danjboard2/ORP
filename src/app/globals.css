@@ -298,7 +298,7 @@ img.smallimage1.sewage, img.smallimage2.sewage ,img.smallimage3.sewage {
   transition:0.2s;
   filter: blur(0px);
 }
-#projects .custom-navigation{ z-index:40; width:200px; position:relative; height:50px;} 
+#projects .custom-navigation{ z-index:40; width:200px; position:relative; height:60px;} 
 #projects  .swiper-button-prev:after, #projects .swiper-rtl .swiper-button-next:after {display:none;}
 #projects .swiper-button-next:after, #projects .swiper-rtl .swiper-button-prev:after {display:none;}
 #projects  .swiper-button-prev, #projects .swiper-button-next {width:auto !important; left:auto !important; right:auto !important; top:30px !important}
@@ -409,6 +409,11 @@ left: -1000px;
 }
 
   @media only screen and (max-width:1023px){
+    .navigate .item .item-button {
+      background:transparent !important;
+      color: #404041 !important;
+      border-width: 1px !important;
+  }
     .navigate .item {display:none}
    .navigate .item.active {display:flex}
    #homeswiper .swiper-pagination {bottom:120px; display:block}

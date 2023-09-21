@@ -78,21 +78,21 @@ export default function Carousel() {
         <section className="w-full flex justify-end items-center flex-col mt-[147px] ">
         <h1 className="text-3xl xl:text-6xl mt-10 text-[#3AAA01] font-bold uppercase w-[90%] lg:w-2/3 mb-20">Projects</h1>
 
-            <div className="w-full max-w-[1000px] flex flex-col lg:flex-row justify-between m-auto px-4 lg:px-12 xl:px-32 mt-10 lg:mt-20 !mb-12">
-            <div className={`item z-10 relative text-center p-4 lg:p-8 xl:p-10 rounded-lg w-full mb-20 lg:mb-0 lg:w-[30%] ${activeItem === 0 ? 'active' : ''}`} onClick={() => setActive(0, "Governments")}>
+            <div className="w-full max-w-[1000px] flex  flex-wrap justify-center flex-row lg:justify-between m-auto px-4 lg:px-12 xl:px-32 mt-10 lg:mt-20 !mb-12">
+            <div className={`item z-10 relative text-center p-4 lg:p-8 xl:p-10 rounded-lg w-1/2 mb-20 lg:mb-0 lg:w-[30%] ${activeItem === 0 ? 'active' : ''}`} onClick={() => setActive(0, "Governments")}>
               <div className="round-icon h-[120px] mb-4 lg:mb-14">
               <Image src="/media/images/government-static.png" alt="Government" width={200} height={200} className="round-image block m-auto -mt-[65px] lg:-mt-[120px] p-[10px] w-[100px] lg:w-[150px] bg-white rounded-full [box-shadow:_0_4px_20px_rgb(0_0_0_/_25%)]"/>
                 </div>
                 <h3 className="text-lg xl:text-xl uppercase font-bold mb-2">Governments</h3>
             </div>
 
-            <div className={`item  z-10 relative text-center p-4 lg:p-8 xl:p-10 rounded-lg w-full mb-20 lg:mb-0 lg:w-[30%] ${activeItem === 1 ? 'active' : ''}`} onClick={() => setActive(1, "Commercial Real-estate")}>
+            <div className={`item  z-10 relative text-center p-4 lg:p-8 xl:p-10 rounded-lg w-1/2 mb-20 lg:mb-0 lg:w-[30%] ${activeItem === 1 ? 'active' : ''}`} onClick={() => setActive(1, "Commercial Real-estate")}>
             <div className="round-icon h-[120px] mb-4 lg:mb-14">
             <Image src="/media/images/commercial-static.png" alt="Commercial Real-estate" width={200} height={200} className="round-image block m-auto -mt-[65px] lg:-mt-[120px] p-[10px] w-[100px] lg:w-[150px] bg-white rounded-full [box-shadow:_0_4px_20px_rgb(0_0_0_/_25%)]"/>
                 </div>
               <h3 className="text-lg xl:text-xl uppercase font-bold mb-2">Commercial Real-estate</h3>
               </div>
-            <div className={`item z-10 relative text-center p-4 lg:p-8 xl:p-10 rounded-lg w-full mb-20 lg:mb-0 lg:w-[30%] ${activeItem === 2 ? 'active' : ''}`} onClick={() => setActive(2, "Global distributors")}>
+            <div className={`item z-10 relative text-center p-4 lg:p-8 xl:p-10 rounded-lg w-1/2 mb-20 lg:mb-0 lg:w-[30%] ${activeItem === 2 ? 'active' : ''}`} onClick={() => setActive(2, "Global distributors")}>
             <div className="round-icon h-[120px] mb-4 lg:mb-14">
             <Image src="/media/images/global-static.png" alt="Global Distributors" width={200} height={200} className="round-image block m-auto -mt-[65px] lg:-mt-[120px] p-[10px] w-[100px] lg:w-[150px] bg-white rounded-full [box-shadow:_0_4px_20px_rgb(0_0_0_/_25%)]"/>
                 </div>
@@ -159,21 +159,21 @@ export default function Carousel() {
       <h2 className="text-2xl xl:text-3xl text-center text-[#404041] uppercase font-bold">{activeItemTitle}</h2>
       </div>
       <div className="bg-[#D9D9D9] z-20 flex flex-col w-full text-left justify-center items-center">
-      <p className="text-lg xl:text-xl px-4 pt-20 md:px-0 w-full md:w-1/2 min-h-[300px] md:min-h-[200px]">{/* activeText */}{activeText2}<br/><br/>
-      <a href={activeURL1} className=" rounded-full text-[#404041] border-2 font-bold border-[#404041] px-6 py-[3px] hover:bg-[#404041] hover:text-white">Learn more...</a></p>
+      <p className="text-base md:text-lg xl:text-xl px-4 pt-20 md:px-0 w-full md:w-1/2 min-h-[230px] md:min-h-[200px]">{/* activeText */}{activeText2}<br/><br/>
+      <a href={activeURL1} className=" rounded-full text-[#404041] border-2 font-bold border-[#404041] px-6 hover:bg-[#404041] hover:text-white">Learn more...</a></p>
       
       { /* governments */}
-      <ul className={`industry-text text-lg xl:text-xl border-t-2 border-[#A0A0A0] w-full md:w-1/2 mt-20 pt-4 pb-10 list-disc  ${activeItem === 0 ? 'active' : ''}`}><li className="ml-[30px]">ORP and our MT1 Mold Treatment Line has become registered and approved for natural disaster response teams.</li>
-      <li className="ml-[30px] pt-4">Post flood/water event, MT1 is applied to effected homes and buildings to treat and prevent mold contamination.</li>
-      <li className="ml-[30px] pt-4">ORP is working with multiple governments (UK, Australia, US, Canada) to be the main product used for mold treatment/prevention for social housing complexes.</li></ul>
+      <ul className={`industry-text text-base md:text-lg xl:text-xl border-t-2 border-[#A0A0A0] w-full md:w-1/2 mt-20 pt-4 pb-10 list-disc  ${activeItem === 0 ? 'active' : ''}`}><li className="ml-[30px] mr-[30px]">ORP and our MT1 Mold Treatment Line has become registered and approved for natural disaster response teams.</li>
+      <li className="ml-[30px] mr-[30px] pt-4">Post flood/water event, MT1 is applied to effected homes and buildings to treat and prevent mold contamination.</li>
+      <li className="ml-[30px] mr-[30px] pt-4">ORP is working with multiple governments (UK, Australia, US, Canada) to be the main product used for mold treatment/prevention for social housing complexes.</li></ul>
 
       { /* real-estate */} 
-      <ul className={`industry-text text-lg xl:text-xl border-t-2 border-[#A0A0A0] w-full md:w-1/2 mt-20 pt-4 pb-10 list-disc  ${activeItem === 1 ? 'active' : ''}`}><li className="ml-[30px]">ORP is working with Canadian and Australian property developers to fully remediate and rehabilitate former industrial properties to be converted into commercial and residential areas.</li>
-      <li className="ml-[30px] pt-4">ORP is working along-side insurance companies to enact a best-practices approach to onsite soil decontamination and remediation procedures.</li></ul>
+      <ul className={`industry-text text-base md:text-lg xl:text-xl border-t-2 border-[#A0A0A0] w-full md:w-1/2 mt-20 pt-4 pb-10 list-disc  ${activeItem === 1 ? 'active' : ''}`}><li className="ml-[30px] mr-[30px]">ORP is working with Canadian and Australian property developers to fully remediate and rehabilitate former industrial properties to be converted into commercial and residential areas.</li>
+      <li className="ml-[30px] mr-[30px] pt-4">ORP is working along-side insurance companies to enact a best-practices approach to onsite soil decontamination and remediation procedures.</li></ul>
       
       { /* global distributors */}
-      <ul className={`industry-text text-lg xl:text-xl border-t-2 border-[#A0A0A0] w-full md:w-1/2 mt-20 pt-4 pb-10 list-disc  ${activeItem === 2 ? 'active' : ''}`}><li className="ml-[30px]">ORP has put into place a formal support and training division to activate service providers across North America and Internationally.</li>
-      <li className="ml-[30px] pt-4">ORP manufactures product locally using a network of laboratories and fermentation facilities, and certified distributors perform onsite remediations according to guidelines.</li></ul>
+      <ul className={`industry-text text-base md:text-lg xl:text-xl border-t-2 border-[#A0A0A0] w-full md:w-1/2 mt-20 pt-4 pb-10 list-disc  ${activeItem === 2 ? 'active' : ''}`}><li className="ml-[30px] mr-[30px]">ORP has put into place a formal support and training division to activate service providers across North America and Internationally.</li>
+      <li className="ml-[30px] mr-[30px] pt-4">ORP manufactures product locally using a network of laboratories and fermentation facilities, and certified distributors perform onsite remediations according to guidelines.</li></ul>
   
       </div>
       </section>

@@ -89,7 +89,7 @@ export default function HomepageSwiper() {
             <h3 className="text-xl xl:text-3xl uppercase font-bold mb-2">Hydrocarbon</h3>
             <h4 className="text-lg xl:text-2xl text-[#5E5E5E] font-bold mb-4">ORP-SR1 & ORP-SR2</h4>
             <p className="text-base sm:text-base text-left sm:text-center xl:text-xl flex-auto">Hydrocarbon contamination in soil is a very serious and expensive problem throughout the world. ORP Soil Treatment 1 was launched after years of R&D to target, break and transform this type of pollution into a harmless byproduct. A revolution in the industry, fully organic and simple to inject. The results speak for themselves, SR1 & SR2 have helped reshape the reality of soil remediation.</p>
-            <Link href="/soil" className="item-button  block w-4/5 m-auto border-solid border-2 color-[#404041] rounded-full text-base sm:text-lg xl:text-2xl px-10 py-2 border-[#404041] mt-6 font-bold">Learn more...</Link>
+            <Link href="/soil" className="item-button  block w-4/5 m-auto border-solid border-[1px] sm:border-2 color-[#404041] rounded-full text-lg xl:text-2xl px-10 md:py-2 border-[#404041] mt-6 font-bold">Learn more...</Link>
         </div>
         <div className={`item bg-white z-10 flex flex-col relative text-center [box-shadow:_0_4px_4px_rgb(0_0_0_/_25%)]  p-4 xl:p-10 rounded-lg rounded-t-none w-full lg:w-[32%] 2xl:w-[30%]  ${activeIndex === 1 ? 'active' : ''}`} onClick={() => goToSlide(1)}>
         <div className="h-[120px] -mb-[50px]">
@@ -98,7 +98,7 @@ export default function HomepageSwiper() {
           <h3 className="text-xl xl:text-3xl uppercase font-bold mb-2">Mold</h3>
           <h4 className="text-lg xl:text-2xl text-[#5E5E5E] font-bold mb-4">ORP-MT1 & ORP-MT2</h4>
           <p className="text-base sm:text-base text-left sm:text-center xl:text-xl  flex-auto">Mold due to moisture events is extremely hazardous to people and employees. Mold Treatment 1&2 are ORP’s flagship product category that target and eliminate surface mold on contact. Developed as an alternative to harmful chemical options, it can be applied throughout structures and buildings simply and safely without added health risk.</p>
-          <Link href="/mold" className="item-button block w-4/5 m-auto border-solid border-2 color-[#404041] rounded-full  text-base sm:text-lg xl:text-2xl px-10 py-2 border-[#404041] mt-6 font-bold">Learn more...</Link>
+          <Link href="/mold" className="item-button block w-4/5 m-auto border-solid border-2 color-[#404041] rounded-full  text-lg xl:text-2xl px-10 md:py-2 border-[#404041] mt-6 font-bold">Learn more...</Link>
           </div>
         <div className={`item bg-white z-10 flex flex-col relative text-center [box-shadow:_0_4px_4px_rgb(0_0_0_/_25%)]  p-4 xl:p-10 rounded-lg rounded-t-none w-full lg:w-[32%] 2xl:w-[30%]  ${activeIndex === 2 ? 'active' : ''}`} onClick={() => goToSlide(2)}>
         <div className="h-[120px] -mb-[50px]">
@@ -107,7 +107,7 @@ export default function HomepageSwiper() {
           <h3 className="text-xl xl:text-3xl uppercase font-bold mb-2">Sewage</h3>
           <h4 className="text-lg xl:text-2xl text-[#5E5E5E] font-bold mb-4">ORP-WS1 & ORP-WS2</h4>
           <p className="text-base sm:text-base text-left sm:text-center xl:text-xl  flex-auto">Currently in development with very promising early results, ORP-WS1 addresses the growing concern of toxic waste water and sewage. Urban sprawl and population growth have put heavy demand on governments to treat and manage sewage. WS1 is a progressive formula that can be modified to match contamination types and help solve this contamination problem.</p>
-          <Link href="/sewage" className="item-button block w-4/5 m-auto border-solid border-2 color-[#404041] rounded-full text-base sm:text-lg xl:text-2xl px-10 py-2 border-[#404041] mt-6 font-bold">Learn more...</Link>
+          <Link href="/sewage" className="item-button block w-4/5 m-auto border-solid border-2 color-[#404041] rounded-full text-lg xl:text-2xl px-10 md:py-2 border-[#404041] mt-6 font-bold">Learn more...</Link>
           </div>
     </div>
     </>

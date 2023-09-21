@@ -12,7 +12,7 @@ export default function CTABlock() {
                         <p className="text-base sm:text-lg xl:text-2xl">Call to action message subtitle or body goes here</p>
                     </div>
                     <div className="w-full lg:w-2/5 flex place-content-center self-center">
-                        <Link href="/" className="inline-block rounded-full border-[#404041] border-solid border-4 p-2 px-10 w-auto text-base sm:text-lg xl:text-2xl font-bold text-[#404041] hover:bg-[#404041] hover:text-white">Enquire now</Link>
+                        <Link href="/" className="inline-block rounded-full border-[#404041] border-solid border-[1px] md:border-4 md:py-2 px-10 w-auto text-lg sm:text-lg xl:text-2xl font-bold text-[#404041] hover:bg-[#404041] hover:text-white">Enquire now</Link>
                     </div>
                 </div>
             </section>
