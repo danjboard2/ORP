@@ -5,6 +5,9 @@ import { useInView } from 'react-intersection-observer';
 import { Player, ControlBar, PlayToggle, BigPlayButton } from 'video-react';
 import { useFadeIn } from './fadein'; // Import the custom hook
 
+let  vid_width:any = 2000;
+let  vid_height:any = 600;
+
 export default function ORPStory() {
 
     function getCurrentDimension() {
@@ -34,22 +37,19 @@ export default function ORPStory() {
           setScreenSize(getCurrentDimension())
         }
         window.addEventListener('resize', updateDimension);
-        
+        if(screenSize.width < 640){
+            vid_width=980;
+            vid_height=350;
+        }
+        else {
+            vid_width=2000;
+            vid_height=600;
+        }
         return(() => {
             window.removeEventListener('resize', updateDimension);
         })
       }, [screenSize])
 
-let  vid_width;
-let  vid_height;
-if(screenSize.width < 640){
-    vid_width=980;
-    vid_height=350;
-}
-else {
-    vid_width=2000;
-    vid_height=600;
-}
 
     return (
         <>
