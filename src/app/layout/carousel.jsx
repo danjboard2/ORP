@@ -79,81 +79,79 @@ export default function Carousel() {
         <h1 className="text-3xl xl:text-6xl mt-10 text-[#3AAA01] font-bold uppercase w-[90%] lg:w-2/3 mb-20">Projects</h1>
 
             <div className="w-full max-w-[1000px] flex  flex-wrap justify-center flex-row lg:justify-between m-auto px-4 lg:px-12 xl:px-32 mt-10 lg:mt-20 !mb-12">
-            <div className={`item z-10 relative text-center p-4 lg:p-8 xl:p-10 rounded-lg w-1/2 mb-20 lg:mb-0 lg:w-[30%] ${activeItem === 0 ? 'active' : ''}`} onClick={() => setActive(0, "Governments")}>
+            <div className={`item z-10 relative text-center p-[5px] sm:p-4 lg:p-8 xl:p-10 rounded-lg w-1/3 mb-20 lg:mb-0 lg:w-[30%] ${activeItem === 0 ? 'active' : ''}`} onClick={() => setActive(0, "Governments")}>
               <div className="round-icon h-[120px] mb-4 lg:mb-14">
               <Image src="/media/images/government-static.png" alt="Government" width={200} height={200} className="round-image block m-auto -mt-[65px] lg:-mt-[120px] p-[10px] w-[100px] lg:w-[150px] bg-white rounded-full [box-shadow:_0_4px_20px_rgb(0_0_0_/_25%)]"/>
                 </div>
-                <h3 className="text-lg xl:text-xl uppercase font-bold mb-2">Governments</h3>
+                <h3 className="text-xs sm:text-lg xl:text-xl uppercase font-bold mb-2">Governments</h3>
             </div>
 
-            <div className={`item  z-10 relative text-center p-4 lg:p-8 xl:p-10 rounded-lg w-1/2 mb-20 lg:mb-0 lg:w-[30%] ${activeItem === 1 ? 'active' : ''}`} onClick={() => setActive(1, "Commercial Real-estate")}>
+            <div className={`item  z-10 relative text-center p-[5px] sm:p-4 lg:p-8 xl:p-10 rounded-lg w-1/3 mb-20 lg:mb-0 lg:w-[30%] ${activeItem === 1 ? 'active' : ''}`} onClick={() => setActive(1, "Commercial Real-estate")}>
             <div className="round-icon h-[120px] mb-4 lg:mb-14">
             <Image src="/media/images/commercial-static.png" alt="Commercial Real-estate" width={200} height={200} className="round-image block m-auto -mt-[65px] lg:-mt-[120px] p-[10px] w-[100px] lg:w-[150px] bg-white rounded-full [box-shadow:_0_4px_20px_rgb(0_0_0_/_25%)]"/>
                 </div>
-              <h3 className="text-lg xl:text-xl uppercase font-bold mb-2">Commercial Real-estate</h3>
+              <h3 className="text-xs sm:text-lg xl:text-xl uppercase font-bold mb-2">Commercial Real-estate</h3>
               </div>
-            <div className={`item z-10 relative text-center p-4 lg:p-8 xl:p-10 rounded-lg w-1/2 mb-20 lg:mb-0 lg:w-[30%] ${activeItem === 2 ? 'active' : ''}`} onClick={() => setActive(2, "Global distributors")}>
+            <div className={`item z-10 relative text-center p-[5px] sm:p-4 lg:p-8 xl:p-10 rounded-lg w-1/3 mb-20 lg:mb-0 lg:w-[30%] ${activeItem === 2 ? 'active' : ''}`} onClick={() => setActive(2, "Global distributors")}>
             <div className="round-icon h-[120px] mb-4 lg:mb-14">
             <Image src="/media/images/global-static.png" alt="Global Distributors" width={200} height={200} className="round-image block m-auto -mt-[65px] lg:-mt-[120px] p-[10px] w-[100px] lg:w-[150px] bg-white rounded-full [box-shadow:_0_4px_20px_rgb(0_0_0_/_25%)]"/>
                 </div>
-              <h3 className="text-lg xl:text-xl uppercase font-bold mb-2">Global Distributors</h3>
+              <h3 className="text-xs sm:text-lg xl:text-xl uppercase font-bold mb-2">Global Distributors</h3>
               </div>
         </div>
 
-        <Swiper id="projects" className="w-full max-w-[1400px] relative"
+        <Swiper id="projects" className="w-[100%] max-w-[1400px] relative !overflow-y-visible"
          onSwiper={(swiper) => setSwiperInstance(swiper)}
          onInit={handleSwiperInit}
         // install Swiper modules
         modules={[Navigation, Pagination, Scrollbar, A11y, EffectCoverflow, EffectFade]}
         effect={"coverflow"}
-        spaceBetween={0}
+        spaceBetween={-80}
+        initialSlide="2"
         coverflowEffect={{
             rotate: 0,
             stretch: 0,
-            depth: 150,
+            depth: 50,
             modifier: 5,
             slideShadows: false,
           }}
           breakpoints={{
             // when window width is >= 640px
             0: {
-              slidesPerView: 2
+              slidesPerView: 5,
+              spaceBetween:-70,
+              coverflowEffect: {
+                modifier: 20,
+                depth: 70,
+              },
             },
-            770: {
-              slidesPerView: 4
-            },
-            // when window width is >= 770px
-          }}
+            640: {
+              slidesPerView: 5,
+              coverflowEffect: {
+                modifier: 12,
+                depth: 50,
+              },
+              },
+            }}
+
         centeredSlides={true}
         grabCursor={true}
         navigation={{
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev'
+            nextEl: '.nav-projects.right',
+            prevEl: '.nav-projects.left'
           }}
         pagination={false}
         scrollbar={{ draggable: true }}
         onSlideChange={(swiper) => handleSlideChange(swiper)}
-        loop={true}
+        loop={false}
       >
         <SwiperSlide className="" data-text="Soil Remediation" data-text2="Our Soil Remediation product can remove the contamination in less that 120 days. Much cheaper than traditional remediation and 100% better for the environment." data-url1="/project-page-goes-here" ><Image className="rounded-full border-4 lg:border-8 border-[#73CD4A] overflow-hidden" src="/media/images/soil-circle.jpg" width={500} height={500} alt="Soil Remediation"/></SwiperSlide>
         <SwiperSlide className="" data-text="Sulphur Remediation" data-text2="Our team is working on our latest product that will remove sulphur contamination from the soil." data-url1="/another-project-page-goes-here"><Image className="rounded-full border-4 lg:border-8 border-[#73CD4A] overflow-hidden" src="/media/images/sulphur-circle.jpg" width={500} height={500} alt="Sulphur Remediation"/></SwiperSlide>
         <SwiperSlide className="" data-text="Flooding" data-text2="Have water in your house? Our mold product will stop mold from growing while you wait for the insurance adjuster to file your claim." data-url1="/project-page-goes-here"><Image className="rounded-full border-4 lg:border-8 border-[#73CD4A] overflow-hidden" src="/media/images/flooding-circle.jpg" width={500} height={500} alt="Flooding"/></SwiperSlide>
         <SwiperSlide className="" data-text="Mold Remediation" data-text2="Remediated black mold found in Montreal school. No traces of mold after our product was applied." data-url1="/project-page-goes-here"><Image className="rounded-full border-4 lg:border-8 border-[#73CD4A] overflow-hidden" src="/media/images/mold-circle.webp" width={500} height={500} alt="Mold Remediation"/></SwiperSlide>
         <SwiperSlide className="" data-text="Heating Oil" data-text2="Furnace oil tanks were often buried in the backyard of many older homes. This contamination was 15000 ppm, we reduced it to 400 ppm in 120 days." data-url1="/project-page-goes-here"><Image className="rounded-full border-4 lg:border-8 border-[#73CD4A] overflow-hidden" src="/media/images/heating-circle.webp" width={500} height={500} alt="Heating Oil"/></SwiperSlide>
-        <SwiperSlide className="" data-text="Soil Remediation" data-text2="Our Soil Remediation product can remove the contamination in less that 120 days. Much cheaper than traditional remediation and 100% better for the environment." data-url1="/project-page-goes-here"><Image className="rounded-full border-4 lg:border-8 border-[#73CD4A] overflow-hidden" src="/media/images/soil-circle.jpg" width={500} height={500} alt="Soil Remediation"/></SwiperSlide>
-        <SwiperSlide className="" data-text="Sulphur Remediation" data-text2="Our team is working on our latest product that will remove sulphur contamination from the soil." data-url1="/project-page-goes-here"><Image className="rounded-full border-4 lg:border-8 border-[#73CD4A] overflow-hidden" src="/media/images/sulphur-circle.jpg" width={500} height={500} alt="Sulphur Remediation"/></SwiperSlide>
-        <SwiperSlide className="" data-text="Flooding" data-text2="Have water in your house? Our mold product will stop mold from growing while you wait for the insurance adjuster to file your claim." data-url1="/project-page-goes-here"><Image className="rounded-full border-4 lg:border-8 border-[#73CD4A] overflow-hidden" src="/media/images/flooding-circle.jpg" width={500} height={500} alt="Flooding"/></SwiperSlide>
-        <SwiperSlide className="" data-text="Mold Remediation" data-text2="Remediated black mold found in Montreal school. No traces of mold after our product was applied." data-url1="/project-page-goes-here"><Image className="rounded-full border-4 lg:border-8 border-[#73CD4A] overflow-hidden" src="/media/images/mold-circle.webp" width={500} height={500} alt="Mold Remediation"/></SwiperSlide>
-        <SwiperSlide className="" data-text="Heating Oil" data-text2="Furnace oil tanks were often buried in the backyard of many older homes. This contamination was 15000 ppm, we reduced it to 400 ppm in 120 days." data-url1="/project-page-goes-here"><Image className="rounded-full border-4 lg:border-8 border-[#73CD4A] overflow-hidden" src="/media/images/heating-circle.webp" width={500} height={500} alt="Heating Oil"/></SwiperSlide>
-        <SwiperSlide className="" data-text="Soil Remediation" data-text2="Our Soil Remediation product can remove the contamination in less that 120 days. Much cheaper than traditional remediation and 100% better for the environment." data-url1="/project-page-goes-here"><Image className="rounded-full border-4 lg:border-8 border-[#73CD4A] overflow-hidden" src="/media/images/soil-circle.jpg" width={500} height={500} alt="Soil Remediation"/></SwiperSlide>
-        <SwiperSlide className="" data-text="Sulphur Remediation" data-text2="Our team is working on our latest product that will remove sulphur contamination from the soil." data-url1="/project-page-goes-here"><Image className="rounded-full border-4 lg:border-8 border-[#73CD4A] overflow-hidden" src="/media/images/sulphur-circle.jpg" width={500} height={500} alt="Sulphur Remediation"/></SwiperSlide>
-        <SwiperSlide className="" data-text="Flooding" data-text2="Have water in your house? Our mold product will stop mold from growing while you wait for the insurance adjuster to file your claim." data-url1="/project-page-goes-here"><Image className="rounded-full border-4 lg:border-8 border-[#73CD4A] overflow-hidden" src="/media/images/flooding-circle.jpg" width={500} height={500} alt="Flooding"/></SwiperSlide>
-        <SwiperSlide className="" data-text="Mold Remediation" data-text2="Remediated black mold found in Montreal school. No traces of mold after our product was applied." data-url1="/project-page-goes-here"><Image className="rounded-full border-4 lg:border-8 border-[#73CD4A] overflow-hidden" src="/media/images/mold-circle.webp" width={500} height={500} alt="Mold Remediation"/></SwiperSlide>
-        <SwiperSlide className="" data-text="Heating Oil" data-text2="Furnace oil tanks were often buried in the backyard of many older homes. This contamination was 15000 ppm, we reduced it to 400 ppm in 120 days." data-url1="/project-page-goes-here"><Image className="rounded-full border-4 lg:border-8 border-[#73CD4A] overflow-hidden" src="/media/images/heating-circle.webp" width={500} height={500} alt="Heating Oil"/></SwiperSlide>
-        <div className={`custom-navigation mt-10 z-10 flex flex-row w-[180px] m-auto justify-between`} >
-          <div className="swiper-button-prev"><FaCircleChevronLeft size={50} className="text-[#000]"/></div>
-          <div className="swiper-button-next"><FaCircleChevronRight size={50} className="text-[#000]"/></div>
-      </div>
+          <div className="nav-projects left absolute left-0 sm:left-4 bottom-0 top-0 z-50 "><FaCircleChevronLeft className="text-[#000] !w-[30px] !h-[30px] sm:!w-[50px] sm:!h-[50px]"/></div>
+          <div className="nav-projects right absolute right-0 sm:right-4 bottom-0 top-0  z-50 "><FaCircleChevronRight className="text-[#000] !w-[30px] !h-[30px] sm:!w-[50px] sm:!h-[50px]"/></div>
       </Swiper>
       <div className="w-full z-20 mt-16 p-6 bg-[#73CD4A] border-8 border-[#3AAA01] border-l-0 border-r-0">
       <h2 className="text-2xl xl:text-3xl text-center text-[#404041] uppercase font-bold">{activeItemTitle}</h2>

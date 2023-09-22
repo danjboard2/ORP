@@ -234,6 +234,12 @@
   text-shadow: 0px 0px 16px rgba(0, 0, 0, 0.35);
 }
 .mobile-nav {display:none;}
+.nav-projects {
+  display: flex;
+  align-items: center;
+  -webkit-tap-highlight-color: transparent;
+}
+.nav-projects.swiper-button-disabled svg {color:#acacac !important;}
 .swiper.swiper-initialized.swiper-horizontal.sewage div ul {padding-top:120px; margin-left:20px}
 .swiper.swiper-initialized.swiper-horizontal.sewage div ul li {padding-top:30px}
 
@@ -289,16 +295,16 @@ img.smallimage1.sewage, img.smallimage2.sewage ,img.smallimage3.sewage {
 
 /* projects */
 #projects .swiper-slide {
-    opacity: 0.5;
+    opacity: 1;
     transition:0.1s;
-    filter: blur(4px);
+    /* filter: blur(4px); */
 }
 #projects .swiper-slide-active {
   opacity: 1;
   transition:0.2s;
   filter: blur(0px);
 }
-#projects .custom-navigation{ z-index:40; width:200px; position:relative; height:60px;} 
+#projects .custom-navigation{ z-index:40; width:200px; height:60px;} 
 #projects  .swiper-button-prev:after, #projects .swiper-rtl .swiper-button-next:after {display:none;}
 #projects .swiper-button-next:after, #projects .swiper-rtl .swiper-button-prev:after {display:none;}
 #projects  .swiper-button-prev, #projects .swiper-button-next {width:auto !important; left:auto !important; right:auto !important; top:30px !important}
@@ -435,6 +441,9 @@ left: -1000px;
   }
 
   @media only screen and (max-width:639px){
+    #projects.swiper-3d .swiper-wrapper {
+      scale: 1.6;
+  }
     .item .round-icon img {
       scale:1;
       transition:0.3s;
