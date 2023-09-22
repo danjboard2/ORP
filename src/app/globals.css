@@ -428,7 +428,7 @@ left: -1000px;
    #fancyswiper .curvedbg.mold {
     left: -880px;
    }
-   .mobile-nav {display:block;}
+   .mobile-nav {display:block; -webkit-tap-highlight-color: transparent;}
    #fancyswiper .curvedbg.sewage {
     left: -1300px;
 }
