@@ -12,10 +12,39 @@ import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
 
 export default function HomepageSwiper() {
+
+  
+  function getCurrentDimension() {
+    if (typeof window !== 'undefined') {
+      // Check if the 'window' object is defined (client-side)
+      return {
+        width: window.innerWidth,
+        height: window.innerHeight
+      };
+    } else {
+      // Provide a fallback value or handle the case when 'window' is not available
+      return {
+        width: 0,
+        height: 0
+      };
+    }
+  }
+const [screenSize, setScreenSize] = useState(getCurrentDimension());
+
     const [swiperInstance, setSwiperInstance] = useState<OriginalSwiper | null>(null);
     const [activeIndex, setActiveIndex] = useState<number>(0);
     const numberOfSlides = 3;
-  
+
+    useEffect(() => {
+      const updateDimension = () => {
+        setScreenSize(getCurrentDimension())
+      }
+      window.addEventListener('resize', updateDimension);
+      return(() => {
+          window.removeEventListener('resize', updateDimension);
+      })
+    }, [screenSize])
+
     useEffect(() => {
         if (swiperInstance) {
           swiperInstance.on('slideChange', function (this: any) {
@@ -84,7 +113,7 @@ export default function HomepageSwiper() {
       <button  className="mobile-nav right absolute right-2 bottom-0 top-0"  onClick={handleNext}><FaCircleChevronRight size={30} color={'#404041'}/></button>
         <div className={`item bg-white z-10 flex flex-col relative text-center [box-shadow:_0_4px_4px_rgb(0_0_0_/_25%)] p-4 xl:p-10 rounded-lg rounded-t-none w-full lg:w-[32%] 2xl:w-[30%] ${activeIndex === 0 ? 'active' : ''}`} onClick={() => goToSlide(0)}>
           <div className="h-[120px] -mb-[50px]">
-            <Image src={activeIndex === 0 ? '/media/images/plant-active.gif' : '/media/images/plant-static.png'} width={80} height={80} alt="Soil" className="round-image block m-auto -mt-[120px] p-[10px] w-[150px] bg-white rounded-full [box-shadow:_0_4px_4px_rgb(0_0_0_/_25%)]"/>
+            <Image src={activeIndex === 0 && screenSize.width < 1023 ? '/media/images/plant-active.gif' : activeIndex === 1 && screenSize.width > 1023  ? '/media/images/plant-active.gif' : '/media/images/plant-static.png'} width={80} height={80} alt="Soil" className={`round-image ${activeIndex === 0 ? 'active' : ''} block m-auto -mt-[120px] p-[10px] w-[150px] bg-white rounded-full [box-shadow:_0_4px_4px_rgb(0_0_0_/_25%)]`}/>
             </div>
             <h3 className="text-xl xl:text-3xl uppercase font-bold mb-2">Hydrocarbon</h3>
             <h4 className="text-lg xl:text-2xl text-[#5E5E5E] font-bold mb-4">ORP-SR1 & ORP-SR2</h4>
@@ -93,7 +122,7 @@ export default function HomepageSwiper() {
         </div>
         <div className={`item bg-white z-10 flex flex-col relative text-center [box-shadow:_0_4px_4px_rgb(0_0_0_/_25%)]  p-4 xl:p-10 rounded-lg rounded-t-none w-full lg:w-[32%] 2xl:w-[30%]  ${activeIndex === 1 ? 'active' : ''}`} onClick={() => goToSlide(1)}>
         <div className="h-[120px] -mb-[50px]">
-            <Image src={activeIndex === 1 ? '/media/images/mold-active.gif' : '/media/images/mold-static.png'} width={80} height={80} alt="Mold" className="round-image block m-auto -mt-[120px] p-[10px] w-[150px] bg-white rounded-full [box-shadow:_0_4px_4px_rgb(0_0_0_/_25%)]"/>
+            <Image src={activeIndex === 1 && screenSize.width < 1023 ? '/media/images/mold-active.gif' : activeIndex === 1 && screenSize.width > 1023  ? '/media/images/mold-active.gif' : '/media/images/mold-static.png'} width={80} height={80} alt="Mold" className={`round-image ${activeIndex === 1 ? 'active' : ''} block m-auto -mt-[120px] p-[10px] w-[150px] bg-white rounded-full [box-shadow:_0_4px_4px_rgb(0_0_0_/_25%)]`}/>
             </div>
           <h3 className="text-xl xl:text-3xl uppercase font-bold mb-2">Mold</h3>
           <h4 className="text-lg xl:text-2xl text-[#5E5E5E] font-bold mb-4">ORP-MT1 & ORP-MT2</h4>
@@ -102,7 +131,7 @@ export default function HomepageSwiper() {
           </div>
         <div className={`item bg-white z-10 flex flex-col relative text-center [box-shadow:_0_4px_4px_rgb(0_0_0_/_25%)]  p-4 xl:p-10 rounded-lg rounded-t-none w-full lg:w-[32%] 2xl:w-[30%]  ${activeIndex === 2 ? 'active' : ''}`} onClick={() => goToSlide(2)}>
         <div className="h-[120px] -mb-[50px]">
-            <Image src={activeIndex === 2 ? '/media/images/sewage-active.gif' : '/media/images/sewage-static.png'} width={80} height={80} alt="Sewage" className="round-image block m-auto -mt-[120px] p-[10px] w-[150px] bg-white rounded-full [box-shadow:_0_4px_4px_rgb(0_0_0_/_25%)]"/>
+            <Image src={activeIndex === 2 && screenSize.width < 1023 ? '/media/images/sewage-active.gif' : activeIndex === 2 && screenSize.width > 1023  ? '/media/images/sewage-active.gif' : '/media/images/sewage-static.png'} width={80} height={80} alt="Sewage" className={`round-image ${activeIndex === 2 ? 'active' : ''} block m-auto -mt-[120px] p-[10px] w-[150px] bg-white rounded-full [box-shadow:_0_4px_4px_rgb(0_0_0_/_25%)]`}/>
             </div>
           <h3 className="text-xl xl:text-3xl uppercase font-bold mb-2">Sewage</h3>
           <h4 className="text-lg xl:text-2xl text-[#5E5E5E] font-bold mb-4">ORP-WS1 & ORP-WS2</h4>
