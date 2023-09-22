@@ -78,7 +78,7 @@ export default function Carousel() {
         <section className="w-full flex justify-end items-center flex-col mt-[147px] ">
         <h1 className="text-3xl xl:text-6xl mt-10 text-[#3AAA01] font-bold uppercase w-[90%] lg:w-2/3 mb-20">Projects</h1>
 
-            <div className="w-full max-w-[1000px] flex  flex-wrap justify-center flex-row lg:justify-between m-auto px-4 lg:px-12 xl:px-32 mt-10 lg:mt-20 !mb-12">
+            <div className="w-full max-w-[1000px] flex  flex-wrap justify-center flex-row lg:justify-between m-auto px-4 lg:px-12 xl:px-32 mt-10 lg:mt-20 sm:!mb-12">
             <div className={`item z-10 relative text-center p-[5px] sm:p-4 lg:p-8 xl:p-10 rounded-lg w-1/3 mb-20 lg:mb-0 lg:w-[30%] ${activeItem === 0 ? 'active' : ''}`} onClick={() => setActive(0, "Governments")}>
               <div className="round-icon h-[120px] mb-4 lg:mb-14">
               <Image src="/media/images/government-static.png" alt="Government" width={200} height={200} className="round-image block m-auto -mt-[65px] lg:-mt-[120px] p-[10px] w-[100px] lg:w-[150px] bg-white rounded-full [box-shadow:_0_4px_20px_rgb(0_0_0_/_25%)]"/>
@@ -153,7 +153,7 @@ export default function Carousel() {
           <div className="nav-projects left absolute left-0 sm:left-4 bottom-0 top-0 z-50 "><FaCircleChevronLeft className="text-[#000] !w-[30px] !h-[30px] sm:!w-[50px] sm:!h-[50px]"/></div>
           <div className="nav-projects right absolute right-0 sm:right-4 bottom-0 top-0  z-50 "><FaCircleChevronRight className="text-[#000] !w-[30px] !h-[30px] sm:!w-[50px] sm:!h-[50px]"/></div>
       </Swiper>
-      <div className="w-full z-20 mt-16 p-6 bg-[#73CD4A] border-8 border-[#3AAA01] border-l-0 border-r-0">
+      <div className="w-full z-20 mt-24 sm:mt-16 p-6 bg-[#73CD4A] border-8 border-[#3AAA01] border-l-0 border-r-0">
       <h2 className="text-2xl xl:text-3xl text-center text-[#404041] uppercase font-bold">{activeItemTitle}</h2>
       </div>
       <div className="bg-[#D9D9D9] z-20 flex flex-col w-full text-left justify-center items-center">
