@@ -101,7 +101,7 @@ const [screenSize, setScreenSize] = useState(getCurrentDimension());
       }}
       pagination={{ clickable: true }}
       rewind={true}
-      allowTouchMove={false}
+      allowTouchMove={true}
       data-swiper-autoplay={5000} 
     >
       <SwiperSlide className="!flex flex-col justify-center px-4 lg:px-32"><Image src="/media/images/soil.jpg" id="swiperimage" className="absolute object-cover object-left block -z-[1] top-0 left-0 right-0 bottom-0 min-w-[100%] min-h-[505px] md:min-h-[965px] w-auto h-auto" width={3000} height={3000} alt="Soil"></Image><div className="flex flex-col w-full max-w-[2000px] md:text-center lg:text-left m-auto 3xl:px-32 pt-[20px] md:pt-[100px]"><h1 className="text-4xl xl:text-7xl font-bold uppercase text-white [text-shadow:_0_5px_6px_rgb(0_0_0_/_80%)]">Hydrocarbon</h1><h2 className="text-2xl xl:text-4xl my-2 md:my-6 font-bold text-white [text-shadow:_0_5px_6px_rgb(0_0_0_/_80%)]">ORP-SR1 & ORP-SR2</h2><Link href="/soil" className="inline-block md:m-auto mt-2 lg:ml-0 w-fit text-lg xl:text-2xl rounded-full border-[1px] md:border-4 border-[#3AAA01] px-10 xl:px-20 md:py-2 font-bold text-[#3AAA01] md:mt-24 bg-[#3AAA01] bg-transparent hover:bg-[#3AAA01] hover:text-white">Learn more...</Link></div></SwiperSlide>
