@@ -522,18 +522,21 @@ left: -1000px;
   font-size: 30px;
   color: #75cd57;
   font-weight: bold;
+  margin-left: 28px;
 }
 .soil .sm-title:before {
   content: 'Soil';
   font-size: 30px;
   color: #75cd57;
   font-weight: bold;
+  margin-left: 28px;
 }
 .sewage .sm-title:before {
   content: 'Sewage';
   font-size: 30px;
   color: #404041;
   font-weight: bold;
+  margin-left: 20px;
 }
 #fancyswiper .sewage ul {
    margin-top: 0px; 
