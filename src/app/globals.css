@@ -494,7 +494,7 @@ left: -1000px;
   width: 1255px;
 }
 #fancyswiper .curvedbg.sewage {
-  border-radius: 12000px 150px 5000px 25000px;
+  border-radius: 21000px 150px 5000px 25000px;
   transform: rotate(61deg);
   left: -490px;
   border-top: 26px solid #75cd57;
@@ -502,7 +502,7 @@ left: -1000px;
   border-right: 26px solid #75cd57;
   border-bottom: 26px solid #75cd57;
   top: 510px;
-  height: 1400px;
+  height: 1320px;
   width: 1355px;
 }
 .swiper.swiper-initialized.swiper-horizontal.sewage{
