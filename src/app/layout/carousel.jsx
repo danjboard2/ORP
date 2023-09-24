@@ -78,7 +78,7 @@ export default function Carousel() {
         <section className="w-full flex justify-end items-center flex-col mt-[147px] ">
         <h1 className="text-3xl xl:text-6xl mt-10 text-[#3AAA01] font-bold uppercase w-[90%] lg:w-2/3 mb-20">Projects</h1>
 
-            <div className="w-full max-w-[1000px] flex  flex-wrap justify-center flex-row lg:justify-between m-auto px-4 lg:px-12 xl:px-32 mt-10 lg:mt-20 sm:!mb-12 xl:!mb-24">
+            <div className="w-full max-w-[1000px] flex  flex-wrap justify-center flex-row lg:justify-between m-auto px-4 lg:px-12 xl:px-32 mt-10 lg:mt-20 !mb-20 xl:!mb-24">
             <div className={`item z-10 relative text-center p-[5px] sm:p-4 lg:p-8 xl:p-10 rounded-lg w-1/3 mb-20 lg:mb-0 lg:w-[30%] ${activeItem === 0 ? 'active' : ''}`} onClick={() => setActive(0, "Governments")}>
               <div className="round-icon h-[120px] mb-4 lg:mb-14">
               <Image src="/media/images/government-static.png" alt="Government" width={200} height={200} className="round-image block m-auto -mt-[65px] lg:-mt-[120px] p-[10px] w-[100px] lg:w-[150px] bg-white rounded-full [box-shadow:_0_4px_20px_rgb(0_0_0_/_25%)]"/>
@@ -100,13 +100,13 @@ export default function Carousel() {
               </div>
         </div>
 
-        <Swiper id="projects" className="w-[100%] max-w-[2000px] relative !overflow-y-visible"
+        <Swiper id="projects" className="w-[100%] sm:px-0 max-w-[2000px] relative !overflow-y-visible"
          onSwiper={(swiper) => setSwiperInstance(swiper)}
          onInit={handleSwiperInit}
         // install Swiper modules
         modules={[Navigation, Pagination, Scrollbar, A11y, EffectCoverflow, EffectFade]}
         effect={"coverflow"}
-        spaceBetween={-80}
+        spaceBetween={0}
         initialSlide="2"
         coverflowEffect={{
             rotate: 0,
@@ -119,15 +119,15 @@ export default function Carousel() {
             // when window width is >= 640px
             0: {
               slidesPerView: 5,
-              spaceBetween:-70,
+              spaceBetween:0,
               coverflowEffect: {
-                modifier: 20,
-                depth: 70,
+                modifier: 15,
+                depth: 30,
               },
             },
             640: {
               slidesPerView: 5,
-              spaceBetween:-25,
+              spaceBetween:0,
               coverflowEffect: {
                 modifier: 15,
                 depth: 30,
@@ -144,13 +144,24 @@ export default function Carousel() {
         pagination={false}
         scrollbar={{ draggable: true }}
         onSlideChange={(swiper) => handleSlideChange(swiper)}
-        loop={false}
+        loop={true}
       >
         <SwiperSlide className="" data-text="Soil Remediation" data-text2="Our Soil Remediation product can remove the contamination in less that 120 days. Much cheaper than traditional remediation and 100% better for the environment." data-url1="/project-page-goes-here" ><Image className="rounded-full border-4 lg:border-8 border-[#73CD4A] overflow-hidden" src="/media/images/soil-circle.jpg" width={500} height={500} alt="Soil Remediation"/></SwiperSlide>
         <SwiperSlide className="" data-text="Sulphur Remediation" data-text2="Our team is working on our latest product that will remove sulphur contamination from the soil." data-url1="/another-project-page-goes-here"><Image className="rounded-full border-4 lg:border-8 border-[#73CD4A] overflow-hidden" src="/media/images/sulphur-circle.jpg" width={500} height={500} alt="Sulphur Remediation"/></SwiperSlide>
         <SwiperSlide className="" data-text="Flooding" data-text2="Have water in your house? Our mold product will stop mold from growing while you wait for the insurance adjuster to file your claim." data-url1="/project-page-goes-here"><Image className="rounded-full border-4 lg:border-8 border-[#73CD4A] overflow-hidden" src="/media/images/flooding-circle.jpg" width={500} height={500} alt="Flooding"/></SwiperSlide>
         <SwiperSlide className="" data-text="Mold Remediation" data-text2="Remediated black mold found in Montreal school. No traces of mold after our product was applied." data-url1="/project-page-goes-here"><Image className="rounded-full border-4 lg:border-8 border-[#73CD4A] overflow-hidden" src="/media/images/mold-circle.webp" width={500} height={500} alt="Mold Remediation"/></SwiperSlide>
         <SwiperSlide className="" data-text="Heating Oil" data-text2="Furnace oil tanks were often buried in the backyard of many older homes. This contamination was 15000 ppm, we reduced it to 400 ppm in 120 days." data-url1="/project-page-goes-here"><Image className="rounded-full border-4 lg:border-8 border-[#73CD4A] overflow-hidden" src="/media/images/heating-circle.webp" width={500} height={500} alt="Heating Oil"/></SwiperSlide>
+        <SwiperSlide className="" data-text="Soil Remediation" data-text2="Our Soil Remediation product can remove the contamination in less that 120 days. Much cheaper than traditional remediation and 100% better for the environment." data-url1="/project-page-goes-here" ><Image className="rounded-full border-4 lg:border-8 border-[#73CD4A] overflow-hidden" src="/media/images/soil-circle.jpg" width={500} height={500} alt="Soil Remediation"/></SwiperSlide>
+        <SwiperSlide className="" data-text="Sulphur Remediation" data-text2="Our team is working on our latest product that will remove sulphur contamination from the soil." data-url1="/another-project-page-goes-here"><Image className="rounded-full border-4 lg:border-8 border-[#73CD4A] overflow-hidden" src="/media/images/sulphur-circle.jpg" width={500} height={500} alt="Sulphur Remediation"/></SwiperSlide>
+        <SwiperSlide className="" data-text="Flooding" data-text2="Have water in your house? Our mold product will stop mold from growing while you wait for the insurance adjuster to file your claim." data-url1="/project-page-goes-here"><Image className="rounded-full border-4 lg:border-8 border-[#73CD4A] overflow-hidden" src="/media/images/flooding-circle.jpg" width={500} height={500} alt="Flooding"/></SwiperSlide>
+        <SwiperSlide className="" data-text="Mold Remediation" data-text2="Remediated black mold found in Montreal school. No traces of mold after our product was applied." data-url1="/project-page-goes-here"><Image className="rounded-full border-4 lg:border-8 border-[#73CD4A] overflow-hidden" src="/media/images/mold-circle.webp" width={500} height={500} alt="Mold Remediation"/></SwiperSlide>
+        <SwiperSlide className="" data-text="Heating Oil" data-text2="Furnace oil tanks were often buried in the backyard of many older homes. This contamination was 15000 ppm, we reduced it to 400 ppm in 120 days." data-url1="/project-page-goes-here"><Image className="rounded-full border-4 lg:border-8 border-[#73CD4A] overflow-hidden" src="/media/images/heating-circle.webp" width={500} height={500} alt="Heating Oil"/></SwiperSlide>
+        <SwiperSlide className="" data-text="Soil Remediation" data-text2="Our Soil Remediation product can remove the contamination in less that 120 days. Much cheaper than traditional remediation and 100% better for the environment." data-url1="/project-page-goes-here" ><Image className="rounded-full border-4 lg:border-8 border-[#73CD4A] overflow-hidden" src="/media/images/soil-circle.jpg" width={500} height={500} alt="Soil Remediation"/></SwiperSlide>
+        <SwiperSlide className="" data-text="Sulphur Remediation" data-text2="Our team is working on our latest product that will remove sulphur contamination from the soil." data-url1="/another-project-page-goes-here"><Image className="rounded-full border-4 lg:border-8 border-[#73CD4A] overflow-hidden" src="/media/images/sulphur-circle.jpg" width={500} height={500} alt="Sulphur Remediation"/></SwiperSlide>
+        <SwiperSlide className="" data-text="Flooding" data-text2="Have water in your house? Our mold product will stop mold from growing while you wait for the insurance adjuster to file your claim." data-url1="/project-page-goes-here"><Image className="rounded-full border-4 lg:border-8 border-[#73CD4A] overflow-hidden" src="/media/images/flooding-circle.jpg" width={500} height={500} alt="Flooding"/></SwiperSlide>
+        <SwiperSlide className="" data-text="Mold Remediation" data-text2="Remediated black mold found in Montreal school. No traces of mold after our product was applied." data-url1="/project-page-goes-here"><Image className="rounded-full border-4 lg:border-8 border-[#73CD4A] overflow-hidden" src="/media/images/mold-circle.webp" width={500} height={500} alt="Mold Remediation"/></SwiperSlide>
+        <SwiperSlide className="" data-text="Heating Oil" data-text2="Furnace oil tanks were often buried in the backyard of many older homes. This contamination was 15000 ppm, we reduced it to 400 ppm in 120 days." data-url1="/project-page-goes-here"><Image className="rounded-full border-4 lg:border-8 border-[#73CD4A] overflow-hidden" src="/media/images/heating-circle.webp" width={500} height={500} alt="Heating Oil"/></SwiperSlide>
+ 
           <div className="nav-projects left absolute left-[10px] sm:left-4 xl:left-36 bottom-0 top-0 z-50 "><FaCircleChevronLeft className="text-[#000] !w-[30px] !h-[30px] sm:!w-[50px] sm:!h-[50px]"/></div>
           <div className="nav-projects right absolute right-[10px] sm:right-4 xl:right-36 bottom-0 top-0  z-50 "><FaCircleChevronRight className="text-[#000] !w-[30px] !h-[30px] sm:!w-[50px] sm:!h-[50px]"/></div>
       </Swiper>
