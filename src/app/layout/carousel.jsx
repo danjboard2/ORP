@@ -100,7 +100,7 @@ export default function Carousel() {
               </div>
         </div>
 
-        <Swiper id="projects" className="w-[100%] max-w-[1400px] relative !overflow-y-visible"
+        <Swiper id="projects" className="w-[100%] max-w-[2000px] relative !overflow-y-visible"
          onSwiper={(swiper) => setSwiperInstance(swiper)}
          onInit={handleSwiperInit}
         // install Swiper modules
@@ -127,9 +127,10 @@ export default function Carousel() {
             },
             640: {
               slidesPerView: 5,
+              spaceBetween:-25,
               coverflowEffect: {
-                modifier: 12,
-                depth: 50,
+                modifier: 15,
+                depth: 30,
               },
               },
             }}
@@ -153,7 +154,7 @@ export default function Carousel() {
           <div className="nav-projects left absolute left-[10px] sm:left-4 bottom-0 top-0 z-50 "><FaCircleChevronLeft className="text-[#000] !w-[30px] !h-[30px] sm:!w-[50px] sm:!h-[50px]"/></div>
           <div className="nav-projects right absolute right-[10px] sm:right-4 bottom-0 top-0  z-50 "><FaCircleChevronRight className="text-[#000] !w-[30px] !h-[30px] sm:!w-[50px] sm:!h-[50px]"/></div>
       </Swiper>
-      <div className="w-full z-20 mt-24 sm:mt-16 p-6 bg-[#73CD4A] border-8 border-[#3AAA01] border-l-0 border-r-0">
+      <div className="w-full z-20 mt-36 sm:mt-24 p-6 bg-[#73CD4A] border-8 border-[#3AAA01] border-l-0 border-r-0">
       <h2 className="text-2xl xl:text-3xl text-center text-[#404041] uppercase font-bold">{activeItemTitle}</h2>
       </div>
       <div className="bg-[#D9D9D9] z-20 flex flex-col w-full text-left justify-center items-center">
