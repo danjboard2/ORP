@@ -453,10 +453,10 @@ left: -1000px;
   }
 
   @media only screen and (max-width:639px){
-    .swiper-slide.swiper-slide-visible,
-    .swiper-slide-prev,
-    .swiper-slide-active,
-    .swiper-slide-next{
+    #projects .swiper-slide.swiper-slide-visible,
+    #projects .swiper-slide-prev,
+    #projects .swiper-slide-active,
+    #projects .swiper-slide-next{
     scale: 2.3;
     }
     .swiper-slide.swiper-slide-visible img,
