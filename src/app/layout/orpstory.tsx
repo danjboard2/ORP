@@ -61,7 +61,7 @@ export default function ORPStory() {
             </div>
 
             {/* video section 1 */}
-            <div className="video-container mb-4">
+            <div className="video-container mb-2 sm:mb-4">
                 <div className="video-wrapper w-full relative">
                     <div className={`fade-element ${fadeClass1} w-full px-10 sm:px-0 text-left sm:w-1/2 lg:w-1/4 absolute flex flex-col h-full pb-10 sm:pb-0 justify-end sm:justify-center ml-0 sm:ml-32 z-10`} ref={ref1}>
                         <h5 className="[text-shadow:_0_1px_5px_rgb(0_0_0)] sm:[text-shadow:none] text-xl sm:text-3xl xl:text-5xl font-bold uppercase text-[#3AAA01] lg:text-[#3AAA01]">Organic by Design</h5>
@@ -84,7 +84,7 @@ export default function ORPStory() {
             </div>
 
              {/* video section 2 */}
-             <div className="video-container mb-4">
+             <div className="video-container mb-2 sm:mb-4">
                 <div className="video-wrapper w-full relative">
                     <Image src="/media/images/arrow-down.png" width={60} height={40} alt="Arrow Down" className="block w-[30px] sm:w-[60px] absolute top-0 z-10 right-[30%] sm:right-[380px]"></Image>
                     <div className={`fade-element ${fadeClass2} w-full px-10 sm:px-0 text-left sm:w-1/2 lg:w-1/4 absolute flex flex-col h-full pb-10 sm:pb-0 justify-end sm:justify-center mr-0 sm:mr-32 right-0 z-10`} ref={ref2}>
@@ -110,7 +110,7 @@ export default function ORPStory() {
 
 
              {/* video section 3 */}
-             <div className="video-container mb-4">
+             <div className="video-container mb-2 sm:mb-4">
                 <div className="video-wrapper w-full relative">
                 <Image src="/media/images/arrow-down.png" width={60} height={40} alt="Arrow Down" className="block w-[30px] sm:w-[60px] absolute top-0 z-10 left-[30%] sm:left-[380px]"></Image>
                     <div className={`fade-element ${fadeClass3} w-full  px-10 sm:px-0 text-left sm:w-1/2 lg:w-1/4 absolute flex flex-col h-full pb-10 sm:pb-0 justify-end sm:justify-center ml-0 sm:ml-32 z-10`}  ref={ref3}>
@@ -118,7 +118,7 @@ export default function ORPStory() {
                         <p className="[text-shadow:_0_1px_5px_rgb(0_0_0)] sm:[text-shadow:none] text-white text-base sm:text-lg xl:text-2xl sm:mt-8">Currently serving Commercial and Residential Property Owners, Governments, and Oil/Gas Industries, ORP is building an impressive early track record poised for rapid growth.</p>
 
                     </div>
-                    <div className="-ml-[50px] sm:-ml-[530px]">
+                    <div className="-ml-[380px] sm:-ml-[530px]">
                     <Player
                         autoPlay
                         muted
